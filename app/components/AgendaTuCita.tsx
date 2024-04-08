@@ -1,5 +1,5 @@
 import FormularioContacto from "./FormularioContacto"
-import bgContacto from "../src/Mobiliario.webp"
+import bgContacto from "~/src/Mobiliario.webp"
 
 type ActionData = {
   nombre?: string;

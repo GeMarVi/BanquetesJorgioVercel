@@ -5,9 +5,7 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
-import type { LinksFunction } from "@vercel/remix"
-
-export const config = { runtime: 'edge' };
+import type { LinksFunction } from "@vercel/remix";
 
 import styles from "~/style/styles.css?url";
 import Header from "~/components/Header";

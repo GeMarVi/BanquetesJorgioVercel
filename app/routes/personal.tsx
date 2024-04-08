@@ -1,7 +1,7 @@
 import { MetaFunction } from "@vercel/remix"
-import Btn from "../components/Btn"
-import dj2 from "../src/dj2.webp"
-import meseros from "../src/meseros.webp"
+import Btn from "~/components/Btn"
+import dj2 from "~/src/dj2.webp"
+import meseros from "~/src/meseros.webp"
 
 export const meta: MetaFunction = () => {
     return [

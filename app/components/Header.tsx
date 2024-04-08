@@ -2,14 +2,14 @@ import { useState, useRef, useEffect } from "react"
 import { useLocation } from "@remix-run/react";
 import { animate } from "motion";
 
-import logo from "../src/logo.svg"
-import bannerPrincipal from "../src/hero.webp"
-import bannerEspadas from "../src/espadasbanner.webp"
-import bannerParrillada from "../src/parrilladaBanner.webp"
-import bannerTacos from "../src/tacosBanner.webp"
-import bannerPersonal from "../src/meserosBanner.webp"
-import bannerMoviliario from "../src/moviliarioBanner.webp"
-import Navegacion from "../components/Navegacion"
+import logo from "~/src/logo.svg"
+import bannerPrincipal from "~/src/hero.webp"
+import bannerEspadas from "~/src/espadasBanner.webp"
+import bannerParrillada from "~/src/parrilladaBanner.webp"
+import bannerTacos from "~/src/tacosBanner.webp"
+import bannerPersonal from "~/src/meserosBanner.webp"
+import bannerMoviliario from "~/src/moviliarioBanner.webp"
+import Navegacion from "~/components/Navegacion"
 import Btn from "./Btn"
 import BtnToggle from "./BtnToggle"
 
@@ -58,7 +58,7 @@ const Header = () => {
       title = 'Espadas Brasileñas y Parrilladas';
       description = "Servicio de exelencia en todo momento";
       break;
-    case '/espadasBrasilenas':
+    case '/espadas-brasilenas':
       title = 'Espadas Brasileñas';
       description = "Disfruta de nuestro exquisito bufette ilimitado de espadas brasileñas";
       break;
@@ -87,7 +87,7 @@ const Header = () => {
     case '/':
       banner = bannerPrincipal;
       break;
-    case '/espadasBrasilenas':
+    case '/espadas-brasilenas':
       banner = bannerEspadas;
       break;
     case '/parrilladas':
@@ -118,7 +118,7 @@ const Header = () => {
           </div>
         </div>
         <Navegacion setActive={setActive} active={active} />
-        <div ref={btnDeskRef} className="mr-4 w-[18rem] hidden lg:block">
+        <div ref={btnDeskRef} className="mr-4 hidden lg:block">
           <Btn isLink={false} route="" value="Contacto" claseBgBtn="bg-rojo" claseBgLine="hidden" claseBefore="before:-left-[1.7rem]" />
         </div>
       </div>

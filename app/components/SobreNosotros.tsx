@@ -1,4 +1,4 @@
-import ejemplo from "../src/Mobiliario2.webp"
+import ejemplo from "~/src/Mobiliario2.webp"
 
 const SobreNosotros = () => {
     return (

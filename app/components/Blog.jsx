@@ -5,7 +5,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
-import Comentarios from "../components/Comentarios"
+import Comentarios from "./Comentarios"
 import foto from "../src/perfil.jpeg"
 
 const Blog = () => {

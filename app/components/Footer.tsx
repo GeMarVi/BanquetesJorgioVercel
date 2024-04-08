@@ -1,8 +1,8 @@
 import { Link } from "@remix-run/react"
 
-import tiktok from "../src/tiktok.svg"
-import facebook from "../src/Facebook.svg"
-import instagram from "../src/Instagram.svg"
+import tiktok from "~/src/tiktok.svg"
+import facebook from "~/src/Facebook.svg"
+import instagram from "~/src/Instagram.svg"
 
 const Footer = () => {
     const year = new Date().getFullYear();
@@ -21,7 +21,7 @@ const Footer = () => {
                 <div className="flex flex-col justify-between items-center gap-4 border-dotted border-gray-400 border-b-2 pb-8">
                     <h4 className="text-center text-white uppercase font-open text-2xl">Servicios</h4>
                     <div className="flex flex-wrap items-center justify-center gap-6">
-                        <Link className="text-white font-light w-max" to="espadasBrasilenas">Espadas brasileñas</Link>
+                        <Link className="text-white font-light w-max" to="espadas-brasilenas">Espadas brasileñas</Link>
                         <Link className="text-white font-light w-max" to="parrilladas">Parrilladas</Link>
                         <Link className="text-white font-light w-max" to="tacos">Taquizas</Link>
                         <Link className="text-white font-light w-max" to="mobiliario">Mobiliario</Link>

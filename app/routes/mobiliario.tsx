@@ -1,11 +1,11 @@
 import { MetaFunction } from "@vercel/remix"
 
-import Btn from "../components/Btn"
-import mesas from "../src/Mesas y sillas 8.webp"
-import salas from "../src/Salas lounge 2 .webp"
-import carpas from "../src/Carpa 5.webp"
-import periqueras from "../src/Periqueras 3.webp"
-import pistas from "../src/Pista iluminada 3.webp"
+import Btn from "~/components/Btn"
+import mesas from "~/src/Mesas y sillas 8.webp"
+import salas from "~/src/Salas lounge 2 .webp"
+import carpas from "~/src/Carpa 5.webp"
+import periqueras from "~/src/Periqueras 3.webp"
+import pistas from "~/src/Pista iluminada 3.webp"
 
 
 

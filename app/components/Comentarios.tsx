@@ -1,4 +1,4 @@
-import estrellas from "../src/estrellas.svg";
+import estrellas from "~/src/estrellas.svg";
 
 interface ComentariosProps {
     src: string;
