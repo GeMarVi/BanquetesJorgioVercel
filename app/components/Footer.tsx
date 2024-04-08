@@ -1,8 +1,8 @@
 import { Link } from "@remix-run/react"
 
-import tiktok from "~/src/tiktok.svg"
-import facebook from "~/src/Facebook.svg"
-import instagram from "~/src/Instagram.svg"
+import tiktok from "../src/tiktok.svg"
+import facebook from "../src/Facebook.svg"
+import instagram from "../src/Instagram.svg"
 
 const Footer = () => {
     const year = new Date().getFullYear();

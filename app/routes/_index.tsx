@@ -2,19 +2,19 @@ import { useActionData } from "@remix-run/react";
 import type { ActionFunctionArgs } from "@vercel/remix";
 import { json, MetaFunction } from "@vercel/remix";
 
-import espadas from "~/src/Espadas4.webp"
-import parrilla from "~/src/parrillada1.webp"
-import tacos from "~/src/tacos.webp"
-import moviliario from "~/src/moviliario.webp"
-import meseros from "~/src/meseros.webp"
-import dj from "~/src/DJ.webp"
+import espadas from "../src/Espadas4.webp"
+import parrilla from "../src/parrillada1.webp"
+import tacos from "../src/tacos.webp"
+import moviliario from "../src/moviliario.webp"
+import meseros from "../src/meseros.webp"
+import dj from "../src/DJ.webp"
 
-import AgendaTuCita from "~/components/AgendaTuCita"
-import Blog from "~/components/Blog"
-import CardServicios from "~/components/CardServicios"
-import SobreNosotros from "~/components/SobreNosotros";
+import AgendaTuCita from "../components/AgendaTuCita"
+import Blog from "../components/Blog"
+import CardServicios from "../components/CardServicios"
+import SobreNosotros from "../components/SobreNosotros";
 
-import sendEmail from "~/utils/mailer.server";
+import sendEmail from "../utils/mailer.server";
 
 export async function action({ request }: ActionFunctionArgs) {
   const formData = await request.formData();

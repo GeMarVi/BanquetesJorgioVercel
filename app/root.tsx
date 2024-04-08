@@ -8,8 +8,8 @@ import {
 import type { LinksFunction } from "@vercel/remix";
 
 import styles from "~/style/styles.css?url";
-import Header from "~/components/Header";
-import Footer from "~/components/Footer";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 import WhatsApp from "./components/WhatsApp";
 
 export const links: LinksFunction = () => [

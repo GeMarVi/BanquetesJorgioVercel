@@ -1,6 +1,6 @@
 import { animate } from "motion";
 import { useRef, useState, useEffect } from "react"
-import whatsApp from "~/src/whatsappFixed.svg"
+import whatsApp from "../src/whatsappFixed.svg"
 
 const WhatsApp = () => {
 

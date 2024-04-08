@@ -1,8 +1,8 @@
 import { MetaFunction } from "@vercel/remix"
-import Btn from "~/components/Btn"
-import tacos1 from "~/src/tacos1.webp"
-import tacos2 from "~/src/tacos2.webp"
-import tacos3 from "~/src/tacos.webp"
+import Btn from "../components/Btn"
+import tacos1 from "../src/tacos1.webp"
+import tacos2 from "../src/tacos2.webp"
+import tacos3 from "../src/tacos.webp"
 
 export const meta: MetaFunction = () => {
     return [

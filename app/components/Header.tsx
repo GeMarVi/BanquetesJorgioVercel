@@ -2,14 +2,14 @@ import { useState, useRef, useEffect } from "react"
 import { useLocation } from "@remix-run/react";
 import { animate } from "motion";
 
-import logo from "~/src/logo.svg"
-import bannerPrincipal from "~/src/hero.webp"
-import bannerEspadas from "~/src/espadasBanner.webp"
-import bannerParrillada from "~/src/parrilladaBanner.webp"
-import bannerTacos from "~/src/tacosBanner.webp"
-import bannerPersonal from "~/src/meserosBanner.webp"
-import bannerMoviliario from "~/src/moviliarioBanner.webp"
-import Navegacion from "~/components/Navegacion"
+import logo from "../src/logo.svg"
+import bannerPrincipal from "../src/hero.webp"
+import bannerEspadas from "../src/espadasBanner.webp"
+import bannerParrillada from "../src/parrilladaBanner.webp"
+import bannerTacos from "../src/tacosBanner.webp"
+import bannerPersonal from "../src/meserosBanner.webp"
+import bannerMoviliario from "../src/moviliarioBanner.webp"
+import Navegacion from "../components/Navegacion"
 import Btn from "./Btn"
 import BtnToggle from "./BtnToggle"
 

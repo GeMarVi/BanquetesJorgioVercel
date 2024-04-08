@@ -1,9 +1,9 @@
 import { MetaFunction } from "@vercel/remix";
 
-import Btn from "~/components/Btn"
-import espada from "~/src/espadasUno.webp"
-import espada3 from "~/src/Espadas2.webp"
-import espada4 from "~/src/Espadas4.webp"
+import Btn from "../components/Btn"
+import espada from "../src/espadasUno.webp"
+import espada3 from "../src/Espadas2.webp"
+import espada4 from "../src/Espadas4.webp"
 
 
 export const meta: MetaFunction = () => {
