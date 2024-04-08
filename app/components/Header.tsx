@@ -58,7 +58,7 @@ const Header = () => {
       title = 'Espadas Brasileñas y Parrilladas';
       description = "Servicio de exelencia en todo momento";
       break;
-    case '/espadas-brasilenas':
+    case '/espadasBrasilenas':
       title = 'Espadas Brasileñas';
       description = "Disfruta de nuestro exquisito bufette ilimitado de espadas brasileñas";
       break;
@@ -87,7 +87,7 @@ const Header = () => {
     case '/':
       banner = bannerPrincipal;
       break;
-    case '/espadas-brasilenas':
+    case '/espadasBrasilenas':
       banner = bannerEspadas;
       break;
     case '/parrilladas':
