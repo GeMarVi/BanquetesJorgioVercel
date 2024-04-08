@@ -1,6 +1,5 @@
 import { useActionData } from "@remix-run/react";
-import type { ActionFunctionArgs } from "@vercel/remix";
-import { json, MetaFunction } from "@remix-run/node";
+import { json, MetaFunction, ActionFunctionArgs } from "@vercel/remix";
 
 import espadas from "../src/Espadas4.webp"
 import parrilla from "../src/parrillada1.webp"
