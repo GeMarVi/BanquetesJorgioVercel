@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="16.814409mm"
+   height="16.814449mm"
+   viewBox="0 0 16.814409 16.814449"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   sodipodi:docname="Facebook.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="5.8511223"
+     inkscape:cx="13.330776"
+     inkscape:cy="28.285172"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-176.2125,-270.40416)">
+    <path
+       id="path740"
+       style="fill:#D24545;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.0352778"
+       d="m 193.02691,278.81121 c 0,4.64326 -3.76396,8.4074 -8.40715,8.4074 -4.6433,0 -8.40726,-3.76414 -8.40726,-8.4074 0,-4.64291 3.76396,-8.40705 8.40726,-8.40705 4.64319,0 8.40715,3.76414 8.40715,8.40705" />
+    <path
+       id="path742"
+       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.0352778"
+       d="m 185.54954,284.16602 v -4.68524 h 1.56228 l 0.29725,-1.93816 h -1.85953 v -1.25765 c 0,-0.53023 0.25961,-1.04705 1.09252,-1.04705 h 0.84554 v -1.65029 c 0,0 -0.7673,-0.13088 -1.50083,-0.13088 -1.53155,0 -2.53255,0.92815 -2.53255,2.60879 v 1.47708 h -1.7024 v 1.93816 h 1.7024 v 4.68524 h 2.09532" />
+  </g>
+</svg>
