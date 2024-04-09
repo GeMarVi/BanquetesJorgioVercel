@@ -16,7 +16,7 @@ const espadasBrasileñas = () => {
         <main className="max-w-6xl mx-auto px-3 md:px-0 text-center mx-aut bg-azulOscuro text-white">
             <div className="md:flex gap-4 lg:gap-0">
                 <ul className="md:pl-16 pb-8 lg:py-8 flex flex-col gap-2 md:w-1/2 md:justify-center">
-                    <h4 className="text-2xl text-center font-monse font-bold uppercase pb-4">Cortes de Carne</h4>
+                    <h4 className="text-2xl text-center font-monse font-bold uppercase pb-4">Carnes</h4>
                     <li className="text-md text-gray-200 text-center font-monse uppercase tracking-wider">Pastor</li>
                     <li className="text-md text-gray-200 text-center font-monse uppercase tracking-wider">Birria</li>
                     <li className="text-md text-gray-200 text-center font-monse uppercase tracking-wider">Suadero</li>
@@ -28,7 +28,7 @@ const espadasBrasileñas = () => {
             </div>
             <div className="md:flex gap-4 lg:gap-0 flex-row-reverse">
                 <ul className="md:pl-16 py-8 flex flex-col md:justify-center md:w-1/2 gap-2">
-                    <h4 className="text-2xl text-center font-monse font-bold uppercase pb-4">Guarniciones</h4>
+                    <h4 className="text-2xl text-center font-monse font-bold uppercase pb-4">Especialidades</h4>
                     <li className="text-md text-gray-200 text-center font-monse uppercase tracking-wider">Gringas</li>
                     <li className="text-md text-gray-200 text-center font-monse uppercase tracking-wider">Tostadas</li>
                     <li className="text-md text-gray-200 text-center font-monse uppercase tracking-wider">Volcanes</li>

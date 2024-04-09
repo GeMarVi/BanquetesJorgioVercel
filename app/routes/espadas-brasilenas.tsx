@@ -5,7 +5,6 @@ import espada from "../src/espadasUno.webp"
 import espada3 from "../src/Espadas2.webp"
 import espada4 from "../src/Espadas4.webp"
 
-
 export const meta: MetaFunction = () => {
     return [
       { title: "Espadas Brasileñas" },
@@ -13,7 +12,6 @@ export const meta: MetaFunction = () => {
     ];
   };
   
-
 const espadasBrasilenas = () => {
     return (
         <main className="max-w-7xl mx-auto px-3 md:px-0 text-center mx-aut bg-azulOscuro text-white">
@@ -21,14 +19,17 @@ const espadasBrasilenas = () => {
                 <ul className="md:pl-16 pb-8 lg:py-8 flex flex-col gap-2 md:w-1/2 md:justify-center">
                     <h4 className="text-2xl text-center font-monse font-bold uppercase pb-4">Cortes de Carne</h4>
                     <li className="text-md text-gray-200 text-center font-monse uppercase tracking-wider">Picaña</li>
+                    <li className="text-md text-gray-200 text-center font-monse uppercase tracking-wider">Camarón a las brasas con chile</li>
                     <li className="text-md text-gray-200 text-center font-monse uppercase tracking-wider">Arrachera</li>
                     <li className="text-md text-gray-200 text-center font-monse uppercase tracking-wider">New York</li>
                     <li className="text-md text-gray-200 text-center font-monse uppercase tracking-wider">Puntas de sirlón al ajo</li>
                     <li className="text-md text-gray-200 text-center font-monse uppercase tracking-wider">Puntas de filete miñon</li>
                     <li className="text-md text-gray-200 text-center font-monse uppercase tracking-wider">Costillas de Cerdo BBQ</li>
+                    <li className="text-md text-gray-200 text-center font-monse uppercase tracking-wider">Puntas de cerdo con jalea de piña y un toque de habanero</li>
                     <li className="text-md text-gray-200 text-center font-monse uppercase tracking-wider">Pechuga de pollo al parmesano</li>
                     <li className="text-md text-gray-200 text-center font-monse uppercase tracking-wider">Chorizo Argentino</li>
                     <li className="text-md text-gray-200 text-center font-monse uppercase tracking-wider">Chistorra</li>
+                    <li className="text-md text-gray-200 text-center font-monse uppercase tracking-wider">Lomo de cerdo horneado a las finas hierbas</li>
                 </ul>
                 <img className="flex-1 md:w-1/2 mb-8 md:mb-0" src={espada} alt="Imagen de las Espadas brasileñas" />
             </div>

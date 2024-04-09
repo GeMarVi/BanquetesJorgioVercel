@@ -23,7 +23,7 @@ const Footer = () => {
                     <div className="flex flex-wrap items-center justify-center gap-6">
                         <Link className="text-white font-light w-max" to="espadas-brasilenas">Espadas brasileñas</Link>
                         <Link className="text-white font-light w-max" to="parrilladas">Parrilladas</Link>
-                        <Link className="text-white font-light w-max" to="tacos">Taquizas</Link>
+                        <Link className="text-white font-light w-max" to="tacos">Buffet de Tacos</Link>
                         <Link className="text-white font-light w-max" to="mobiliario">Mobiliario</Link>
                         <Link className="text-white font-light w-max" to="personal">Meseros</Link>
                     </div>

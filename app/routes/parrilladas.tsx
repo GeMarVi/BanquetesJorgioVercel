@@ -17,28 +17,32 @@ const espadasBrasileñas = () => {
             <div className="md:flex gap-4 lg:gap-0">
                 <ul className="md:pl-16 pb-8 lg:py-8 flex flex-col gap-2 md:w-1/2 md:justify-center">
                     <h4 className="text-2xl text-center font-monse font-bold uppercase pb-4">Cortes de Carne</h4>
-                    <li className="text-md text-gray-200 text-center font-monse uppercase tracking-wider">Arrachera</li>
-                    <li className="text-md text-gray-200 text-center font-monse uppercase tracking-wider">Chistorra</li>
-                    <li className="text-md text-gray-200 text-center font-monse uppercase tracking-wider">Chorizo Argentino</li>
-                    <li className="text-md text-gray-200 text-center font-monse uppercase tracking-wider">Pechuga de pollo marinada</li>
+                    <li className="text-md text-gray-200 text-center font-monse uppercase tracking-wider">Picaña</li>
+                    <li className="text-md text-gray-200 text-center font-monse uppercase tracking-wider">New-York</li>
+                    <li className="text-md text-gray-200 text-center font-monse uppercase tracking-wider">Arrachera Marinada</li>
                     <li className="text-md text-gray-200 text-center font-monse uppercase tracking-wider">Costilla de res con hueso</li>
-                    <li className="text-md text-gray-200 text-center font-monse uppercase tracking-wider">Cortesía: Alitas al carbón</li>
+                    <li className="text-md text-gray-200 text-center font-monse uppercase tracking-wider">Pechuga de pollo marinada</li>
+                    <li className="text-md text-gray-200 text-center font-monse uppercase tracking-wider">Chorizo Argentino</li>
+                    <li className="text-md text-gray-200 text-center font-monse uppercase tracking-wider">Costilla BBQ</li>
+                    <li className="text-md text-gray-200 text-center font-monse uppercase tracking-wider">Chistorra</li>
+                    <li className="text-md text-gray-200 text-center font-monse uppercase tracking-wider">Cortesía: Alitas al carbón BBQ</li>
                 </ul>
                 <img className="flex-1 md:w-1/2 mb-8 md:mb-0" src={parrillada} alt="Imagen de las Espadas brasileñas" />
             </div>
             <div className="md:flex gap-4 lg:gap-0 flex-row-reverse">
                 <ul className="md:pl-16 py-8 flex flex-col md:justify-center md:w-1/2 gap-2">
                     <h4 className="text-2xl text-center font-monse font-bold uppercase pb-4">Guarniciones</h4>
-                    <li className="text-md text-gray-200 text-center font-monse uppercase tracking-wider">Pasta a la crema</li>
+                    
                     <li className="text-md text-gray-200 text-center font-monse uppercase tracking-wider">Ensalada mixta dulce</li>
                     <li className="text-md text-gray-200 text-center font-monse uppercase tracking-wider">Ensalada mixta salada</li>
+                    <li className="text-md text-gray-200 text-center font-monse uppercase tracking-wider">Ensalada de temporada</li>
                     <li className="text-md text-gray-200 text-center font-monse uppercase tracking-wider">Nopales</li>
                     <li className="text-md text-gray-200 text-center font-monse uppercase tracking-wider">Salsas</li>
                     <li className="text-md text-gray-200 text-center font-monse uppercase tracking-wider">Limones</li>
                     <li className="text-md text-gray-200 text-center font-monse uppercase tracking-wider">Aderezos</li>
                     <li className="text-md text-gray-200 text-center font-monse uppercase tracking-wider">Tortillas</li>
-                    <li className="text-md text-gray-200 text-center font-monse uppercase tracking-wider">Pan de ajo</li>
-                    <li className="text-md text-gray-200 text-center font-monse uppercase tracking-wider">Piña asada con canela</li>
+                    <li className="text-md text-gray-200 text-center font-monse uppercase tracking-wider">Pasta a la crema</li>
+                    <li className="text-md text-gray-200 text-center font-monse uppercase tracking-wider">Cortesía: Pan con Ajo Y Piña asada con canela</li>
                 </ul>
                 <img className="flex-1 md:w-1/2" src={espada3} alt="Imagen de las Espadas brasileñas" />
             </div>

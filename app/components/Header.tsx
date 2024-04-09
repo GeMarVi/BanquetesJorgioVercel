@@ -1,10 +1,10 @@
 import { useState, useRef, useEffect } from "react"
-import { useLocation } from "@remix-run/react";
+import { Link, useLocation } from "@remix-run/react";
 import { animate } from "motion";
 
 import logo from "../src/logo.svg"
 import bannerPrincipal from "../src/hero.webp"
-import bannerEspadas from "../src/espadasBanner.webp"
+import bannerEspadas from "../src/espadasbanner.webp"
 import bannerParrillada from "../src/parrilladaBanner.webp"
 import bannerTacos from "../src/tacosBanner.webp"
 import bannerPersonal from "../src/meserosBanner.webp"
@@ -41,26 +41,26 @@ const Header = () => {
   }, [active]);
 
   useEffect(() => {
-    if (titleRef.current) 
+    if (titleRef.current)
       animate(titleRef.current, { transform: "translateX(0)" }, { duration: .8, delay: .8 })
-    if (titleRef.current) 
+    if (titleRef.current)
       animate(titleRef.current, { transform: "translateY(0)", opacity: 1 }, { duration: .8 })
-    if (btnRef.current) 
+    if (btnRef.current)
       animate(btnRef.current, { transform: "translateX(0)" }, { duration: .8 })
-    if (headerRef.current) 
-      animate(headerRef.current, { opacity: 1 },{duration: .8 })
-  }, [route])
+    if (headerRef.current)
+      animate(headerRef.current, { opacity: 1 }, { duration: .8 })
+  }, [])
 
   let title = '';
   let description = "";
   switch (route) {
     case '/':
       title = 'Espadas Brasileñas y Parrilladas';
-      description = "Servicio de exelencia en todo momento";
+      description = "Sabemos lo que te gusta";
       break;
     case '/espadas-brasilenas':
       title = 'Espadas Brasileñas';
-      description = "Disfruta de nuestro exquisito bufette ilimitado de espadas brasileñas";
+      description = "Exquisito bufette ilimitado de espadas brasileñas, come todo lo que tu puedas";
       break;
     case '/parrilladas':
       title = 'Parrilladas';
@@ -72,7 +72,7 @@ const Header = () => {
       break;
     case '/tacos':
       title = 'Buffet de Tacos';
-      description = "Disfruta de nuestro exquisito buffet de tacos"
+      description = "Para los amantes de los tacos"
       break;
     case '/personal':
       title = 'Personal';
@@ -112,7 +112,9 @@ const Header = () => {
     <header className="relative h-screen text-white -z-20 overflow-hidden">
       <div ref={headerRef} className="mx-auto h-[10vh] opacity-0 lg:h-auto lg:flex justify-between items-center lg:py-2">
         <div className="flex items-center lg:block justify-between px-6 py-3 lg:py-0">
-          <img src={logo} className="w-28 lg:w-36 relative z-[70]" alt="logo" />
+          <Link to={"/"}>
+            <img src={logo} className="w-28 lg:w-36 relative z-[70]" alt="logo" />
+          </Link>
           <div className="lg:hidden relative z-[200]" onClick={handleClick}>
             <BtnToggle active={active} setActive={setActive} />
           </div>
@@ -123,13 +125,13 @@ const Header = () => {
         </div>
       </div>
       <div style={{ backgroundImage: `url(${banner})` }} className="relative mx-auto h-[75vh] lg:h-[calc(100vh-204px)] bg-cover bg-no-repeat bg-center flex flex-col gap-6 justify-center items-center">
-      <div className="absolute top-0 bottom-0 left-0 right-0 gradient-banner"></div>
+        <div className="absolute top-0 bottom-0 left-0 right-0 gradient-banner"></div>
         <div ref={titleRef} className="flex flex-col gap-6 lg:gap-12 justify-center items-center -translate-x-[300%] lg:translate-x-0 lg:translate-y-8 lg:opacity-0 px-3 lg:px-0">
-          { route == "/" ? <h1 className="text-7xl font-extrabold lg:text-[6rem] font-title uppercase">Jorgio</h1> : null
+          {route == "/" ? <h1 className="text-7xl font-extrabold lg:text-[6rem] font-title uppercase">Jorgio</h1> : null
           }
           <p className={`text-center font-title uppercase text-rojo ${route != "/" ? "font-bold text-5xl lg:text-7xl" : "text-5xl font-bold"}`}>{title}</p>
-          <p className={`text-center font-title max-w-[50rem] ${route !== "/" ? "not-italic text-3xl font-bold" : "italic text-xl font-light"}`}>"{description}"</p> 
-          
+          <p className={`text-center font-title max-w-[50rem] ${route !== "/" ? "not-italic text-3xl font-bold" : "italic text-2xl font-light"}`}>"{description}"</p>
+
         </div>
         <div ref={btnRef} className="lg:hidden flex justify-center relative w-3/5 translate-x-[300%]">
           <Btn isLink={false} route="" value="Contáctanos" claseBgBtn="bg-rojo" claseBgLine="hidden" claseBefore="before:-left-[1.7rem] before:bg-rojo" />

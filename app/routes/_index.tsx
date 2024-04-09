@@ -78,8 +78,8 @@ export default function Index() {
             <CardServicios route="/espadas-brasilenas" img={espadas} titulo={"Espadas brasileñas"} />
             <CardServicios route="/parrilladas" img={parrilla} titulo={"Parrilladas"} />
             <CardServicios route="/personal" img={meseros} titulo={"Meseros y bartender"} />
-            <CardServicios route="/tacos" img={tacos} titulo={"Bufet de tacos"} />
-            <CardServicios route="/mobiliario" img={moviliario} titulo={"Renta de moviliario"} />
+            <CardServicios route="/tacos" img={tacos} titulo={"Buffet de tacos"} />
+            <CardServicios route="/mobiliario" img={moviliario} titulo={"Renta de mobiliario"} />
             <CardServicios route="/personal" img={dj} titulo={"Audio Dj"} />
           </div>
         </section>
