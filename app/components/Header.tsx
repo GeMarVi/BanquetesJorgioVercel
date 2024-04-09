@@ -106,11 +106,9 @@ const Header = () => {
       banner = 'Page Not Found';
   }
 
-
-
   return (
     <header className="relative h-screen text-white -z-20 overflow-hidden">
-      <div ref={headerRef} className="mx-auto h-[10vh] opacity-0 lg:h-auto lg:flex justify-between items-center lg:py-2">
+      <div ref={headerRef} className="mx-auto opacity-0 lg:h-auto lg:flex justify-between items-center lg:py-2">
         <div className="flex items-center lg:block justify-between px-6 py-3 lg:py-0">
           <Link to={"/"}>
             <img src={logo} className="w-28 lg:w-36 relative z-[70]" alt="logo" />
