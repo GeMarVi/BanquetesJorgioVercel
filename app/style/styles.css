@@ -62,6 +62,36 @@
 
 @layer components {
 
+  .arrow{
+    transform: translateX(-.8rem);
+  }
+  .arrow::before{
+     content: "";
+     background-image: url('../src/arrow.svg');
+     background-size: cover;
+     display: inline-block;
+     vertical-align: middle;
+     width: .70rem;
+     height: .75rem;
+     margin-right: .8rem;
+  }
+  .linea-derecha::before{
+     content: "";
+     display: inline-block;
+     width: 25%;
+     height: 2px;
+     margin-right: 3rem;
+     background-color: #D24545;
+  }
+  .linea-izquierda::after{
+     content: "";
+     display: inline-block;
+     width: 25%;
+     height: 2px;
+     margin-left: 3rem;
+     background-color: #D24545;
+  }
+
   .text-gradient {
     background: #CF7F7F;
     background: linear-gradient(to right, #CF7F7F 0%, #D24545 100%);
@@ -75,18 +105,6 @@
 
   .gradient-banner {
     background-color: rgba(19, 19, 20, 0.6);
-  }
-
-  .decoracion-lista::before {
-    content: "";
-    display: inline-block;
-    background-image: url('../src/decoracion-lista.svg');
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center center;
-    vertical-align: middle;
-    width: 1.5rem;
-    height: 1.5rem;
   }
 
   .linea-decoracion::after {
