@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="15.000051"
+   height="14.999846"
+   version="1.1"
+   viewBox="0 0 15.000052 14.999846"
+   xml:space="preserve"
+   id="svg1"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"><defs
+     id="defs1" /><metadata
+     id="metadata1"><rdf:RDF><cc:Work
+         rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata><g
+     transform="matrix(0.02408331,0,0,-0.02408298,-14.825444,90.713362)"
+     fill="#d24545"
+     id="g1"
+     style="stroke-width:41.52281606;stroke-dasharray:none"><path
+       d="m 927.01,3184.7 c -149.44,0 -270.58,121.14 -270.58,270.58 0,149.44 121.14,270.58 270.58,270.58 149.44,0 270.58,-121.14 270.58,-270.58 0,-149.44 -121.14,-270.58 -270.58,-270.58 m -248.67,270.58 c 0,-137.11 111.55,-248.67 248.67,-248.67 137.12,0 248.67,111.55 248.67,248.67 0,137.12 -111.54,248.67 -248.67,248.67 -137.12,0 -248.67,-111.54 -248.67,-248.67"
+       stroke="#d24545"
+       stroke-width="15.75"
+       style="stroke-width:41.52281606;stroke-dasharray:none;paint-order:fill markers stroke"
+       id="path1" /><circle
+       transform="scale(1,-1)"
+       cx="929.19"
+       cy="-3451.6001"
+       r="150"
+       stroke-width="0"
+       style="paint-order:fill markers stroke;stroke-width:41.52281606;stroke-dasharray:none"
+       id="circle1" /></g></svg>

@@ -5,8 +5,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        'title': ['"Roboto Flex"' ,'serif'],
-        'monse': ['"Montserrat"' , 'serif'],
+        'title': ['"Nunito"' ,'sans-serif'],
+        'monse': ['"Montserrat"' , 'sans-serif'],
         'open': ['"open_sanscondensed_light"' , 'serif'],
       },
       backgroundColor:{

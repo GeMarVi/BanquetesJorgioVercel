@@ -2,7 +2,7 @@ import { useActionData } from "@remix-run/react";
 import type { ActionFunctionArgs } from "@vercel/remix";
 import { json, MetaFunction } from "@vercel/remix";
 
-import espadas from "../src/Espadas4.webp"
+import espadas from "../src/espadas-tres.webp"
 import parrilla from "../src/parrillada1.webp"
 import tacos from "../src/tacos.webp"
 import moviliario from "../src/moviliario.webp"
