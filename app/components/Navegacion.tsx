@@ -19,7 +19,7 @@ const Navegacion: React.FC<NavegacionProps> = ({ active, setActive }) => {
       <Link onClick={handleClick} className={`py-2 w-max font-open tracking-[.30em] uppercase font-normal cursor-pointer text-base lg:text-sm ${ location === "/espadas-brasilenas" ? "border-b border-[#D24545]" : ""}`} to="/espadas-brasilenas">Espadas Brasileñas</Link>
       <Link onClick={handleClick} className={`py-2 w-max font-open tracking-[.30em] uppercase font-normal cursor-pointer text-base lg:text-sm ${ location === "/parrilladas" ? "border-b border-[#D24545]" : ""}`} to="/parrilladas">Parrilladas</Link>
       <Link onClick={handleClick} className={`py-2 w-max font-open tracking-[.30em] uppercase font-normal cursor-pointer text-base lg:text-sm ${ location === "/tacos" ? "border-b border-[#D24545]" : ""}`} to="/tacos">Buffet de Tacos</Link>
-      <Link onClick={handleClick} className={`py-2 w-max font-open tracking-[.30em] uppercase font-normal cursor-pointer text-base lg:text-sm ${ location === "/personal" ? "border-b border-[#D24545]" : ""}`} to="/personal">Meseros</Link>
+      <Link onClick={handleClick} className={`py-2 w-max font-open tracking-[.30em] uppercase font-normal cursor-pointer text-base lg:text-sm ${ location === "/personal" ? "border-b border-[#D24545]" : ""}`} to="/personal">Personal</Link>
       <Link onClick={handleClick} className={`py-2 w-max font-open tracking-[.30em] uppercase font-normal cursor-pointer text-base lg:text-sm ${ location === "/mobiliario" ? "border-b border-[#D24545]" : ""}`} to="/mobiliario">Mobiliario</Link>
 
     </nav>

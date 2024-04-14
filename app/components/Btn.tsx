@@ -4,29 +4,20 @@ import { Link } from '@remix-run/react';
 interface BtnProps {
   isLink: boolean;
   value: string;
-  claseBefore: string;
-  claseBgLine: string;
-  claseBgBtn: string;
   route: string;
 }
 
-const Btn: React.FC<BtnProps> = ({ isLink, value, claseBefore, claseBgLine, claseBgBtn, route }) => {
+const Btn: React.FC<BtnProps> = ({ isLink, value, route }) => {
   if (isLink) {
     return (
-      <Link to={route} prefetch="intent" className={`fancy ${claseBgBtn}`}>
-        <span className={`top-key ${claseBgLine}`}></span>
-        <span className={`text font-open tracking-[.3em] text-sm ${claseBefore}`}>{value}</span>
-        <span className={`bottom-key-1 ${claseBgLine}`}></span>
-        <span className={`bottom-key-2 ${claseBgLine}`}></span>
+      <Link to={route} className="btn font-title font-bold text-xl text-center">
+        {value}
       </Link>
     );
   } else {
     return (
-      <button  className={`fancy ${claseBgBtn}`}>
-        <span className={`top-key ${claseBgLine}`}></span>
-        <span className={`text font-open tracking-[.3em] text-sm ${claseBefore}`}>{value}</span>
-        <span className={`bottom-key-1 ${claseBgLine}`}></span>
-        <span className={`bottom-key-2 ${claseBgLine}`}></span>
+      <button className="btn font-title font-bold text-xl text-center">
+        {value}
       </button>
     );
   }

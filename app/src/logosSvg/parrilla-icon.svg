@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 448 448"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="parrilla-icon.svg"
+   width="448"
+   height="448"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.6035156"
+     inkscape:cx="223.88307"
+     inkscape:cy="74.523752"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1" />
+  <path
+     fill="#d24545"
+     d="M 0,40 C 0,17.9 17.9,0 40,0 h 368 c 22.1,0 40,17.9 40,40 v 24 c 0,89.8 -52.9,167.3 -129.2,203 L 382,414.5 c 5.2,12.2 -0.4,26.3 -12.6,31.5 -12.2,5.2 -26.3,-0.4 -31.5,-12.6 L 316.7,384 H 160 c 0,35.3 -28.7,64 -64,64 -35.3,0 -64,-28.7 -64,-64 0,-35.3 28.7,-64 64,-64 3.4,0 6.8,0.3 10.1,0.8 L 129.2,267 C 52.9,231.3 0,153.8 0,64 Z m 151.8,296 h 144.4 l -22.9,-53.4 c -15.9,3.6 -32.3,5.4 -49.3,5.4 -17,0 -33.4,-1.9 -49.3,-5.4 z M 96,408 a 24,24 0 1 0 0,-48 24,24 0 1 0 0,48 z"
+     id="path1" />
+</svg>

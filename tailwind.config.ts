@@ -18,7 +18,7 @@ export default {
       },
       textColor:{
         'paragraph': "#e5e7eb",
-        'rojo': "#E72929"
+        'rojo': "#D24545"
       }
     },
   },

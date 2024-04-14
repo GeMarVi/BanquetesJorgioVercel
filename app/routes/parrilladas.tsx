@@ -1,60 +1,120 @@
-import { MetaFunction } from "@vercel/remix"
+import { MetaFunction } from "@vercel/remix";
+import { useState, useEffect } from "react";
 
 import Btn from "../components/Btn"
 import parrillada from "../src/Parrillada.webp"
 import espada3 from "../src/parrillada1.webp"
-import bg from "../src/bg-carnes.svg"
+import ListaCarnes from "~/components/ListaCarnes";
+
+import { Autoplay, Pagination, Navigation, EffectFlip } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+import 'swiper/css/effect-flip';
 
 export const meta: MetaFunction = () => {
     return [
-      { title: "Mobiliario" },
-      { name: "description", content: "Nuestras parrilladas a domicilio hacen de tu evento algo inolvidable con los mejores y mas finos cortes de carne" },
+        { title: "Espadas Brasileñas" },
+        { name: "description", content: "Disfruta de nuestro exquisito Buffet de espadas brasileñas, cortes de carne exquisitos y calidad superior" },
     ];
-  };
+};
 
-const espadasBrasileñas = () => {
+const parrilladas = () => {
+
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const handleResize = () => {
+            // Actualizar el estado según el ancho de la ventana
+            setIsMobile(window.innerWidth < 1024);
+        };
+        window.addEventListener('resize', handleResize);
+        handleResize();
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
+    const Carnes = [
+        "Picaña",
+        "New York",
+        "Arrachera Marinada",
+        "Costillas de Res con hueso",
+        "Pechuga de pollo marinada",
+        "Chorizo Argentino",
+        "Costillas BBQ",
+        "Chistorra",
+        "Cortesia: Alitas al Carbón"
+    ]
+
+    const Guarniciones = [
+        "Ensalada mixta dulce",
+        "Ensalada mixta salada",
+        "Ensalada de temporada",
+        "Nopales",
+        "Salsas",
+        "Limones",
+        "Aderesos",
+        "Tortillas",
+        "Pasta a la crema",
+        "Cortasia: Pan con Ajo y Piña asada con Canela",]
+
+    const images = [
+        parrillada,
+        espada3,
+        parrillada,
+        espada3,
+        parrillada,
+        espada3,
+    ]
+
     return (
-        <main className="max-w-6xl -mt-[8rem] md:mt-0 mx-auto text-center mx-aut bg-azulOscuro text-white">
-            <div className="md:flex gap-4 lg:gap-0">
-            <ul style={{ backgroundImage: `url(${bg})` }} className="bg-cover bg-no-repeat bg-center py-[3.5rem] lg:py-8 flex flex-col gap-2 md:w-1/2 md:justify-center">
-                    <h4 className="text-2xl text-center font-monse font-bold uppercase pb-4">Cortes de Carne</h4>
-                    <li className="text-md text-gray-200 text-center font-monse uppercase tracking-wider">Picaña</li>
-                    <li className="text-md text-gray-200 text-center font-monse uppercase tracking-wider">New-York</li>
-                    <li className="text-md text-gray-200 text-center font-monse uppercase tracking-wider">Arrachera Marinada</li>
-                    <li className="text-md text-gray-200 text-center font-monse uppercase tracking-wider">Costilla de res con hueso</li>
-                    <li className="text-md text-gray-200 text-center font-monse uppercase tracking-wider">Pechuga de pollo marinada</li>
-                    <li className="text-md text-gray-200 text-center font-monse uppercase tracking-wider">Chorizo Argentino</li>
-                    <li className="text-md text-gray-200 text-center font-monse uppercase tracking-wider">Costilla BBQ</li>
-                    <li className="text-md text-gray-200 text-center font-monse uppercase tracking-wider">Chistorra</li>
-                    <li className="text-md text-gray-200 text-center font-monse uppercase tracking-wider">Cortesía: Alitas al carbón BBQ</li>
-                </ul>
-                <img className="flex-1 md:w-1/2 w-[95%] mx-auto" src={parrillada} alt="Imagen de las Espadas brasileñas" />
+        <main className="bg-cover bg-no-repeat bg-center max-w-7xl -mt-[8rem] md:mt-0 mx-auto pb-16 md:px-0 text-center mx-aut bg-transparent text-white">
+            <div className="noise"></div>
+            <h3 className="text-white text-center uppercase text-3xl font-open tracking-wider pt-16 pb-16">Menú</h3>
+            <div className="flex flex-col lg:flex-row gap-4 items-center overflow-hidden section-routes-swiper">
+                <div className="flex flex-col gap-16 lg:w-[40%] p-8">
+                    <ListaCarnes clase="linea-separacion" title="Cortes de Carne" items={Carnes} />
+                    <ListaCarnes clase="linea-separacion" title="Guarniciones" items={Guarniciones} />
+                </div>
+                <div className="w-[90vw] mx-auto lg:mx-0 lg:mt-0 lg:max-h-[80rem] lg:grid lg:grid-cols-11 lg:grid-rows-3 lg:gap-4 lg:w-[60%]">
+                    {isMobile ? (
+                        <Swiper
+                            effect={'flip'}
+                            centeredSlides={true}
+                            loop={true}
+                            autoplay={{
+                                delay: 3000,
+                                disableOnInteraction: false,
+                            }}
+                            pagination={{
+                                clickable: true,
+                            }}
+                            modules={[Autoplay, Pagination, Navigation, EffectFlip]}
+                        >
+                            {images.map( image => (
+                                <SwiperSlide key={Date.now()}><img className="w-full h-full object-cover" src={image} alt="" /></SwiperSlide>
+                            ))}
+                        </Swiper>) : (
+                        <>
+                            <div className="col-span-6 h-auto"><img className="w-full h-full object-cover" src={parrillada} alt="" /></div>
+                            <div className="col-span-5 h-auto"><img className="w-full h-full object-cover" src={espada3} alt="" /></div>
+                            <div className="col-span-5 h-auto"><img className="w-full h-full object-cover" src={parrillada} alt="" /></div>
+                            <div className="col-span-6 h-auto"><img className="w-full h-full object-cover" src={espada3} alt="" /></div>
+                            <div className="col-span-6 h-auto"><img className="w-full h-full object-cover" src={parrillada} alt="" /></div>
+                            <div className="col-span-5 h-auto"><img className="w-full h-full object-cover" src={espada3} alt="" /></div>
+                        </>
+                    )}
+                </div>
             </div>
-            <div className="md:flex gap-4 lg:gap-0 flex-row-reverse">
-            <ul style={{ backgroundImage: `url(${bg})` }} className="bg-cover bg-no-repeat bg-center py-[3.5rem] lg:py-8 flex flex-col gap-2 md:w-1/2 md:justify-center">
-                    <h4 className="text-2xl text-center font-monse font-bold uppercase pb-4">Guarniciones</h4>
-                    
-                    <li className="text-md text-gray-200 text-center font-monse uppercase tracking-wider">Ensalada mixta dulce</li>
-                    <li className="text-md text-gray-200 text-center font-monse uppercase tracking-wider">Ensalada mixta salada</li>
-                    <li className="text-md text-gray-200 text-center font-monse uppercase tracking-wider">Ensalada de temporada</li>
-                    <li className="text-md text-gray-200 text-center font-monse uppercase tracking-wider">Nopales</li>
-                    <li className="text-md text-gray-200 text-center font-monse uppercase tracking-wider">Salsas</li>
-                    <li className="text-md text-gray-200 text-center font-monse uppercase tracking-wider">Limones</li>
-                    <li className="text-md text-gray-200 text-center font-monse uppercase tracking-wider">Aderezos</li>
-                    <li className="text-md text-gray-200 text-center font-monse uppercase tracking-wider">Tortillas</li>
-                    <li className="text-md text-gray-200 text-center font-monse uppercase tracking-wider">Pasta a la crema</li>
-                    <li className="text-md text-gray-200 text-center font-monse uppercase tracking-wider">Cortesía: Pan con Ajo Y Piña asada con canela</li>
-                </ul>
-                <img className="flex-1 md:w-1/2 w-[95%] mx-auto" src={espada3} alt="Imagen de las Espadas brasileñas" />
-            </div>
-            <p className="text-center italic font-monse my-16 text-gray-300">Si no encuentras algún artículo que buscas en nuestro catálogo, no dudes en ponerte en contacto con nosotros y hacer tu pregunta.</p>
+            <p className="text-center italic my-16 font-monse text-gray-300">Si no encuentras algún artículo que buscas en nuestro catálogo, no dudes en ponerte en contacto con nosotros y hacer tu pregunta.</p>
             <div className="flex justify-center">
-                <Btn isLink={true} route="#" claseBefore="before:-left-[2rem]" claseBgBtn="" claseBgLine="bg-azulOscuro" value="Cotiza tu servicio" />
+                <Btn isLink={true} route="#" value="Cotiza tu servicio" />
             </div>
-
-        </main>
+        </main >
     )
 }
 
-export default espadasBrasileñas
-
+export default parrilladas

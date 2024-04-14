@@ -14,6 +14,13 @@ import Blog from "../components/Blog"
 import CardServicios from "../components/CardServicios"
 import SobreNosotros from "../components/SobreNosotros";
 
+import logoEspadas from "../src/logosSvg/espadas-icon.svg"
+import logoParrilla from "../src/logosSvg/parrilla-icon.svg"
+import logoTaco from "../src/logosSvg/taco-icon.svg"
+import logoCarpa from "../src/logosSvg/mobiliario-icon.svg"
+import logoMesero from "../src/logosSvg/mesero-icon.svg"
+import logoDj from "../src/logosSvg/dj-icon.svg"
+
 import sendEmail from "../utils/mailer.server";
 
 export async function action({ request }: ActionFunctionArgs) {
@@ -71,16 +78,17 @@ export default function Index() {
 
   return (
     <>
-      <main className="max-w-6xl mx-auto bg-azulOscuro">
+      <main className="max-w-6xl mx-auto bg-transparent">
+        <div className="noise"></div>
         <section className="px-2 lg:px-8 pt-20">
           <h2 className="mb-24 text-white text-center uppercase text-3xl font-open tracking-wider">Nuestros servicios</h2>
           <div className="md:grid gap-y-12 gap-x-6 md:grid-cols-2 lg:grid-cols-3">
-            <CardServicios route="/espadas-brasilenas" img={espadas} titulo={"Espadas brasileñas"} />
-            <CardServicios route="/parrilladas" img={parrilla} titulo={"Parrilladas"} />
-            <CardServicios route="/personal" img={meseros} titulo={"Meseros y bartender"} />
-            <CardServicios route="/tacos" img={tacos} titulo={"Buffet de tacos"} />
-            <CardServicios route="/mobiliario" img={moviliario} titulo={"Renta de mobiliario"} />
-            <CardServicios route="/personal" img={dj} titulo={"Audio Dj"} />
+            <CardServicios logo={logoEspadas} route="/espadas-brasilenas" img={espadas} titulo={"Espadas brasileñas"} />
+            <CardServicios logo={logoParrilla} route="/parrilladas" img={parrilla} titulo={"Parrilladas"} />
+            <CardServicios logo={logoMesero} route="/personal" img={meseros} titulo={"Meseros y bartender"} />
+            <CardServicios logo={logoTaco} route="/tacos" img={tacos} titulo={"Buffet de tacos"} />
+            <CardServicios logo={logoCarpa} route="/mobiliario" img={moviliario} titulo={"Renta de mobiliario"} />
+            <CardServicios logo={logoDj} route="/personal" img={dj} titulo={"Audio Dj"} />
           </div>
         </section>
         <SobreNosotros />

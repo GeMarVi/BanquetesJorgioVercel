@@ -3,25 +3,22 @@ import Btn from "./Btn";
 interface CardServiciosProps {
   img: string
   titulo: string
-  route:string
+  route: string
+  logo: string
 }
 
-const CardServicios: React.FC<CardServiciosProps> = ({ img, titulo, route }) => {
+const CardServicios: React.FC<CardServiciosProps> = ({ img, titulo, route, logo }) => {
   return (
-    <div className="relative mb-16 md:mb-0 mx-4 md:mx-0 flex w-auto flex-col bg-opaco border border-gray-500 bg-clip-border text-gray-700 hover:scale-105 transition-transform ease-in">
+    <div className="relative mb-16 md:mb-0 mx-4 md:mx-0 flex w-auto flex-col border border-gray-500 bg-clip-border text-gray-700">
       <div className="relative mx-4 -mt-6 h-60 w-auto overflow-hidden bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40">
-          <img className="object-cover h-full w-full" src={img} alt={`Imagen donde se ve el servicio de ${titulo} de banquetes Jorgio`} />
+        <img className="object-cover h-full w-full" src={img} alt={`Imagen donde se ve el servicio de ${titulo} de banquetes Jorgio`} />
       </div>
-      <div className="p-6">
-        <h5 className="mb-2 block font-monse text-gray-100 text-xl font-semibold leading-snug tracking-normal uppercase antialiased">
+      <div className="p-6 flex flex-col gap-4 justify-between">
+        <div className="bg-cover bg-no-repeat w-8 h-8" style={{ backgroundImage: `url(${logo})` }}></div>
+        <h5 className="mb-2 block font-title text-2xl text-gray-100 font-extrabold">
           {titulo}
         </h5>
-        {/* <p className="block font-sans text-base text-white font-light leading-relaxed text-inherit antialiased">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc felis ligula.
-        </p> */}
-      </div>
-      <div className="p-6 pt-0">
-          <Btn isLink={true} route={route} claseBgBtn="" claseBgLine="" claseBefore="before:-left-[3rem]" value="Mas información"/>
+        <Btn isLink={true} route={route} value="Mas información" />
       </div>
     </div>
   );

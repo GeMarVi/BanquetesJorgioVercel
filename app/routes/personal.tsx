@@ -1,40 +1,97 @@
-import { MetaFunction } from "@vercel/remix"
+import { MetaFunction } from "@vercel/remix";
+import { useState, useEffect } from "react";
+
 import Btn from "../components/Btn"
 import dj2 from "../src/dj2.webp"
 import meseros from "../src/meseros.webp"
-import bg from "../src/bg-carnes.svg"
+import ListaCarnes from "~/components/ListaCarnes";
+
+import { Autoplay, Pagination, Navigation, EffectFlip } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+import 'swiper/css/effect-flip';
 
 export const meta: MetaFunction = () => {
     return [
-      { title: "Mobiliario" },
-      { name: "description", content: "Deja que nuestro personal se encargue de todo tu solo disfruta, nuestros meseros atenderán a tus invitados con atención y detalle, nuestro barman aporta deliciosa bebidas y cocteles y nuestro Dj hará de tu evento algo vívido y mágico" },
+        { title: "Espadas Brasileñas" },
+        { name: "description", content: "Disfruta de nuestro exquisito Buffet de espadas brasileñas, cortes de carne exquisitos y calidad superior" },
     ];
-  };
+};
 
-const personal = () => {
+const moviliario = () => {
+
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const handleResize = () => {
+            // Actualizar el estado según el ancho de la ventana
+            setIsMobile(window.innerWidth < 1024);
+        };
+        window.addEventListener('resize', handleResize);
+        handleResize();
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+    
+     const meserosArray = ["Deja que nuestro personal Profesional se encargue de brindar una experiencia impecable, te atendemos como te mereces"]
+     const barmanArray = ["Las buenas bebidas nunca deben faltar en un evento, disfruta de la increible explosión de sabor que nuestro barman aporta a todas tus bebidas"]
+     const djArray = ["Experimenta la magia de la música con una calidad de audio excepcional que hará vibrar cada rincón. Contrata un Dj con equipo de primera para una experiencia sonora inolvidable"]
+
+    const images = [
+       meseros,
+       dj2,
+    ]
+
     return (
-        <main className="max-w-6xl -mt-[8rem] md:mt-0 text-center mx-auto bg-azulOscuro text-white md:py-12">
-            <div className="flex flex-col">
-                <div className="md:flex gap-4 lg:gap-0">
-                <div style={{ backgroundImage: `url(${bg})` }} className="bg-cover bg-no-repeat bg-center py-[3.5rem] lg:py-8 flex flex-col gap-2 md:w-1/2 md:justify-center">
-                        <h4 className="text-2xl text-center font-monse font-bold uppercase pb-4">Meseros y Barman</h4>
-                        <p className="text-md text-gray-200 text-center font-monse uppercase tracking-wider">Deja que nuestro personal Profesional se encargue de brindar una experiencia impecable, desde un servicio atento hasta coctéles irresistibles</p>
-                    </div>
-                    <img className="flex-1 md:w-1/2 w-[95%] mx-auto" src={meseros} alt="Imagen de las Espadas brasileñas" />
+        <main className="bg-cover bg-no-repeat bg-center max-w-7xl -mt-[8rem] md:mt-0 mx-auto pb-16 md:px-0 text-center mx-aut bg-transparent text-white">
+            <div className="noise"></div>
+            <div className="flex flex-col lg:flex-row gap-4 items-center overflow-hidden section-routes-swiper">
+                <div className="flex flex-col gap-16 lg:w-[50%] p-8">
+                    <ListaCarnes clase="linea-separacion" title="Meseros" items={meserosArray} />
+                    <ListaCarnes clase="linea-separacion" title="Barman" items={barmanArray} />
+                    <ListaCarnes clase="linea-separacion" title="Dj" items={djArray} />
+                  
                 </div>
-                <div className="md:flex flex-row-reverse gap-4 lg:gap-0">
-                <div style={{ backgroundImage: `url(${bg})` }} className="bg-cover bg-no-repeat bg-center py-[3.5rem] lg:py-8 flex flex-col gap-2 md:w-1/2 md:justify-center">
-                        <h4 className="text-2xl text-center font-monse font-bold uppercase pb-4">Dj</h4>
-                        <p className="text-md text-gray-200 text-center font-monse uppercase tracking-wider">Experimenta la magia de la música con una calidad de audio excepcional que hará vibrar cada rincón. Contrata un Dj con equipo de primera para una experiencia sonora inolvidable</p>
-                    </div>
-                    <img className="flex-1 md:w-1/2 w-[95%] mx-auto" src={dj2} alt="Imagen de las Espadas brasileñas" />
+                <div className="w-[90vw] mx-auto lg:mx-0 lg:mt-0 lg:max-h-[80rem] lg:grid lg:grid-cols-11 lg:grid-rows-3 lg:gap-4 lg:w-[50%]">
+                    {isMobile ? (
+                        <Swiper
+                            effect={'flip'}
+                            centeredSlides={true}
+                            loop={true}
+                            autoplay={{
+                                delay: 3000,
+                                disableOnInteraction: false,
+                            }}
+                            pagination={{
+                                clickable: true,
+                            }}
+                            modules={[Autoplay, Pagination, Navigation, EffectFlip]}
+                        >
+                            {images.map( image => (
+                                <SwiperSlide key={Date.now()}><img className="w-full h-full object-cover" src={image} alt="" /></SwiperSlide>
+                            ))}
+                        </Swiper>) : (
+                        <>
+                            <div className="col-span-6 h-auto"><img className="w-full h-full object-cover" src={meseros} alt="" /></div>
+                            <div className="col-span-5 h-auto"><img className="w-full h-full object-cover" src={meseros} alt="" /></div>
+                            <div className="col-span-5 h-auto"><img className="w-full h-full object-cover" src={dj2} alt="" /></div>
+                            <div className="col-span-6 h-auto"><img className="w-full h-full object-cover" src={dj2} alt="" /></div>
+                            <div className="col-span-6 h-auto"><img className="w-full h-full object-cover" src={meseros} alt="" /></div>
+                            <div className="col-span-5 h-auto"><img className="w-full h-full object-cover" src={dj2} alt="" /></div>
+                        </>
+                    )}
                 </div>
             </div>
-            <div className="flex justify-center mt-16">
-                <Btn value="Cotiza tu servicio" claseBefore="before:-left-[2rem]" claseBgBtn="" claseBgLine="bg-azulOscuro" isLink={false} route="" />
+            <p className="text-center italic my-16 font-monse text-gray-300">Si no encuentras algún artículo que buscas en nuestro catálogo, no dudes en ponerte en contacto con nosotros y hacer tu pregunta.</p>
+            <div className="flex justify-center">
+                <Btn isLink={true} route="#" value="Cotiza tu servicio" />
             </div>
-        </main>
+        </main >
     )
 }
 
-export default personal
+export default moviliario

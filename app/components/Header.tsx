@@ -111,7 +111,7 @@ const Header = () => {
       <div ref={headerRef} className="mx-auto opacity-0 lg:h-auto lg:flex justify-between items-center lg:py-2">
         <div className="flex items-center lg:block justify-between px-6 py-3 lg:py-0">
           <Link to={"/"}>
-            <img src={logo} className="w-28 lg:w-36 relative z-[70]" alt="logo" />
+            <img src={logo} className="w-28 lg:w-32 relative z-[70]" alt="logo" />
           </Link>
           <div className="lg:hidden relative z-[200]" onClick={handleClick}>
             <BtnToggle active={active} setActive={setActive} />
@@ -119,20 +119,20 @@ const Header = () => {
         </div>
         <Navegacion setActive={setActive} active={active} />
         <div ref={btnDeskRef} className="mr-4 hidden lg:block">
-          <Btn isLink={false} route="" value="Contacto" claseBgBtn="bg-rojo" claseBgLine="hidden" claseBefore="before:-left-[1.7rem]" />
+          <Btn isLink={false} route="" value="Contacto"/>
         </div>
       </div>
-      <div style={{ backgroundImage: `url(${banner})` }} className="relative mx-auto h-[75vh] lg:h-[calc(100vh-204px)] bg-cover bg-no-repeat bg-center flex flex-col gap-6 justify-center items-center">
+      <div style={{ backgroundImage: `url(${banner})` }} className="relative mx-auto h-[75vh] lg:h-[calc(100vh-170px)] bg-cover bg-no-repeat bg-center flex flex-col gap-6 justify-center items-center">
         <div className="absolute top-0 bottom-0 left-0 right-0 gradient-banner"></div>
         <div ref={titleRef} className="flex flex-col gap-6 lg:gap-12 justify-center items-center -translate-x-[300%] lg:translate-x-0 lg:translate-y-8 lg:opacity-0 px-3 lg:px-0">
           {route == "/" ? <h1 className="text-7xl font-[1000] lg:text-[6rem] font-title uppercase">Jorgio</h1> : null
           }
-          <p className={`text-center font-title uppercase text-rojo ${route != "/" ? "font-[900] text-5xl lg:text-7xl" : "text-5xl font-bold"}`}>{title}</p>
+          <p className={`text-center font-title uppercase ${route != "/" ? "font-[900] text-5xl lg:text-7xl" : "text-5xl font-bold"}`}>{title}</p>
           <p className={`text-center font-title max-w-[50rem] ${route !== "/" ? "not-italic text-3xl font-bold" : "italic text-2xl font-light"}`}>"{description}"</p>
 
         </div>
         <div ref={btnRef} className="lg:hidden flex justify-center relative w-3/5 translate-x-[300%]">
-          <Btn isLink={false} route="" value="Contáctanos" claseBgBtn="bg-rojo" claseBgLine="hidden" claseBefore="before:-left-[1.7rem] before:bg-rojo" />
+          <Btn isLink={false} route="" value="Contáctanos"/>
         </div>
       </div>
     </header>

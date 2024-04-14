@@ -21,7 +21,7 @@ const Blog = () => {
 
     return (
 
-        <section className="pt-[8.5rem] lg:pt-[8rem] mb-[4.5rem]">
+        <section className="pt-[8.5rem] lg:pt-[8rem] mb-[4.5rem] section-blog">
             <h3 className="text-white text-center uppercase text-3xl font-open tracking-wider">Testimonios de nuestros Clientes</h3>
             <Swiper
                spaceBetween={30}
