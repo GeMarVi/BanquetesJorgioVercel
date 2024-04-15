@@ -2,24 +2,10 @@ import { useActionData } from "@remix-run/react";
 import type { ActionFunctionArgs } from "@vercel/remix";
 import { json, MetaFunction } from "@vercel/remix";
 
-import espadas from "../src/espadas-tres.webp"
-import parrilla from "../src/parrillada1.webp"
-import tacos from "../src/tacos.webp"
-import moviliario from "../src/moviliario.webp"
-import meseros from "../src/meseros.webp"
-import dj from "../src/DJ.webp"
-
 import AgendaTuCita from "../components/AgendaTuCita"
 import Blog from "../components/Blog"
 import CardServicios from "../components/CardServicios"
 import SobreNosotros from "../components/SobreNosotros";
-
-import logoEspadas from "../src/logosSvg/espadas-icon.svg"
-import logoParrilla from "../src/logosSvg/parrilla-icon.svg"
-import logoTaco from "../src/logosSvg/taco-icon.svg"
-import logoCarpa from "../src/logosSvg/mobiliario-icon.svg"
-import logoMesero from "../src/logosSvg/mesero-icon.svg"
-import logoDj from "../src/logosSvg/dj-icon.svg"
 
 import sendEmail from "../utils/mailer.server";
 import Video from "~/components/Video";
@@ -83,14 +69,9 @@ export default function Index() {
         <div className="noise"></div>
         <SobreNosotros />
         <section className="px-2 lg:px-8 pt-20">
-          <h2 className="mb-24 text-white text-center uppercase text-3xl font-open tracking-wider">Nuestros servicios</h2>
+          <h2 className="mb-24 text-white uppercase font-[1000] text-[3.5rem] w-3/4 font-Inter">Conoce todos los servicios que ofrecemos</h2>
           <div className="md:grid gap-y-12 gap-x-6 md:grid-cols-2 lg:grid-cols-3">
-            <CardServicios logo={logoEspadas} route="/espadas-brasilenas" img={espadas} titulo={"Espadas brasileñas"} />
-            <CardServicios logo={logoParrilla} route="/parrilladas" img={parrilla} titulo={"Parrilladas"} />
-            <CardServicios logo={logoMesero} route="/personal" img={meseros} titulo={"Meseros y bartender"} />
-            <CardServicios logo={logoTaco} route="/tacos" img={tacos} titulo={"Buffet de tacos"} />
-            <CardServicios logo={logoCarpa} route="/mobiliario" img={moviliario} titulo={"Renta de mobiliario"} />
-            <CardServicios logo={logoDj} route="/personal" img={dj} titulo={"Audio Dj"} />
+            <CardServicios />
           </div>
         </section>
         <Blog />

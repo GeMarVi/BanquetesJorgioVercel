@@ -5,8 +5,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        'title': ['"Nunito"' ,'sans-serif'],
-        'monse': ['"Montserrat"' , 'sans-serif'],
+        'Nunito': ['"Nunito"' ,'sans-serif'],
+        'Inter': ['"Inter"' , 'sans-serif'],
         'open': ['"open_sanscondensed_light"' , 'serif'],
       },
       backgroundColor:{

@@ -12,7 +12,7 @@ type ActionData = {
 const FormularioContacto = (data: ActionData) => {
  
   return (
-    <Form method="post" className="flex flex-col relative p-8 gap-2 flex-1 lg:mt-0 border-solid border-[1px] border-gray-200">
+    <Form method="post" className="flex flex-col relative p-8 gap-2 flex-1 lg:mt-0 border border-gray-500 bg-clip-border">
           <div className="flexform gap-2 lg:gap-0">
             <div>
               <label>
@@ -21,7 +21,7 @@ const FormularioContacto = (data: ActionData) => {
                   <span className="text-red-600">{data?.nombre}</span>
                 ) : null}
               </label>
-              <input name="nombre" type="text" className="input bg-transparent text-paragraph" />
+              <input name="nombre" type="text" className="input bg-transparent text-paragraph border border-gray-500 bg-clip-border" />
             </div>
             <div>
               <label>
@@ -30,7 +30,7 @@ const FormularioContacto = (data: ActionData) => {
                   <span className="text-red-600">{data?.apellido}</span>
                 ) : null}
               </label>
-              <input name="apellido" type="text" className="input bg-transparent text-paragraph" />
+              <input name="apellido" type="text" className="input bg-transparent text-paragraph border border-gray-500 bg-clip-border" />
             </div>
           </div>
           <div>
@@ -40,7 +40,7 @@ const FormularioContacto = (data: ActionData) => {
                 <span className="text-red-600">{data?.email}</span>
               ) : null}
             </label>
-            <input name="email" type="email" className="input bg-transparent text-paragraph" />
+            <input name="email" type="email" className="input bg-transparent text-paragraph border border-gray-500 bg-clip-border" />
           </div>
           <div>
             <label>
@@ -49,7 +49,7 @@ const FormularioContacto = (data: ActionData) => {
                 <span className="text-red-600">{data?.telefono}</span>
               ) : null}
             </label>
-            <input type="tel" name="telefono" className="input bg-transparent text-paragraph" />
+            <input type="tel" name="telefono" className="input bg-transparent text-paragraph border border-gray-500 bg-clip-border" />
           </div>
           <div>
             <label>
@@ -58,10 +58,10 @@ const FormularioContacto = (data: ActionData) => {
                 <span className="text-red-600">{data?.mensaje}</span>
               ) : null}
             </label>
-            <textarea name="mensaje" className="input01 bg-transparent text-paragraph"></textarea>
+            <textarea name="mensaje" className="input01 bg-transparent text-paragraph border border-gray-500 bg-clip-border"></textarea>
           </div>
        
-            <Btn isLink={false} route="/" value="Enviar" />
+            <Btn target={false} isLink={false} route="/" value="Enviar" />
         
         </Form>
   )

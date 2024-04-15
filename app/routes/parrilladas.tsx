@@ -111,7 +111,7 @@ const parrilladas = () => {
             </div>
             <p className="text-center italic my-16 font-monse text-gray-300">Si no encuentras algún artículo que buscas en nuestro catálogo, no dudes en ponerte en contacto con nosotros y hacer tu pregunta.</p>
             <div className="flex justify-center">
-                <Btn isLink={true} route="#" value="Cotiza tu servicio" />
+                <Btn target={false} isLink={true} route="#" value="Cotiza tu servicio" />
             </div>
         </main >
     )

@@ -10,7 +10,7 @@ interface ComentariosProps {
   
   const Comentarios: React.FC<ComentariosProps> = ({ src, name, location, description, social }) => {
     return (
-      <figure className='flex w-[95vw] flex-col justify-between md:w-3/4 min-h-72 mx-auto p-8 border-solid border-[1px]'>
+      <figure className='flex w-[95vw] flex-col justify-between md:w-3/4 min-h-72 mx-auto p-8 border border-gray-500 bg-clip-border'>
         <div className='flex items-center gap-6 max-w-[19rem]'>
           <div className="rounded-[100%] overflow-hidden">
             <img className="w-20" src={src} alt="user-photo" />

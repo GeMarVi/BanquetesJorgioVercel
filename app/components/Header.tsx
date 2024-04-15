@@ -119,20 +119,20 @@ const Header = () => {
         </div>
         <Navegacion setActive={setActive} active={active} />
         <div ref={btnDeskRef} className="mr-4 hidden lg:block">
-          <Btn isLink={false} route="" value="Contacto"/>
+          <Btn target={false} isLink={false} route="" value="Contacto"/>
         </div>
       </div>
       <div style={{ backgroundImage: `url(${banner})` }} className="relative mx-auto h-[75vh] lg:h-[calc(100vh-170px)] bg-cover bg-no-repeat bg-center flex flex-col gap-6 justify-center items-center">
         <div className="absolute top-0 bottom-0 left-0 right-0 gradient-banner"></div>
         <div ref={titleRef} className="flex flex-col gap-6 lg:gap-12 justify-center items-center -translate-x-[300%] lg:translate-x-0 lg:translate-y-8 lg:opacity-0 px-3 lg:px-0">
-          {route == "/" ? <h1 className="text-7xl font-[1000] lg:text-[6rem] font-title uppercase">Jorgio</h1> : null
+          {route == "/" ? <h1 className="text-7xl font-[1000] lg:text-[6rem] font-Inter uppercase">Jorgio</h1> : null
           }
-          <p className={`text-center font-title uppercase ${route != "/" ? "font-[900] text-5xl lg:text-7xl" : "text-5xl font-bold"}`}>{title}</p>
-          <p className={`text-center font-title max-w-[50rem] ${route !== "/" ? "not-italic text-3xl font-bold" : "italic text-2xl font-light"}`}>"{description}"</p>
+          <p className={`text-center font-Inter uppercase ${route != "/" ? "font-[900] text-5xl lg:text-7xl" : "text-5xl font-bold"}`}>{title}</p>
+          <p className={`text-center font-Inter max-w-[50rem] ${route !== "/" ? "not-italic text-3xl font-bold" : "italic text-2xl font-light"}`}>"{description}"</p>
 
         </div>
         <div ref={btnRef} className="lg:hidden flex justify-center relative w-3/5 translate-x-[300%]">
-          <Btn isLink={false} route="" value="Contáctanos"/>
+          <Btn target={false} isLink={false} route="" value="Contáctanos"/>
         </div>
       </div>
     </header>
