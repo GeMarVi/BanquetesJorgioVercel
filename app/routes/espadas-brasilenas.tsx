@@ -104,8 +104,8 @@ const espadasBrasilenas = () => {
                             }}
                             modules={[Autoplay, Pagination, Navigation, EffectFlip]}
                         >
-                            {images.map( image => (
-                                <SwiperSlide key={Date.now()}><img className="w-full h-full object-cover" src={image} alt="" /></SwiperSlide>
+                            {images.map( (image, index) => (
+                                <SwiperSlide key={index}><img className="w-full h-full object-cover" src={image} alt="" /></SwiperSlide>
                             ))}
                         </Swiper>) : (
                         <>

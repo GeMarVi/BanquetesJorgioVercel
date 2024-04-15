@@ -12,11 +12,11 @@ type ActionData = {
 const FormularioContacto = (data: ActionData) => {
  
   return (
-    <Form method="post" className="flex flex-col relative p-8 gap-2 flex-1 lg:mt-0 border-solid border-[1px] border-gray-500">
+    <Form method="post" className="flex flex-col relative p-8 gap-2 flex-1 lg:mt-0 border-solid border-[1px] border-gray-200">
           <div className="flexform gap-2 lg:gap-0">
             <div>
               <label>
-                <span className="text-gray-200 uppercase font-open text-lg">Nombre</span>
+                <span className="text-gray-200 uppercase font-title text-lg font-light">Nombre</span>
                 {data.nombre ? (
                   <span className="text-red-600">{data?.nombre}</span>
                 ) : null}
@@ -25,7 +25,7 @@ const FormularioContacto = (data: ActionData) => {
             </div>
             <div>
               <label>
-                <span className="text-gray-200 uppercase font-open text-lg">Apellido</span>
+                <span className="text-gray-200 uppercase font-title text-lg font-light">Apellido</span>
                 {data?.apellido ? (
                   <span className="text-red-600">{data?.apellido}</span>
                 ) : null}
@@ -35,7 +35,7 @@ const FormularioContacto = (data: ActionData) => {
           </div>
           <div>
             <label>
-              <span className="text-gray-200 uppercase font-open text-lg" >Email</span>
+              <span className="text-gray-200 uppercase font-title text-lg font-light" >Email</span>
               {data?.email ? (
                 <span className="text-red-600">{data?.email}</span>
               ) : null}
@@ -44,7 +44,7 @@ const FormularioContacto = (data: ActionData) => {
           </div>
           <div>
             <label>
-              <span className="text-gray-200 uppercase font-open text-lg">Telefono de Contacto</span>
+              <span className="text-gray-200 uppercase font-title text-lg font-light">Telefono de Contacto</span>
               {data?.telefono ? (
                 <span className="text-red-600">{data?.telefono}</span>
               ) : null}
@@ -53,7 +53,7 @@ const FormularioContacto = (data: ActionData) => {
           </div>
           <div>
             <label>
-              <span className="text-gray-200 uppercase font-open text-lg">Mensaje</span>
+              <span className="text-gray-200 uppercase font-title text-lg font-light">Mensaje</span>
               {data?.mensaje ? (
                 <span className="text-red-600">{data?.mensaje}</span>
               ) : null}
