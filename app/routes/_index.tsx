@@ -65,11 +65,10 @@ export default function Index() {
 
   return (
     <>
-      <main className="max-w-6xl mx-auto bg-transparent">
-        <div className="noise"></div>
+      <main className="bg-transparent">
         <SobreNosotros />
-        <section className="px-2 lg:px-8 pt-20">
-          <h2 className="mb-24 text-white uppercase font-[1000] text-[3.5rem] w-3/4 font-Inter">Conoce todos los servicios que ofrecemos</h2>
+        <section className="px-2 lg:px-8 pt-20 max-w-6xl mx-auto">
+          <h2 className="mb-24 text-center text-heading text-5xl font-clash">Conoce todos los servicios que ofrecemos</h2>
           <div className="md:grid gap-y-12 gap-x-6 md:grid-cols-2 lg:grid-cols-3">
             <CardServicios />
           </div>

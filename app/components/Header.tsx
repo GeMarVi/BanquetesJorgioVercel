@@ -107,7 +107,7 @@ const Header = () => {
   }
 
   return (
-    <header className="relative h-screen text-white -z-20 overflow-hidden">
+    <header style={{ backgroundImage: `url(${banner})` }} className="relative bg-center bg-no-repeat bg-cover h-screen text-white -z-20 overflow-hidden">
       <div ref={headerRef} className="mx-auto opacity-0 lg:h-auto lg:flex justify-between items-center lg:py-2">
         <div className="flex items-center lg:block justify-between px-6 py-3 lg:py-0">
           <Link to={"/"}>
@@ -119,21 +119,21 @@ const Header = () => {
         </div>
         <Navegacion setActive={setActive} active={active} />
         <div ref={btnDeskRef} className="mr-4 hidden lg:block">
-          <Btn target={false} isLink={false} route="" value="Contacto"/>
+          <Btn target={false} isLink={false} route="" value="Contacto" />
         </div>
       </div>
-      <div style={{ backgroundImage: `url(${banner})` }} className="relative mx-auto h-[75vh] lg:h-[calc(100vh-170px)] bg-cover bg-no-repeat bg-center flex flex-col gap-6 justify-center items-center">
-        <div className="absolute top-0 bottom-0 left-0 right-0 gradient-banner"></div>
-        <div ref={titleRef} className="flex flex-col gap-6 lg:gap-12 justify-center items-center -translate-x-[300%] lg:translate-x-0 lg:translate-y-8 lg:opacity-0 px-3 lg:px-0">
-          {route == "/" ? <h1 className="text-7xl font-[1000] lg:text-[6rem] font-Inter uppercase">Jorgio</h1> : null
+      <div className="relative mx-auto h-[75vh] lg:h-screen flex flex-col gap-6 justify-center">
+        <div ref={titleRef} className="relative mx-4 h-[60vh] lg:h-auto lg:mx-0 flex flex-col gap-6 lg:gap-12 justify-center -translate-x-[300%] lg:translate-x-0 lg:translate-y-8 lg:opacity-0 lg:ml-20 p-14 lg:w-max bg-black bg-opacity-70">
+          <div className="absolute border border-gray-50 w-[80%] lg:w-[95%] h-[85%] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
+          {route == "/" ? <h1 className="text-7xl lg:text-[6rem] font-clash uppercase text-center lg:text-left">Jorgio</h1> : null
           }
-          <p className={`text-center font-Inter uppercase ${route != "/" ? "font-[900] text-5xl lg:text-7xl" : "text-5xl font-bold"}`}>{title}</p>
-          <p className={`text-center font-Inter max-w-[50rem] ${route !== "/" ? "not-italic text-3xl font-bold" : "italic text-2xl font-light"}`}>"{description}"</p>
-
+          <p className={`font-clash ${route != "/" ? "font-[900] text-5xl text-center lg:text-left lg:text-7xl" : "text-4xl lg:text-5xl text-center lg:text-left font-bold"}`}>{title}</p>
+          <p className={`font-variable max-w-[50rem] ${route !== "/" ? "text-3xl text-center lg:text-left font-normal" : "text-2xl text-center lg:text-left font-light"}`}>"{description}"</p>
+          <div ref={btnRef} className="lg:hidden flex justify-center relative translate-x-[300%]">
+             <Btn target={false} isLink={false} route="" value="Contáctanos" />
+          </div>
         </div>
-        <div ref={btnRef} className="lg:hidden flex justify-center relative w-3/5 translate-x-[300%]">
-          <Btn target={false} isLink={false} route="" value="Contáctanos"/>
-        </div>
+        
       </div>
     </header>
   )

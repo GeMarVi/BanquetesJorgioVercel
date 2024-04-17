@@ -11,8 +11,8 @@ interface BtnProps {
 const Btn: React.FC<BtnProps> = ({ isLink, value, route, target }) => {
   if (isLink) {
     return (
-      <Link to={route} target={target ? "_blank" : "_self"} className="cursor-pointer uppercase relative group overflow-hidden border-2 px-8 py-2 border-rojo">
-        <span className="font-bold text-white text-sm font-Inter relative z-10 group-hover:text-white duration-500">{value}</span>
+      <Link to={route} target={target ? "_blank" : "_self"} className="cursor-pointer relative group overflow-hidden border-2 px-8 py-2 border-[#36392D]">
+        <span className="font-normal text-heading text-xl font-variable relative z-10 group-hover:text-white duration-500">{value}</span>
         <span className="absolute top-0 left-0 w-full bg-rojo duration-500 group-hover:-translate-x-full h-full"></span>
         <span className="absolute top-0 left-0 w-full bg-rojo duration-500 group-hover:translate-x-full h-full"></span>
         <span className="absolute top-0 left-0 w-full bg-rojo duration-500 delay-300 group-hover:-translate-y-full h-full"></span>
@@ -21,8 +21,8 @@ const Btn: React.FC<BtnProps> = ({ isLink, value, route, target }) => {
     );
   } else {
     return (
-      <button className="cursor-pointer uppercase relative group overflow-hidden border-2 px-8 py-2 border-rojo">
-        <span className="font-bold text-white text-sm font-Inter relative z-10 group-hover:text-white duration-500">{value}</span>
+      <button className="cursor-pointer relative group overflow-hidden border-2 px-8 py-2 border-[#36392D]">
+        <span className="font-normal text-heading text-xl font-variable relative z-10 group-hover:text-white duration-500">{value}</span>
         <span className="absolute top-0 left-0 w-full bg-rojo duration-500 group-hover:-translate-x-full h-full"></span>
         <span className="absolute top-0 left-0 w-full bg-rojo duration-500 group-hover:translate-x-full h-full"></span>
         <span className="absolute top-0 left-0 w-full bg-rojo duration-500 delay-300 group-hover:-translate-y-full h-full"></span>

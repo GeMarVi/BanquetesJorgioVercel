@@ -71,8 +71,9 @@ const parrilladas = () => {
     ]
 
     return (
-        <main className="bg-cover bg-no-repeat bg-center max-w-7xl -mt-[8rem] md:mt-0 mx-auto pb-16 md:px-0 text-center mx-aut bg-transparent text-white">
+        <main className="bg-cover bg-no-repeat bg-center max-w-6xl -mt-[8rem] md:mt-0 mx-auto pb-16 md:px-0 text-center mx-aut bg-transparent text-white">
             <div className="noise"></div>
+            <h3 className="text-heading text-center uppercase text-5xl font-clash tracking-wider pt-16 pb-16">Menú</h3>
             <h3 className="text-white text-center uppercase text-3xl font-open tracking-wider pt-16 pb-16">Menú</h3>
             <div className="flex flex-col lg:flex-row gap-4 items-center overflow-hidden section-routes-swiper">
                 <div className="flex flex-col gap-16 lg:w-[40%] p-8">
@@ -109,7 +110,7 @@ const parrilladas = () => {
                     )}
                 </div>
             </div>
-            <p className="text-center italic my-16 font-monse text-gray-300">Si no encuentras algún artículo que buscas en nuestro catálogo, no dudes en ponerte en contacto con nosotros y hacer tu pregunta.</p>
+            <p className="text-center text-lg my-16 font-Inter text-heading">Si no encuentras algún artículo que buscas en nuestro catálogo, no dudes en ponerte en contacto con nosotros y hacer tu pregunta.</p>
             <div className="flex justify-center">
                 <Btn target={false} isLink={true} route="#" value="Cotiza tu servicio" />
             </div>

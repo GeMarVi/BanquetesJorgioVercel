@@ -8,16 +8,19 @@ export default {
         'Nunito': ['"Nunito"' ,'sans-serif'],
         'Inter': ['"Inter"' , 'sans-serif'],
         'open': ['"open_sanscondensed_light"' , 'serif'],
+        'clash': ['"ClashDisplay-Bold"' , 'serif'],
+        'variable': ['"ClashDisplay-Variable"' , 'serif'],
+
       },
       backgroundColor:{
         'primaryBg' : "#F8F6F4",
-        'rojo': "#D24545",
-        'rojoOscuro': "#A94438",
-        'opaco': "#1E293B",
-        'azulOscuro': "#0A1A22",
+        'rojo': "#F9EFDB",
+        'tercero': "#878F70",
+        'secundario': "#B7BCA9",
+        'azulOscuro': "#CFD2C6",
       },
       textColor:{
-        'paragraph': "#e5e7eb",
+        'heading': "#36392D",
         'rojo': "#D24545"
       }
     },
