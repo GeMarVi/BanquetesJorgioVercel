@@ -73,7 +73,7 @@ const FormularioContacto = (data: ActionData) => {
         <div className="flex gap-2 justify-between items-center">
           <div>
             <label>
-              <span className="font-variable text-lg  font-normal text-heading">Ciudad de México</span>
+              <span className="font-variable text-lg  font-normal text-heading">CDMX</span>
               {data?.telefono ? (
                 <span className="text-red-600">{data?.telefono}</span>
               ) : null}

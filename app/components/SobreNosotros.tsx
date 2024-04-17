@@ -17,11 +17,11 @@ const SobreNosotros = () => {
                         Ofrecemos una gama completa de servicios para garantizar que tu evento sea un éxito absoluto.
                     </p>
                     <div className="flex justify-between items-center text-heading">
-                        <div className="flex justify-between gap-4 font-title items-center px-4 border-l-2 lg:border-l-4 border-[#36392D]">
+                        <div className="flex justify-between gap-2 lg:gap-4 font-title items-center px-2 lg:px-4 border-l-2 lg:border-l-4 border-[#36392D]">
                             <p className="text-3xl lg:text-5xl font-extrabold font-title">20</p>
                             <p>Años de <span className="block text-heading font-bold text-sm lg:text-base uppercase">Experiencia</span></p>
                         </div>
-                        <div className="flex justify-between gap-4 font-title items-center px-4 border-l-2 lg:border-l-4 border-[#36392D]">
+                        <div className="flex justify-between gap-2 lg:gap-4 font-title items-center px-2 lg:px-4 border-l-2 lg:border-l-4 border-[#36392D]">
                             <p className="text-3xl lg:text-5xl font-extrabold font-title">300+</p>
                             <p>Banquetes <span className="block text-heading font-bold text-sm lg:text-base uppercase">Exitosos</span></p>
                         </div>

@@ -96,12 +96,12 @@
   justify-content: center;
 }
 
-.section-blog .swiper .swiper-pagination-bullet-active {
-  background-color: #E72929;
+.swiper .swiper-pagination-bullet-active {
+  background-color: #36392D;
 }
 
-.section-blog .swiper .swiper-pagination-bullet {
-  background-color: #E72929;
+.swiper .swiper-pagination-bullet {
+  background-color: #36392D;
 }
 
 @media (min-width: 1025px) {
@@ -116,14 +116,6 @@
     justify-content: center;
     align-items: center;
     flex-shrink: 1 !important;
-  }
-
-  .section-blog .swiper .swiper-pagination-bullet-active {
-    background-color: #E72929;
-  }
-
-  .section-blog .swiper .swiper-pagination-bullet {
-    background-color: #E72929;
   }
 }
 
@@ -141,13 +133,6 @@
   width: 90vw !important;
 }
 
-.section-routes-swiper .swiper .swiper-pagination-bullet-active {
-  background-color: #E72929;
-}
-
-.section-routes-swiper .swiper .swiper-pagination-bullet {
-  background-color: #E72929;
-}
 
 .whatsapp-svg::before {
   content: "";

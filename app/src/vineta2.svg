@@ -16,11 +16,11 @@
          rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata><g
      transform="matrix(0.02408331,0,0,-0.02408298,-14.825444,90.713362)"
-     fill="#d24545"
+     fill="#36392D"
      id="g1"
      style="stroke-width:41.52281606;stroke-dasharray:none"><path
        d="m 927.01,3184.7 c -149.44,0 -270.58,121.14 -270.58,270.58 0,149.44 121.14,270.58 270.58,270.58 149.44,0 270.58,-121.14 270.58,-270.58 0,-149.44 -121.14,-270.58 -270.58,-270.58 m -248.67,270.58 c 0,-137.11 111.55,-248.67 248.67,-248.67 137.12,0 248.67,111.55 248.67,248.67 0,137.12 -111.54,248.67 -248.67,248.67 -137.12,0 -248.67,-111.54 -248.67,-248.67"
-       stroke="#d24545"
+       stroke="#36392D"
        stroke-width="15.75"
        style="stroke-width:41.52281606;stroke-dasharray:none;paint-order:fill markers stroke"
        id="path1" /><circle

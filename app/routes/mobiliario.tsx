@@ -39,27 +39,26 @@ const moviliario = () => {
             window.removeEventListener('resize', handleResize);
         };
     }, []);
-    
-     const carpasArray = ["Solución practica y elegante para proteger a tus invitados, desde eventos al aire libre hasta celebraciones bajo techo, nuestras carpas son la opción ideal para adaptarse a cualquier entorno"]
-     const sillasArray = ["Asegura el éxito de tu evento con nuestras mesas y sillas de calidad superiór. Brinda a tus invitados un espacio comodo y estilisado, nuestro mobiliario versátil se adapta a  eventos corporativos y celebraciones especiales"]
-     const salasLoungeArray = ["Crea espacios acogedores para que tus invitados disfruten con estilo y comodidad. Con nuestros asientos premium, haz que tu evento destaque por su elegancia"]
-     const periquerasArray =  ["Dale un toque moderno a tu evento con nuestras periqueras tipo bar, ofrece comodidad y estilo a tus invitados"]
-     const pistaArray = ["Haz que tu evento brille con nuestra pista de baile iluminada crea un ambiente electrizante donde la diversión y la musica se fusionan."]
+
+    const carpasArray = ["Solución practica y elegante para proteger a tus invitados, desde eventos al aire libre hasta celebraciones bajo techo, nuestras carpas son la opción ideal para adaptarse a cualquier entorno"]
+    const sillasArray = ["Asegura el éxito de tu evento con nuestras mesas y sillas de calidad superiór. Brinda a tus invitados un espacio comodo y estilisado, nuestro mobiliario versátil se adapta a  eventos corporativos y celebraciones especiales"]
+    const salasLoungeArray = ["Crea espacios acogedores para que tus invitados disfruten con estilo y comodidad. Con nuestros asientos premium, haz que tu evento destaque por su elegancia"]
+    const periquerasArray = ["Dale un toque moderno a tu evento con nuestras periqueras tipo bar, ofrece comodidad y estilo a tus invitados"]
+    const pistaArray = ["Haz que tu evento brille con nuestra pista de baile iluminada crea un ambiente electrizante donde la diversión y la musica se fusionan."]
 
     const images = [
-       mesas,
-       salas,
-       carpas,
-       periqueras,
-       pistas,
+        mesas,
+        salas,
+        carpas,
+        periqueras,
+        pistas,
     ]
 
     return (
-        <main className="bg-cover bg-no-repeat bg-center max-w-6xl -mt-[8rem] md:mt-0 mx-auto pb-16 md:px-0 text-center mx-aut bg-transparent text-white">
-            <div className="noise"></div>
-            <h3 className="text-heading text-center uppercase text-5xl font-clash tracking-wider pt-16 pb-16">Menú</h3>
+        <main className="bg-cover bg-no-repeat bg-center max-w-6xl md:mt-0 mx-auto pb-16 md:px-0 text-center mx-aut bg-transparent text-white">
+            <h3 className="text-heading text-center uppercase text-4xl lg:text-5xl font-clash tracking-wider pt-16 pb-16">Conoce todos los mobiliarios que manejamos</h3>
             <div className="flex flex-col lg:flex-row gap-4 items-center overflow-hidden section-routes-swiper">
-                <div className="flex flex-col gap-16 lg:w-[50%] p-8">
+                <div className="flex flex-col gap-16 lg:w-[50%] p-6 lg:p-8">
                     <ListaCarnes clase="linea-separacion" title="Sillas y mesas" items={sillasArray} />
                     <ListaCarnes clase="linea-separacion" title="salas lounge" items={salasLoungeArray} />
                     <ListaCarnes clase="linea-separacion" title="carpas" items={carpasArray} />
@@ -81,7 +80,7 @@ const moviliario = () => {
                             }}
                             modules={[Autoplay, Pagination, Navigation, EffectFlip]}
                         >
-                            {images.map( (image, index) => (
+                            {images.map((image, index) => (
                                 <SwiperSlide key={index}><img className="w-full h-full object-cover" src={image} alt="" /></SwiperSlide>
                             ))}
                         </Swiper>) : (

@@ -47,11 +47,10 @@ const moviliario = () => {
     ]
 
     return (
-        <main className="bg-cover bg-no-repeat bg-center max-w-6xl -mt-[8rem] md:mt-0 mx-auto pb-16 md:px-0 text-center mx-aut bg-transparent text-white">
-            <div className="noise"></div>
-            <h3 className="text-heading text-center uppercase text-5xl font-clash tracking-wider pt-16 pb-16">Menú</h3>
+        <main className="bg-cover bg-no-repeat bg-center max-w-6xl md:mt-0 mx-auto pb-16 md:px-0 text-center mx-aut bg-transparent text-white">
+            <h3 className="text-heading text-center uppercase text-4xl lg:text-5xl font-clash tracking-wider pt-16 pb-16">Tenemos un equipo con experiencia y muy profesional</h3>
             <div className="flex flex-col lg:flex-row gap-4 items-center overflow-hidden section-routes-swiper">
-                <div className="flex flex-col gap-16 lg:w-[50%] p-8">
+                <div className="flex flex-col gap-16 lg:w-[50%] p-6 lg:p-8">
                     <ListaCarnes clase="linea-separacion" title="Meseros" items={meserosArray} />
                     <ListaCarnes clase="linea-separacion" title="Barman" items={barmanArray} />
                     <ListaCarnes clase="linea-separacion" title="Dj" items={djArray} />
