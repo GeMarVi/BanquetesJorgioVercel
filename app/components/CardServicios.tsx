@@ -1,18 +1,18 @@
 import Btn from "./Btn";
 
-import espadas from "~/src/espadas-tres.webp"
+import espadas from "../src/espadas-tres.webp"
 import parrilla from "~/src/parrillada1.webp"
-import tacos from "~/src/tacos.webp"
-import mobiliario from "~/src/moviliario.webp"
-import meseros from "~/src/meseros.webp"
-import dj from "~/src/DJ.webp"
+import tacos from "../src/tacos.webp"
+import mobiliario from "../src/moviliario.webp"
+import meseros from "../src/meseros.webp"
+import dj from "../src/DJ.webp"
 
-import logoEspadas from "~/src/logosSvg/espadas-icon.svg"
-import logoParrilla from "~/src/logosSvg/parrilla-icon.svg"
-import logoTaco from "~/src/logosSvg/taco-icon.svg"
-import logoCarpa from "~/src/logosSvg/mobiliario-icon.svg"
-import logoMesero from "~/src/logosSvg/mesero-icon.svg"
-import logoDj from "~/src/logosSvg/dj-icon.svg"
+import logoEspadas from "../src/logosSvg/espadas-icon.svg"
+import logoParrilla from "../src/logosSvg/parrilla-icon.svg"
+import logoTaco from "../src/logosSvg/taco-icon.svg"
+import logoCarpa from "../src/logosSvg/mobiliario-icon.svg"
+import logoMesero from "../src/logosSvg/mesero-icon.svg"
+import logoDj from "../src/logosSvg/dj-icon.svg"
 
 const CardServicios = () => {
 
