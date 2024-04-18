@@ -1,4 +1,5 @@
 import { Link, useLocation } from "@remix-run/react";
+import Btn from "./Btn";
 
 interface NavegacionProps {
   active: boolean;
@@ -21,7 +22,9 @@ const Navegacion: React.FC<NavegacionProps> = ({ active, setActive }) => {
       <Link prefetch="intent" onClick={handleClick} className={`py-2 w-max font-variable font-normal text-heading lg:text-gray-50 cursor-pointer text-2xl lg:text-xl ${ location === "/tacos" ? "border-b border-[#D24545]" : ""}`} to="/tacos">Buffet de Tacos</Link>
       <Link prefetch="intent" onClick={handleClick} className={`py-2 w-max font-variable font-normal text-heading lg:text-gray-50 cursor-pointer text-2xl lg:text-xl ${ location === "/personal" ? "border-b border-[#D24545]" : ""}`} to="/personal">Personal</Link>
       <Link prefetch="intent" onClick={handleClick} className={`py-2 w-max font-variable font-normal text-heading lg:text-gray-50 cursor-pointer text-2xl lg:text-xl ${ location === "/mobiliario" ? "border-b border-[#D24545]" : ""}`} to="/mobiliario">Mobiliario</Link>
-
+      <div className="mr-4 hidden lg:block">
+          <Btn target={false} isLink={false} route="" value="Contacto" />
+        </div>
     </nav>
   );
 }

@@ -1,18 +1,10 @@
 import { MetaFunction } from "@vercel/remix";
-import { useState, useEffect } from "react";
 
 import Btn from "../components/Btn"
 import dj2 from "../src/dj2.webp"
 import meseros from "../src/meseros.webp"
 import ListaCarnes from "~/components/ListaCarnes";
-
-import { Autoplay, Pagination, Navigation, EffectFlip } from 'swiper/modules';
-import { Swiper, SwiperSlide } from 'swiper/react';
-
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
-import 'swiper/css/effect-flip';
+import SwiperRoutesImages from "~/components/SwiperRoutesImages";
 
 export const meta: MetaFunction = () => {
     return [
@@ -23,70 +15,49 @@ export const meta: MetaFunction = () => {
 
 const moviliario = () => {
 
-    const [isMobile, setIsMobile] = useState(false);
-
-    useEffect(() => {
-        const handleResize = () => {
-            // Actualizar el estado según el ancho de la ventana
-            setIsMobile(window.innerWidth < 1024);
-        };
-        window.addEventListener('resize', handleResize);
-        handleResize();
-        return () => {
-            window.removeEventListener('resize', handleResize);
-        };
-    }, []);
-    
      const meserosArray = ["Deja que nuestro personal Profesional se encargue de brindar una experiencia impecable, te atendemos como te mereces"]
      const barmanArray = ["Las buenas bebidas nunca deben faltar en un evento, disfruta de la increible explosión de sabor que nuestro barman aporta a todas tus bebidas"]
      const djArray = ["Experimenta la magia de la música con una calidad de audio excepcional que hará vibrar cada rincón. Contrata un Dj con equipo de primera para una experiencia sonora inolvidable"]
 
-    const images = [
-       meseros,
-       dj2,
-    ]
+     const images = [
+        {title: "Meseros", src: meseros},
+        {title: "Meseros", src: meseros},
+      ]
+     const images2 = [
+        {title: "Barman", src: meseros},
+        {title: "Barman", src: meseros},
+      ]
+     const images3 = [
+        {title: "Dj", src: dj2},
+        {title: "Dj", src: dj2},
+      ]
 
     return (
-        <main className="bg-cover bg-no-repeat bg-center max-w-6xl md:mt-0 mx-auto pb-16 md:px-0 text-center mx-aut bg-transparent text-white">
-            <h3 className="text-heading text-center uppercase text-4xl lg:text-5xl font-clash tracking-wider pt-16 pb-16">Tenemos un equipo con experiencia y muy profesional</h3>
-            <div className="flex flex-col lg:flex-row gap-4 items-center overflow-hidden section-routes-swiper">
-                <div className="flex flex-col gap-16 lg:w-[50%] p-6 lg:p-8">
-                    <ListaCarnes clase="linea-separacion" title="Meseros" items={meserosArray} />
-                    <ListaCarnes clase="linea-separacion" title="Barman" items={barmanArray} />
-                    <ListaCarnes clase="linea-separacion" title="Dj" items={djArray} />
-                  
+        <main className="bg-cover bg-no-repeat bg-center max-w-6xl md:mt-0 mx-auto pb-16 px-3 lg:px-0 text-center mx-aut bg-transparent text-white section-routes-swiper">
+            <h3 className="text-heading text-center uppercase text-4xl font-clash tracking-wider py-16">Nuestro equipo sin lugar a dudas te hará sentir especial tenemos experiencia y somos muy profesionales</h3>
+
+           <div className="flex flex-col gap-32">
+            
+                <div className="flex flex-col lg:items-center lg:flex-row gap-8">
+                    <div className="flex-1 px-6 lg:px-0"><ListaCarnes clase="" title="Meseros" items={meserosArray} /></div>
+                    <SwiperRoutesImages urls={images}/>
                 </div>
-                <div className="w-[90vw] mx-auto lg:mx-0 lg:mt-0 lg:max-h-[80rem] lg:grid lg:grid-cols-11 lg:grid-rows-3 lg:gap-4 lg:w-[50%]">
-                    {isMobile ? (
-                        <Swiper
-                            effect={'flip'}
-                            centeredSlides={true}
-                            loop={true}
-                            autoplay={{
-                                delay: 3000,
-                                disableOnInteraction: false,
-                            }}
-                            pagination={{
-                                clickable: true,
-                            }}
-                            modules={[Autoplay, Pagination, Navigation, EffectFlip]}
-                        >
-                            {images.map( (image, index) => (
-                                <SwiperSlide key={index}><img className="w-full h-full object-cover" src={image} alt="" /></SwiperSlide>
-                            ))}
-                        </Swiper>) : (
-                        <>
-                            <div className="col-span-6 h-auto"><img className="w-full h-full object-cover" src={meseros} alt="" /></div>
-                            <div className="col-span-5 h-auto"><img className="w-full h-full object-cover" src={meseros} alt="" /></div>
-                            <div className="col-span-5 h-auto"><img className="w-full h-full object-cover" src={dj2} alt="" /></div>
-                            <div className="col-span-6 h-auto"><img className="w-full h-full object-cover" src={dj2} alt="" /></div>
-                            <div className="col-span-6 h-auto"><img className="w-full h-full object-cover" src={meseros} alt="" /></div>
-                            <div className="col-span-5 h-auto"><img className="w-full h-full object-cover" src={dj2} alt="" /></div>
-                        </>
-                    )}
+
+                <div className="flex flex-col lg:items-center lg:flex-row-reverse gap-8">
+                    <div className="flex-1 px-6 lg:px-0"><ListaCarnes clase="" title="Barman" items={barmanArray} /></div>
+                    <SwiperRoutesImages urls={images2} />
                 </div>
+
+                <div className="flex flex-col lg:items-center lg:flex-row gap-8">
+                    <div className="flex-1 px-6 lg:px-0"><ListaCarnes clase="" title="Dj" items={djArray} /></div>
+                    <SwiperRoutesImages urls={images3} />
+                </div>
+
             </div>
-            <p className="text-center text-lg my-16 font-Inter text-heading">Si no encuentras algún artículo que buscas en nuestro catálogo, no dudes en ponerte en contacto con nosotros y hacer tu pregunta.</p>
+            <div className="">
+                <p className="text-heading text-center font-Inter flex-1 text-2xl pt-16 pb-16">Si no encuentras algún artículo que buscas en nuestro catálogo, contáctanos y haznos saber todas tus dudas.</p>
+            </div>
+
             <div className="flex justify-center">
                 <Btn target={false} isLink={true} route="#" value="Cotiza tu servicio" />
             </div>

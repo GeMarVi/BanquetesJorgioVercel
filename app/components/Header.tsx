@@ -103,9 +103,6 @@ const Header = () => {
         </div>
 
         <Navegacion setActive={setActive} active={active} />
-        <div className="mr-4 hidden lg:block">
-          <Btn target={false} isLink={false} route="" value="Contacto" />
-        </div>
       </div>
 
       <div className="relative h-full lg:h-auto lg:mb-16 lg:ml-8 flex flex-col justify-center items-center lg:items-start">

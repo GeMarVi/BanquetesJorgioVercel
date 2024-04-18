@@ -35,7 +35,7 @@ const FormularioContacto = (data: ActionData) => {
             <span className="text-red-600">{data?.nombre}</span>
           ) : null}
         </label>
-        <input name="nombre" type="text" className="w-full p-2 bg-azulOscuro outline-none border border-gray-500 bg-clip-border" />
+        <input name="nombre" type="text" className="w-full p-2 bg-primario outline-none border border-gray-500 bg-clip-border" />
       </div>
 
       <div>
@@ -45,7 +45,7 @@ const FormularioContacto = (data: ActionData) => {
             <span className="text-red-600">{data?.apellido}</span>
           ) : null}
         </label>
-        <input name="apellido" type="text" className="w-full p-2 bg-azulOscuro outline-none border border-gray-500 bg-clip-border" />
+        <input name="apellido" type="text" className="w-full p-2 bg-primario outline-none border border-gray-500 bg-clip-border" />
       </div>
 
       <div>
@@ -55,7 +55,7 @@ const FormularioContacto = (data: ActionData) => {
             <span className="text-red-600">{data?.email}</span>
           ) : null}
         </label>
-        <input name="email" type="email" className="w-full p-2 bg-azulOscuro outline-none border border-gray-500 bg-clip-border" />
+        <input name="email" type="email" className="w-full p-2 bg-primario outline-none border border-gray-500 bg-clip-border" />
       </div>
 
       <div>
@@ -65,7 +65,7 @@ const FormularioContacto = (data: ActionData) => {
             <span className="text-red-600">{data?.telefono}</span>
           ) : null}
         </label>
-        <input type="tel" name="telefono" className="w-full p-2 bg-azulOscuro outline-none border border-gray-500 bg-clip-border" />
+        <input type="tel" name="telefono" className="w-full p-2 bg-primario outline-none border border-gray-500 bg-clip-border" />
       </div>
 
       <div>
@@ -78,7 +78,7 @@ const FormularioContacto = (data: ActionData) => {
                 <span className="text-red-600">{data?.telefono}</span>
               ) : null}
             </label>
-            <select className="h-[2rem] w-full font-Inter px-2 text-heading text-sm border border-gray-500 bg-azulOscuro outline-none" defaultValue={"Elige una opción"} name="municipio">
+            <select className="h-[2rem] w-full font-Inter px-2 text-heading text-sm border border-gray-500 bg-primario outline-none" defaultValue={"Elige una opción"} name="municipio">
               <option className="font-Inter bg-gray-100 text-center" value={"Elige una opción"} hidden>Elige una opción</option>
               {alcaldias.map((alcaldia, index) => (
                 <option className="text-heading font-Inter bg-gray-100" key={index} value={alcaldia}>{alcaldia}</option>
@@ -92,7 +92,7 @@ const FormularioContacto = (data: ActionData) => {
                 <span className="text-red-600">{data?.telefono}</span>
               ) : null}
             </label>
-            <select className="h-[2rem] w-full font-Inter px-2 text-heading text-sm border border-gray-500 bg-azulOscuro outline-none" name="municipio" defaultValue="Elige una opción">
+            <select className="h-[2rem] w-full font-Inter px-2 text-heading text-sm border border-gray-500 bg-primario outline-none" name="municipio" defaultValue="Elige una opción">
               <option className="font-Inter bg-gray-100 text-center" value={"Elige una opción"} hidden>Elige una opción</option>
               {municipios.map((municipio, index) => (
                 <option className="text-heading font-Inter bg-gray-100" key={index} value={municipio}>{municipio}</option>
@@ -110,7 +110,7 @@ const FormularioContacto = (data: ActionData) => {
             <span className="text-red-600">{data?.telefono}</span>
           ) : null}
         </label>
-        <input type="number" name="personas" className="w-full p-2 bg-azulOscuro outline-none border border-gray-500 bg-clip-border" />
+        <input type="number" name="personas" className="w-full p-2 bg-primario outline-none border border-gray-500 bg-clip-border" />
       </div>
 
       <div>
@@ -120,7 +120,7 @@ const FormularioContacto = (data: ActionData) => {
             <span className="text-red-600">{data?.telefono}</span>
           ) : null}
         </label>
-        <select className="h-[2rem] w-full font-In px-2 text-heading font-Inter text-sm border border-gray-500 bg-azulOscuro outline-none" defaultValue={"Elige una opción"} name="evento">
+        <select className="h-[2rem] w-full font-In px-2 text-heading font-Inter text-sm border border-gray-500 bg-primario outline-none" defaultValue={"Elige una opción"} name="evento">
           <option className="font-Inter bg-gray-100 text-center" value={"Elige una opción"} hidden >Elige una opción</option>
           {eventos.map((evento, index) => (
             <option className="text-heading font-Inter bg-gray-100" key={index} value={evento}>{evento}</option>
@@ -135,7 +135,7 @@ const FormularioContacto = (data: ActionData) => {
             <span className="text-red-600">{data?.mensaje}</span>
           ) : null}
         </label>
-        <textarea name="mensaje" className="w-full p-2 bg-azulOscuro outline-none border border-gray-500 bg-clip-border"></textarea>
+        <textarea name="mensaje" className="w-full p-2 bg-primario outline-none border border-gray-500 bg-clip-border"></textarea>
       </div>
       <Btn target={false} isLink={false} route="/" value="Enviar" />
     </Form>

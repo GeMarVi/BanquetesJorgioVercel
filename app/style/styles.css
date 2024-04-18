@@ -84,56 +84,36 @@
   font-style: normal;
 }
 
-
-.section-blog .swiper {
-  max-width: 50rem;
-  height: 30rem;
-}
-
-.section-blog .swiper .swiper-slide {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.swiper .swiper-pagination-bullet-active {
-  background-color: #36392D;
-}
-
-.swiper .swiper-pagination-bullet {
-  background-color: #36392D;
-}
-
-@media (min-width: 1025px) {
-  .section-blog .swiper {
-    max-width: unset;
-    width: 100%;
-    height: 100%;
-  }
-
-  .section-blog .swiper .swiper-slide {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-shrink: 1 !important;
-  }
-}
-
 /* routs*/
 .section-routes-swiper .swiper {
   max-width: 100%;
-  height: 28rem;
+  height: 100%;
 }
 
 .section-routes-swiper .swiper .swiper-slide {
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  height: 25rem;
-  width: 90vw !important;
+  height: 30rem;
+  width: 100%;
 }
 
+@media (min-width: 1024px) {
+  .section-routes-swiper .swiper {
+    max-width: 100%;
+    height: 100%;
+  }
+  
+  .section-routes-swiper .swiper .swiper-slide {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+  }
+}
 
+/* Seccion contactanos */
 .whatsapp-svg::before {
   content: "";
   background-image: url('../src/WhatsApp.svg');

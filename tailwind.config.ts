@@ -13,15 +13,13 @@ export default {
 
       },
       backgroundColor:{
-        'primaryBg' : "#F8F6F4",
-        'rojo': "#F9EFDB",
-        'tercero': "#878F70",
+        'primario': "#CFD2C6",
         'secundario': "#B7BCA9",
-        'azulOscuro': "#CFD2C6",
+        'terciario': "#B7BCA9",
       },
       textColor:{
         'heading': "#36392D",
-        'rojo': "#D24545"
+        'paragraph': "#D24545"
       }
     },
   },

@@ -30,7 +30,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Meta />
         <Links />
       </head>
-      <body className="bg-azulOscuro relative -z-50 overflow-x-hidden">
+      <body className="bg-primario relative -z-50 overflow-x-hidden">
         <Header />
         <WhatsApp />
         {children}
