@@ -5,6 +5,13 @@ import parrillada from "../src/Parrillada.webp"
 import espada3 from "../src/parrillada1.webp"
 import ListaCarnes from "~/components/ListaCarnes";
 
+import ensalada1 from "../src/parrilladas/ensalada-1.webp"
+import ensalada2 from "../src/parrilladas/ensalada-2.webp"
+import ensalada3 from "../src/parrilladas/ensalada-3.webp"
+import ensalada4 from "../src/parrilladas/ensalada-4.webp"
+import ensalada5 from "../src/parrilladas/ensalada-5.webp"
+import ensalada6 from "../src/parrilladas/ensalada-6.webp"
+
 import SwiperRoutesImages from "~/components/SwiperRoutesImages";
 
 
@@ -36,7 +43,7 @@ const parrilladas = () => {
         "Nopales",
         "Salsas",
         "Limones",
-        "Aderesos",
+        "Aderezos",
         "Tortillas",
         "Pasta a la crema",
         "Cortasia: Pan con Ajo y Piña asada con Canela",]
@@ -45,6 +52,15 @@ const parrilladas = () => {
             {title: "parrillada", src: parrillada},
             {title: "parrillada", src: espada3},
             {title: "parrillada", src: parrillada},
+        ]
+
+        const ensaladas = [
+            {title: "ensaladas y guarniciones", src: ensalada1},
+            {title: "ensaladas y guarniciones", src: ensalada2},
+            {title: "ensaladas y guarniciones", src: ensalada3},
+            {title: "ensaladas y guarniciones", src: ensalada4},
+            {title: "ensaladas y guarniciones", src: ensalada5},
+            {title: "ensaladas y guarniciones", src: ensalada6},
         ]
 
     return (
@@ -57,10 +73,10 @@ const parrilladas = () => {
             <SwiperRoutesImages urls={images}/>
         </div>
 
-        <p className="text-heading text-center text-4xl font-clash pt-16 pb-16">Complemente tus deliciosos cortes de carne con nuestras guarniciones perfectemente preparedas </p>
+        <p className="text-heading text-center text-4xl font-clash pt-16 pb-16">Complemente tus deliciosos cortes de carne con nuestras guarniciones perfectemente preparadas </p>
         <div className="flex flex-col lg:items-center lg:flex-row gap-8">
             <div className="flex-1 px-6 lg:px-0"><ListaCarnes clase="" title="Guarniciones" items={Guarniciones} /></div>
-            <SwiperRoutesImages urls={images} />
+            <SwiperRoutesImages urls={ensaladas} />
         </div>
          
         <div className="flex flex-col lg:flex-row gap-4 lg:gap-8 my-16">

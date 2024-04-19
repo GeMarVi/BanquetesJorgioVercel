@@ -71,7 +71,7 @@ const FormularioContacto = (data: ActionData) => {
       <div>
         <h5 className="font-variable text-lg font-normal text-heading mb-2">¿Donde es tu evento?</h5>
         <div className="flex gap-2 justify-between items-center">
-          <div>
+          <div className="flex-1">
             <label>
               <span className="font-variable text-lg  font-normal text-heading">CDMX</span>
               {data?.telefono ? (
@@ -85,7 +85,7 @@ const FormularioContacto = (data: ActionData) => {
               ))}
             </select>
           </div>
-          <div>
+          <div className="flex-1">
             <label>
               <span className="font-variable text-lg  font-normal text-heading">Estado de México</span>
               {data?.telefono ? (

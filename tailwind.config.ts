@@ -5,22 +5,45 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        'Nunito': ['"Nunito"' ,'sans-serif'],
-        'Inter': ['"Inter"' , 'sans-serif'],
-        'open': ['"open_sanscondensed_light"' , 'serif'],
-        'clash': ['"ClashDisplay-Bold"' , 'serif'],
-        'variable': ['"ClashDisplay-Variable"' , 'serif'],
+        'Nunito': ['"Nunito"', 'sans-serif'],
+        'Inter': ['"Inter"', 'sans-serif'],
+        'clash': ['"ClashDisplay-Bold"', 'serif'],
+        'variable': ['"ClashDisplay-Variable"', 'serif'],
 
       },
-      backgroundColor:{
-        'primario': "#CFD2C6",
-        'secundario': "#B7BCA9",
-        'terciario': "#B7BCA9",
+      backgroundColor: {
+        'primario': "#222831",
+        'secundario': "#393E46",
+        'terciario': "#00ADB5",
       },
-      textColor:{
-        'heading': "#36392D",
+      fill: {
+        'custom-fill': "#00ADB5",
+      },
+      stroke: {
+        'custom-stroke': "#00ADB5",
+      },
+      textColor: {
+        'heading': "#EEEEEE",
         'paragraph': "#D24545"
-      }
+      },
+      borderColor:{
+        'custom-border' : "#00ADB5"
+      },
+
+      keyframes: {
+        infinityScroll: {
+          from: { transform: 'translateX(0)' },
+          to: { transform: 'translateX(calc(-30rem*6))' },
+        },
+        infinityScrollMobile: {
+          from: { transform: 'translateX(0)' },
+          to: { transform: 'translateX(calc(-95vw*6))' },
+        }
+      },
+      animation: {
+        slideInfinity: 'infinityScroll 20s infinite linear',
+        slideInfinityMobile: 'infinityScrollMobile 20s infinite linear',
+      },
     },
   },
   plugins: [],

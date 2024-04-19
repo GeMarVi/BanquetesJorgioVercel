@@ -3,17 +3,6 @@
 @tailwind utilities;
 
 
-@layer base {
-  @font-face {
-    font-family: 'open_sanscondensed_light';
-    src: url('OpenSans-CondLight-webfont.eot');
-    src:
-      url('OpenSans-CondLight-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-  }
-}
-
 @font-face {
   font-family: 'ClashDisplay-Extralight';
   src: url('./fonts//ClashDisplay-Extralight.woff2') format('woff2'),
@@ -138,10 +127,6 @@
 
 @layer components {
 
-  .__carousel {
-    scroll-snap-type: x mandatory;
-  }
-
   /* noise */
   .noise {
     position: fixed;
@@ -175,7 +160,6 @@
     height: 2px;
     bottom: -.3rem;
     left: -1rem;
-    background-color: #36392D;
   }
 
   .animacionY {
@@ -372,25 +356,8 @@
 
   /* scroll */
 
-
-
-  .custom-scroll::-webkit-scrollbar {
-    height: .9rem;
-    background-color: #CFD2C6;
+  .animation-pause:hover{
+    animation-play-state: paused;
   }
-
-  @-moz-document url-prefix() {
-    .custom-scroll {
-    scrollbar-color: #36392D #CFD2C6;
-   }
-  }
-
-  .custom-scroll::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    background-color: #36392D;
-    width: 2rem;
-  }
-
-
 
 }

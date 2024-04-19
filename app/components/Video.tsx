@@ -16,7 +16,7 @@ const Video: React.FC = () => {
 
   return (
     <>
-      <section className='bg-gray-100 w-screen mx-auto py-16'>
+      <section className='bg-secundario w-screen mx-auto py-16'>
         <div className='max-w-6xl mx-auto flex flex-col items-center justify-center px-2 lg:px-0 gap-8'>
           <h3 className='text-heading text-center text-5xl font-clash pb-4'>¿Aun no nos conoces?</h3>
           <div className='flex flex-col-reverse lg:flex-row gap-16 items-center'>

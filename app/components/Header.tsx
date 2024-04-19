@@ -2,12 +2,12 @@ import { useState, useEffect } from "react"
 import { Link, useLocation } from "@remix-run/react";
 
 import logo from "../src/logo.svg"
-import bannerPrincipal from "../src/hero.webp"
-import bannerEspadas from "../src/espadasbanner.webp"
-import bannerParrillada from "../src/parrilladaBanner.webp"
-import bannerTacos from "../src/tacosBanner.webp"
-import bannerPersonal from "../src/meserosBanner.webp"
-import bannerMoviliario from "../src/moviliarioBanner.webp"
+import bannerPrincipal from "../src/banners/hero.webp"
+import bannerEspadas from "../src/banners/espadas-banner.webp"
+import bannerParrillada from "../src/banners/parrillada-banner.webp"
+import bannerTacos from "../src/banners/tacos-banner.webp"
+import bannerPersonal from "../src/banners/meseros-banner.webp"
+import bannerMoviliario from "../src/banners/mobiliario-banner.jpg"
 import Navegacion from "../components/Navegacion"
 import Btn from "./Btn"
 import BtnToggle from "./BtnToggle"
@@ -91,6 +91,7 @@ const Header = () => {
 
   return (
     <header style={{ backgroundImage: `url(${banner})` }} className="flex flex-col justify-between relative bg-center bg-no-repeat bg-cover h-screen text-white -z-20 overflow-hidden">
+      <div className="absolute z-30 w-full h-full top-0 bottom-0 left-0 right-0 bg-gradient-to-b from-black via-transparent to-transparent"></div>
       <div  className="lg:h-auto lg:flex justify-between items-center lg:py-2">
         <div className="flex items-center lg:block justify-between px-6 py-3 lg:py-0">
           <Link to={"/"}>

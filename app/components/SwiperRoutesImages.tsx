@@ -21,10 +21,10 @@ const SwiperRoutesImages: React.FC<SwiperRoutesImagesProps> = ({ urls }) => {
         <Swiper 
         centeredSlides={true}
         loop={true}
-        // autoplay={{
-        //     delay: 3000,
-        //     disableOnInteraction: false,
-        // }}
+        autoplay={{
+            delay: 3000,
+            disableOnInteraction: false,
+        }}
         pagination={{
             clickable: true,
         }}

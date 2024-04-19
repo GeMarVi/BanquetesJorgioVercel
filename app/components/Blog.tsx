@@ -60,15 +60,20 @@ const Blog = () => {
     ];
 
     return (
-        <section className="pt-[8.5rem] lg:pt-[8rem] mb-[4.5rem] section-blog">
+        <section className="pt-[8.5rem] lg:pt-[8rem] mb-[4.5rem] lg:pb-8">
             <h3 className="text-heading text-5xl font-clash text-center pb-16">Testimonios de nuestros Clientes</h3>
-            <div className="max-w-max mx-auto">
-                <div className="__carousel flex gap-6 overflow-x-scroll md:pb-4 custom-scroll scroll-smooth">
+
+            <div className="w-screen h-auto overflow-hidden">
+                <div className="flex w-[calc(30rem*12)] animate-slideInfinityMobile md:animate-slideInfinity animation-pause">
+                    {cards.map(card => (
+                        <Comentarios key={card.id} src={card.src} name={card.name} location={card.location} description={card.description} />
+                    ))}
                     {cards.map(card => (
                         <Comentarios key={card.id} src={card.src} name={card.name} location={card.location} description={card.description} />
                     ))}
                 </div>
             </div>
+
         </section>
     )
 }

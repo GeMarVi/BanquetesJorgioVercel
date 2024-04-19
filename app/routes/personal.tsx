@@ -36,18 +36,18 @@ const moviliario = () => {
         <main className="bg-cover bg-no-repeat bg-center max-w-6xl md:mt-0 mx-auto pb-16 px-3 lg:px-0 text-center mx-aut bg-transparent text-white section-routes-swiper">
             <h3 className="text-heading text-center uppercase text-4xl font-clash tracking-wider py-16">Nuestro equipo sin lugar a dudas te hará sentir especial tenemos experiencia y somos muy profesionales</h3>
 
-           <div className="flex flex-col gap-32">
+           <div className="flex flex-col gap-24">
             
                 <div className="flex flex-col lg:items-center lg:flex-row gap-8">
                     <div className="flex-1 px-6 lg:px-0"><ListaCarnes clase="" title="Meseros" items={meserosArray} /></div>
                     <SwiperRoutesImages urls={images}/>
                 </div>
-
+                <hr className="h-[2px] w-full min-w-[18rem] border-t-0 bg-transparent bg-gradient-to-r from-transparent via-white to-transparent bg-center md:my-9"></hr>
                 <div className="flex flex-col lg:items-center lg:flex-row-reverse gap-8">
                     <div className="flex-1 px-6 lg:px-0"><ListaCarnes clase="" title="Barman" items={barmanArray} /></div>
                     <SwiperRoutesImages urls={images2} />
                 </div>
-
+                <hr className="h-[2px] w-full min-w-[18rem] border-t-0 bg-transparent bg-gradient-to-r from-transparent via-white to-transparent bg-center md:my-9"></hr>
                 <div className="flex flex-col lg:items-center lg:flex-row gap-8">
                     <div className="flex-1 px-6 lg:px-0"><ListaCarnes clase="" title="Dj" items={djArray} /></div>
                     <SwiperRoutesImages urls={images3} />
