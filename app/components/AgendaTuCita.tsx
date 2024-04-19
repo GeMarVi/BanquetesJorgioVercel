@@ -12,8 +12,8 @@ type ActionData = {
 const AgendaTuCita = (data: ActionData) => {
 
   return (
-    <section className="lg:p-0 lg:py-20 pt-16 max-w-6xl mx-auto">
-      <h3 className="text-heading  text-center text-5xl font-clash lg:pb-12">Contáctanos</h3>
+    <section className="pt-32 lg:pt-40 max-w-6xl mx-auto">
+      <h3 className="text-heading-6  text-center text-5xl lg:text-7xl font-clash lg:pb-12">Envíenos <span className="text-gradient">un mensaje</span></h3>
       <div className="flex flex-col lg:flex-row justify-between lg:items-stretch mx-auto lg:h-auto mt-10">
         <FormularioContacto nombre={data.nombre} apellido={data.apellido} email={data.email} telefono={data.telefono} mensaje={data.mensaje} />
         <div style={{ backgroundImage: `url(${bgContacto})` }} className="flex h-[40rem] lg:h-auto p-4 lg:p-8 lg:flex-1 flex-col justify-center items-center gap-20 bg-cover bg-bottom bg-no-repeat relative">

@@ -26,7 +26,7 @@ const CardServicios = () => {
         </div>
         <div className="p-6 flex flex-col gap-4 justify-between">
           <div className="bg-cover bg-no-repeat w-8 h-8">{card.logo}</div>
-          <h5 className="mb-2 block font-variable text-2xl text-heading font-bold">
+          <h5 className="mb-2 block font-variable text-2xl text-heading font-normal">
             {card.title}
           </h5>
           <Btn target={false} isLink={true} route={card.route} value="Mas información" />

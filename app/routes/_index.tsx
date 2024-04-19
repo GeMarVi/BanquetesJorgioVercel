@@ -67,8 +67,8 @@ export default function Index() {
     <>
       <main className="bg-transparent">
         <SobreNosotros />
-        <section className="px-2 lg:px-0 pt-20 max-w-6xl mx-auto">
-          <h2 className="mb-24 text-center text-heading text-5xl font-clash">Conoce todos los servicios que ofrecemos</h2>
+        <section className="px-2 lg:px-0 pt-32 lg:pt-40 max-w-6xl mx-auto">
+          <h2 className="mb-24 text-center text-heading-2 text-5xl lg:text-7xl font-clash">Conoce <span className="text-gradient">todos los servicios que ofrecemos</span></h2>
           <div className="md:grid gap-y-12 gap-x-6 md:grid-cols-2 lg:grid-cols-3">
             <CardServicios />
           </div>

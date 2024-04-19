@@ -25,7 +25,7 @@ const Comentarios: React.FC<ComentariosProps> = ({ src, name, location, descript
         <figcaption className='mt-4 text-heading'>
           <p className="text-title text-lg font-normal text-heading">{description}</p>
         </figcaption>
-        <div className="absolute right-5 top-5 w-7 lg:w-7 h-7 lg:h-7"><FacebookIcon/></div>
+        <div className="absolute right-5 top-5 w-auto h-auto"><FacebookIcon/></div>
       </figure>
     </div>
   );

@@ -58,7 +58,7 @@ const TacosIcon = () => (
 
 const FacebookIcon = () => (
   <svg
-  className='w-7 lg:w-7 h-10 lg:h-10'
+  className='w-7 lg:w-10 h-10 lg:h-10'
   viewBox="0 0 16.814409 16.814449"
   version="1.1"
   id="svg1"

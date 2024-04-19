@@ -60,8 +60,8 @@ const Blog = () => {
     ];
 
     return (
-        <section className="pt-[8.5rem] lg:pt-[8rem] mb-[4.5rem] lg:pb-8">
-            <h3 className="text-heading text-5xl font-clash text-center pb-16">Testimonios de nuestros Clientes</h3>
+        <section className="pt-32 lg:pt-40">
+            <h3 className="text-heading-3 text-5xl lg:text-7xl font-clash text-center pb-16">Testimonios <span className="text-gradient">de nuestros Clientes</span></h3>
 
             <div className="w-screen h-auto overflow-hidden">
                 <div className="flex w-[calc(30rem*12)] animate-slideInfinityMobile md:animate-slideInfinity animation-pause">

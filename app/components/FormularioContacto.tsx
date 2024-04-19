@@ -25,9 +25,7 @@ const FormularioContacto = (data: ActionData) => {
 
   return (
     <Form method="post" className="flex flex-col relative p-8 gap-4 flex-1 lg:mt-0 bg-secundario">
-      <h4 className="font-variable text-heading text-2xl mb-2 font-normal">Solicita una cotizacion y nuestro equipo se pondrá en contacto contigo lo mas pronto posible</h4>
-
-
+      <h4 className="font-variable text-heading text-2xl mb-2 font-normal">Solicita una cotización y nuestro equipo se pondrá en contacto contigo lo mas pronto posible</h4>
       <div>
         <label>
           <span className="font-variable text-lg  font-normal text-heading">Nombre</span>
@@ -81,7 +79,7 @@ const FormularioContacto = (data: ActionData) => {
             <select className="h-[2rem] w-full font-Inter px-2 text-heading text-sm border border-gray-500 bg-primario outline-none" defaultValue={"Elige una opción"} name="municipio">
               <option className="font-Inter bg-gray-100 text-center" value={"Elige una opción"} hidden>Elige una opción</option>
               {alcaldias.map((alcaldia, index) => (
-                <option className="text-heading font-Inter bg-gray-100" key={index} value={alcaldia}>{alcaldia}</option>
+                <option className="text-dark font-Inter bg-gray-100" key={index} value={alcaldia}>{alcaldia}</option>
               ))}
             </select>
           </div>
@@ -95,7 +93,7 @@ const FormularioContacto = (data: ActionData) => {
             <select className="h-[2rem] w-full font-Inter px-2 text-heading text-sm border border-gray-500 bg-primario outline-none" name="municipio" defaultValue="Elige una opción">
               <option className="font-Inter bg-gray-100 text-center" value={"Elige una opción"} hidden>Elige una opción</option>
               {municipios.map((municipio, index) => (
-                <option className="text-heading font-Inter bg-gray-100" key={index} value={municipio}>{municipio}</option>
+                <option className="text-dark font-Inter bg-gray-100" key={index} value={municipio}>{municipio}</option>
               ))}
             </select>
 
@@ -123,7 +121,7 @@ const FormularioContacto = (data: ActionData) => {
         <select className="h-[2rem] w-full font-In px-2 text-heading font-Inter text-sm border border-gray-500 bg-primario outline-none" defaultValue={"Elige una opción"} name="evento">
           <option className="font-Inter bg-gray-100 text-center" value={"Elige una opción"} hidden >Elige una opción</option>
           {eventos.map((evento, index) => (
-            <option className="text-heading font-Inter bg-gray-100" key={index} value={evento}>{evento}</option>
+            <option className="text-dark font-Inter bg-gray-100" key={index} value={evento}>{evento}</option>
           ))}
         </select>
       </div>

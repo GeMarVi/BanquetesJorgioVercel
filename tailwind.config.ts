@@ -13,21 +13,28 @@ export default {
       },
       backgroundColor: {
         'primario': "#222831",
-        'secundario': "#393E46",
-        'terciario': "#00ADB5",
+        'secundario': "#31363F",
+        'terciario': "#000000",
       },
       fill: {
-        'custom-fill': "#00ADB5",
+        'custom-fill': "#FF4848",
       },
       stroke: {
-        'custom-stroke': "#00ADB5",
+        'custom-stroke': "#FF4848",
       },
       textColor: {
         'heading': "#EEEEEE",
-        'paragraph': "#D24545"
+        'paragraph': "#00ADB5",
+        'heading-1': "#C4FB6D",
+        'heading-2': "#FFE227",
+        'heading-3': "#0079FF",
+        'heading-4': "#A555EC",
+        'heading-5': "#F38EFF",
+        'heading-6': "#F2613F",
+        'dark': "#222831",
       },
       borderColor:{
-        'custom-border' : "#00ADB5"
+        'custom-border' : "#FF4848"
       },
 
       keyframes: {
@@ -41,7 +48,7 @@ export default {
         }
       },
       animation: {
-        slideInfinity: 'infinityScroll 20s infinite linear',
+        slideInfinity: 'infinityScroll 30s infinite linear',
         slideInfinityMobile: 'infinityScrollMobile 20s infinite linear',
       },
     },

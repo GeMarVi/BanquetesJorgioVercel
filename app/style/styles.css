@@ -92,7 +92,7 @@
     max-width: 100%;
     height: 100%;
   }
-  
+
   .section-routes-swiper .swiper .swiper-slide {
     display: flex;
     align-items: flex-start;
@@ -127,30 +127,14 @@
 
 @layer components {
 
-  /* noise */
-  .noise {
-    position: fixed;
-    inset: 0;
-    height: 100%;
-    width: 100%;
-    pointer-events: none;
-    z-index: -999;
-  }
 
-  .noise::before {
-    opacity: .2;
-    content: "";
-    background-image: url("../src/noise.svg");
-    background-repeat: repeat;
-    background-size: 182px;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -999;
+  .text-gradient {
+    color: #FF4848;
+    background-image: -webkit-linear-gradient(0deg, #FF4848 4%, #B21F66 63%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
-
 
   .linea-menu::before {
     content: "";
@@ -356,7 +340,7 @@
 
   /* scroll */
 
-  .animation-pause:hover{
+  .animation-pause:hover {
     animation-play-state: paused;
   }
 
