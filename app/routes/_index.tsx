@@ -18,7 +18,7 @@ export async function action({ request }: ActionFunctionArgs) {
   const telefono = String(formData.get("telefono"));
   const mensaje = String(formData.get("mensaje"));
 
-  const errors: { nombre?:string; apellido?:string; email?:string; telefono?:string; mensaje?:string } = {};
+  const errors: { nombre?: string; apellido?: string; email?: string; telefono?: string; mensaje?: string } = {};
   const emailRegex = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
   const phoneRegex = /^\d{10}$/;
 
@@ -46,8 +46,8 @@ export async function action({ request }: ActionFunctionArgs) {
 
   if (Object.keys(errors).length > 0) {
     return json({ errors });
-  }else{
-    sendEmail(nombre, apellido, email, telefono, mensaje); 
+  } else {
+    sendEmail(nombre, apellido, email, telefono, mensaje);
     return null
   }
 }
@@ -67,20 +67,15 @@ export default function Index() {
     <>
       <main className="bg-transparent">
         <SobreNosotros />
-        <section className="px-2 lg:px-0 pt-32 lg:pt-40 max-w-6xl mx-auto">
-          <h2 className="mb-24 text-center text-heading-2 text-5xl lg:text-7xl font-clash">Conoce <span className="text-gradient">todos los servicios que ofrecemos</span></h2>
-          <div className="md:grid gap-y-12 gap-x-6 md:grid-cols-2 lg:grid-cols-3">
-            <CardServicios />
-          </div>
-        </section>
+        <CardServicios />
         <Blog />
         <Video />
-        <AgendaTuCita 
-            nombre={actionData?.errors.nombre} 
-            apellido={actionData?.errors.apellido} 
-            email={actionData?.errors.email} 
-            telefono={actionData?.errors.telefono} 
-            mensaje={actionData?.errors.mensaje}
+        <AgendaTuCita
+          nombre={actionData?.errors.nombre}
+          apellido={actionData?.errors.apellido}
+          email={actionData?.errors.email}
+          telefono={actionData?.errors.telefono}
+          mensaje={actionData?.errors.mensaje}
         />
       </main>
     </>
