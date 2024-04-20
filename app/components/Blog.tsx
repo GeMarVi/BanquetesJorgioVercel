@@ -5,6 +5,7 @@ import foto4 from "../src/perfil-social/lomejor.jpeg"
 import foto5 from "../src/perfil-social/veronica.jpeg"
 import foto6 from "../src/perfil-social/betzabeth.jpeg"
 import Comentarios from './Comentarios';
+import { HeadingVistas } from "./HeadingVistas"
 
 const Blog = () => {
 
@@ -60,10 +61,9 @@ const Blog = () => {
     ];
 
     return (
-        <section className="pt-32 lg:pt-40">
-            <h3 className="text-heading-3 text-5xl lg:text-7xl font-clash text-center pb-16">Testimonios <span className="text-gradient">de nuestros Clientes</span></h3>
-
-            <div className="w-screen h-auto overflow-hidden">
+        <section className="pt-32 lg:pt-40 overflow-hidden lg:overflow-visible">
+            <HeadingVistas text="Testimonios de nuestros Clientes" initial="scale(0.5)" whileInView="scale(1)"/>
+            <div className="w-screen h-auto overflow-hidden mt-24">
                 <div className="flex w-[calc(30rem*12)] animate-slideInfinityMobile md:animate-slideInfinity animation-pause">
                     {cards.map(card => (
                         <Comentarios key={card.id} src={card.src} name={card.name} location={card.location} description={card.description} />

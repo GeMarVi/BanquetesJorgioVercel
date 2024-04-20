@@ -26,6 +26,7 @@ import pista3 from "../src/mobiliario/pista-iluminada-3.webp"
 import periqueras1 from "../src/mobiliario/periqueras-1.webp"
 import periqueras2 from "../src/mobiliario/periqueras-2.webp"
 import periqueras3 from "../src/mobiliario/periqueras-3.webp"
+import { HeadingVistas } from "../components/HeadingVistas";
 
 
 ListaCarnes
@@ -75,10 +76,10 @@ const moviliario = () => {
       ]
 
     return (
-        <main className="bg-cover bg-no-repeat bg-center max-w-6xl md:mt-0 mx-auto pb-16 px-3 lg:px-0 text-center mx-aut bg-transparent text-white section-routes-swiper">
+        <main className="mt-32 lg:mt-40 max-w-6xl mx-auto pb-16 px-3 lg:px-0 text-center mx-aut bg-transparent text-white section-routes-swiper overflow-hidden lg:overflow-visible">
 
-            <p className="text-heading text-center text-4xl font-clash py-16">¿Quieres que tu evento sea acogedor y disfrutable? mira nuestros accesorios para ello</p>
-           <div className="flex flex-col gap-24">
+            <HeadingVistas initial={"translateX(-200px)"} whileInView={"translateX(0)"}  text="¿Quieres que tu evento sea acogedor y disfrutable? mira nuestros accesorios para ello" />
+           <div className="flex flex-col gap-24 mt-32">
             
                 <div className="flex flex-col lg:items-center lg:flex-row gap-8">
                     <div className="flex-1 px-6 lg:px-0"><ListaCarnes clase="" title="Carpas" items={carpasArray} /></div>

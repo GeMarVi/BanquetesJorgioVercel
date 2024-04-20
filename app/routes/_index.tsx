@@ -4,11 +4,11 @@ import { json, MetaFunction } from "@vercel/remix";
 
 import AgendaTuCita from "../components/AgendaTuCita"
 import Blog from "../components/Blog"
-import CardServicios from "../components/CardServicios"
+import Servicios from "../components/Servicios"
 import SobreNosotros from "../components/SobreNosotros";
 
 import sendEmail from "../utils/mailer.server";
-import Video from "~/components/Video";
+import Video from "../components/Video";
 
 export async function action({ request }: ActionFunctionArgs) {
   const formData = await request.formData();
@@ -67,7 +67,7 @@ export default function Index() {
     <>
       <main className="bg-transparent">
         <SobreNosotros />
-        <CardServicios />
+        <Servicios />
         <Blog />
         <Video />
         <AgendaTuCita

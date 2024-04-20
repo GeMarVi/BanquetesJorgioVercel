@@ -1,5 +1,6 @@
 import { MetaFunction } from "@vercel/remix";
 
+import { HeadingVistas } from "~/components/HeadingVistas";
 import Btn from "../components/Btn"
 import dj2 from "../src/dj2.webp"
 import meseros from "../src/meseros.webp"
@@ -33,10 +34,9 @@ const moviliario = () => {
       ]
 
     return (
-        <main className="bg-cover bg-no-repeat bg-center max-w-6xl md:mt-0 mx-auto pb-16 px-3 lg:px-0 text-center mx-aut bg-transparent text-white section-routes-swiper">
-            <h3 className="text-heading text-center uppercase text-4xl font-clash tracking-wider py-16">Nuestro equipo sin lugar a dudas te hará sentir especial tenemos experiencia y somos muy profesionales</h3>
-
-           <div className="flex flex-col gap-24">
+        <main className="bg-cover overflow-hidden lg:overflow-visible bg-no-repeat bg-center max-w-6xl mt-32 lg:mt-40 mx-auto pb-16 px-3 lg:px-0 text-center mx-aut bg-transparent text-white section-routes-swiper">
+            <HeadingVistas initial={"translateX(-200px)"} whileInView={"translateX(0)"} text="Nuestro equipo sin lugar a dudas te hará sentir especial tenemos experiencia y somos muy profesionales" />
+           <div className="flex flex-col gap-24 mt-32">
             
                 <div className="flex flex-col lg:items-center lg:flex-row gap-8">
                     <div className="flex-1 px-6 lg:px-0"><ListaCarnes clase="" title="Meseros" items={meserosArray} /></div>

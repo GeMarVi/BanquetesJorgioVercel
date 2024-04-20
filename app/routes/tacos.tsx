@@ -1,5 +1,6 @@
 import { MetaFunction } from "@vercel/remix";
 
+import { HeadingVistas } from "~/components/HeadingVistas";
 import Btn from "../components/Btn"
 import tacos1 from "../src/tacos1.webp"
 import tacos2 from "../src/tacos2.webp"
@@ -49,26 +50,28 @@ const tacos = () => {
       ]
 
     return (
-        <main className="bg-cover bg-no-repeat bg-center max-w-6xl md:mt-0 mx-auto pb-16 px-3 lg:px-0 text-center mx-aut bg-transparent text-white section-routes-swiper">
-            <h3 className="text-heading text-center uppercase text-5xl font-clash tracking-wider pt-16 pb-16">Menú</h3>
-            <p className="text-heading text-center text-4xl font-clash pb-16">Disfruta de la variedad de carnes de este delicioso y tradicional platillo mexicano</p>
-            <div className="flex flex-col lg:items-center lg:flex-row gap-8">
+        <main className="bg-cover overflow-hidden lg:overflow-visible bg-no-repeat bg-center max-w-6xl mx-auto mt-32 lg:mt-40 pb-16 px-3 lg:px-0 text-center mx-aut bg-transparent text-white section-routes-swiper">
+            <HeadingVistas initial={"translateX(-200px)"} whileInView={"translateX(0)"} text="Disfruta de la variedad de carnes de este delicioso y tradicional platillo mexicano" />
+            
+            <div className="flex flex-col lg:items-center lg:flex-row mt-24 mb-40 gap-8">
                 <div className="flex-1 px-6 lg:px-0"><ListaCarnes clase="" title="Carnes" items={Carnes} /></div>
                 <SwiperRoutesImages urls={images}/>
             </div>
 
-            <p className="text-heading text-center text-4xl font-clash pt-16 pb-16">¿No quieres solo tacos? Acompañalos con estas exquisitas especialidades que no deben faltar en tu mesa</p>
-            <div className="flex flex-col lg:items-center lg:flex-row gap-8">
+            <HeadingVistas initial={"translateX(200px)"} whileInView={"translateX(0)"} text="¿No quieres solo tacos? Acompañalos con estas exquisitas especialidades que no deben faltar en tu mesa" />
+            
+            <div className="flex flex-col lg:items-center lg:flex-row-reverse gap-8 mt-24 mb-40">
                 <div className="flex-1 px-6 lg:px-0"><ListaCarnes clase="" title="Especialidades" items={Especialidades} /></div>
                 <SwiperRoutesImages urls={images} />
             </div>
 
-            <p className="text-heading text-center text-4xl font-clash pt-16 pb-16">Un buen taco siempre debe llevar su acompañamiento</p>
-            <div className="flex flex-col lg:items-center lg:flex-row gap-8">
+            <HeadingVistas initial={"translateX(-200px)"} whileInView={"translateX(0)"} text="Un buen taco siempre debe llevar su acompañamiento" />
+           
+            <div className="flex flex-col lg:items-center lg:flex-row gap-8 mb-20 mt-24">
                 <div className="flex-1 px-6 lg:px-0"><ListaCarnes clase="" title="Servicios" items={Servicios} /></div>
                 <SwiperRoutesImages urls={images} />
             </div>
-            
+            <hr className="h-[2px] w-full min-w-[18rem] border-t-0 bg-transparent bg-gradient-to-r from-transparent via-white to-transparent bg-center md:my-9"></hr>
             <div className="">
                 <p className="text-heading text-center font-Inter flex-1 text-2xl pt-16 pb-16">Si no encuentras algún artículo que buscas en nuestro catálogo, contáctanos y haznos saber todas tus dudas.</p>
             </div>

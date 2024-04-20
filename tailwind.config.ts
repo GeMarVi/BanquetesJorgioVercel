@@ -14,7 +14,8 @@ export default {
       backgroundColor: {
         'primario': "#222831",
         'secundario': "#31363F",
-        'terciario': "#000000",
+        'terciario': "#FF4848",
+        'dark': "#000000",
       },
       fill: {
         'custom-fill': "#FF4848",
@@ -48,7 +49,7 @@ export default {
         }
       },
       animation: {
-        slideInfinity: 'infinityScroll 30s infinite linear',
+        slideInfinity: 'infinityScroll 35s infinite linear',
         slideInfinityMobile: 'infinityScrollMobile 20s infinite linear',
       },
     },
