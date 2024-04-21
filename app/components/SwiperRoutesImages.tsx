@@ -1,9 +1,9 @@
 import { AnimatePresence, motion, useInView } from "framer-motion";
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { NextArrow, PrevArrow } from "../components/IconsSvg";
 
 const hiddenMask = `repeating-linear-gradient(to right, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 30px, rgba(0,0,0,1) 30px, rgba(0,0,0,1) 30px)`;
-const visibleMask = `repeating-linear-gradient(to right, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 0px, rgba(0,0,0,1) 0px, rgba(0,0,0,1) 30px)`;
+const visibleMask = `repeating-linear-gradient(to right, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 0px, rgba(0,0,0,1) 0px, rgba(0,0,0,1) 28px)`;
 
 interface Image {
    title: string;
@@ -40,10 +40,10 @@ const variants = {
 const SwiperRoutesImages: React.FC<SwiperRoutesImagesProps> = ({ urls }) => {
    const [index, setIndex] = useState(0);
    const [direction, setDirection] = useState(0);
-   
+
    const imageRef = useRef(null);
-    
-   const isInView = useInView(imageRef, {once: true});
+
+   const isInView = useInView(imageRef, { once: true });
 
    const nextStep = () => {
       setDirection(1);
@@ -63,8 +63,17 @@ const SwiperRoutesImages: React.FC<SwiperRoutesImagesProps> = ({ urls }) => {
       }
    };
 
+   useEffect(() => {
+      const intervalId = setInterval(() => {
+         nextStep();
+      }, 5000);
+      return () => {
+         clearInterval(intervalId);
+      };
+   }, [index])
+   
    return (
-      <div className="flex-1 flex lg:h-[40rem] lg:w-1/2">
+      <div className="lg:flex-1 flex w-[95vw] h-[35rem] lg:h-[40rem] lg:w-1/2 mx-auto lg:mx-0">
          <motion.div
             ref={imageRef}
             initial={false}
@@ -92,13 +101,13 @@ const SwiperRoutesImages: React.FC<SwiperRoutesImagesProps> = ({ urls }) => {
             </AnimatePresence>
             <button
                onClick={nextStep}
-               className="p-4 w-[4.5rem] aspect-[1] cursor-pointer absolute z-[5000] top-1/2 -translate-y-1/2 right-2"
+               className="p-4 w-[4.5rem] aspect-[1] cursor-pointer absolute z-[5000] top-1/2 -translate-y-1/2 right-1"
             >
                <NextArrow />
             </button>
             <button
                onClick={prevStep}
-               className="p-4 w-[4.5rem] aspect-[1] cursor-pointer absolute z-[5000] top-1/2 -translate-y-1/2 left-2"
+               className="p-4 w-[4.5rem] aspect-[1] cursor-pointer absolute z-[5000] top-1/2 -translate-y-1/2 left-1"
             >
                <PrevArrow />
             </button>

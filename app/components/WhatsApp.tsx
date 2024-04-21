@@ -1,23 +1,38 @@
-import { useRef, useState } from "react"
-import whatsApp from "../src/whatsappFixed.svg"
+import { useRef, useState, useEffect } from "react";
+import whatsApp from "../src/whatsappFixed.svg";
 
 const WhatsApp = () => {
-
     const [active, setActive] = useState(false);
     const btnWhatsRef = useRef(null);
 
-    const handleClick = () => {
-        setActive(!active);
-    }
+    useEffect(() => {
+        // Mostrar el mensaje después de 10 segundos
+        const showTimeout = setTimeout(() => {
+            setActive(true);
+
+            // Ocultar el mensaje después de 5 segundos
+            const hideTimeout = setTimeout(() => {
+                setActive(false);
+            }, 5000); // 5 segundos
+
+            return () => {
+                clearTimeout(hideTimeout);
+            };
+        }, 10000); // 10 segundos
+
+        return () => {
+            clearTimeout(showTimeout);
+        };
+    }, []);
 
     return (
-        <div ref={btnWhatsRef} onClick={handleClick} className={`fixed z-50 bottom-6 right-6 transition-transform duration-300 ${active ? "-translate-x-20" : ""}`}>
-
-            <div className={`text-right left-[1px] pr-8 align-middle text-lg p-1 transition-[width] duration-300 absolute rounded-full bg-[#FF4848] -z-30 text-gray-200 top-1/2 -translate-y-1/2 w-10 ${active ? "block w-32 lg:w-36 text-gray-100" : "text-transparent hidden"}`}>¡Hola!</div>
-
+        <div ref={btnWhatsRef} className={`fixed z-50 bottom-6 right-6 transition-transform duration-300 ${active ? "-translate-x-20" : ""}`}>
+            <div className={`text-right left-[1px] pr-8 align-middle text-lg p-1 transition-[width] duration-300 absolute rounded-full bg-[#FF4848] -z-30 text-gray-200 top-1/2 -translate-y-1/2 w-10 ${active ? "block w-32 lg:w-36 text-gray-100" : "text-transparent hidden"}`}>
+                ¡Hola!
+            </div>
             <img className="w-10 lg:w-11 object-contain" src={whatsApp} alt="Logo de WhastApp para contactar a Giorgio Espadas Brasileñas y Parrilladas" />
         </div>
-    )
-}
+    );
+};
 
-export default WhatsApp
+export default WhatsApp;

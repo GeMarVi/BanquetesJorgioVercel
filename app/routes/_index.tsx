@@ -8,7 +8,7 @@ import Servicios from "../components/Servicios"
 import SobreNosotros from "../components/SobreNosotros";
 
 import sendEmail from "../utils/mailer.server";
-import Video from "../components/Video";
+import AunNoNosConoces from "../components/AunNoNosConoces";
 
 export async function action({ request }: ActionFunctionArgs) {
   const formData = await request.formData();
@@ -69,7 +69,7 @@ export default function Index() {
         <SobreNosotros />
         <Servicios />
         <Blog />
-        <Video />
+        <AunNoNosConoces />
         <AgendaTuCita
           nombre={actionData?.errors.nombre}
           apellido={actionData?.errors.apellido}
