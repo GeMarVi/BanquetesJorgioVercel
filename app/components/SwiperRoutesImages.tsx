@@ -43,7 +43,7 @@ const SwiperRoutesImages: React.FC<SwiperRoutesImagesProps> = ({ urls }) => {
    
    const imageRef = useRef(null);
     
-   const isInView = useInView(imageRef);
+   const isInView = useInView(imageRef, {once: true});
 
    const nextStep = () => {
       setDirection(1);
@@ -73,7 +73,7 @@ const SwiperRoutesImages: React.FC<SwiperRoutesImagesProps> = ({ urls }) => {
                   ? { WebkitMaskImage: visibleMask, maskImage: visibleMask }
                   : { WebkitMaskImage: hiddenMask, maskImage: hiddenMask }
             }
-            transition={{ duration: 1, delay: 1 }}
+            transition={{ duration: 1, delay: 0.3 }}
             viewport={{ once: true }}
             className="relative overflow-hidden h-full w-full"
          >
@@ -92,13 +92,13 @@ const SwiperRoutesImages: React.FC<SwiperRoutesImagesProps> = ({ urls }) => {
             </AnimatePresence>
             <button
                onClick={nextStep}
-               className="p-4 w-16 aspect-[1] rounded-[32px] cursor-pointer text-center text-gray-50 absolute z-[5000] top-1/2 -translate-y-1/2 right-2"
+               className="p-4 w-[4.5rem] aspect-[1] cursor-pointer absolute z-[5000] top-1/2 -translate-y-1/2 right-2"
             >
                <NextArrow />
             </button>
             <button
                onClick={prevStep}
-               className="p-4 w-16 aspect-[1] rounded-[32px] cursor-pointer text-center text-gray-50 absolute z-[5000] top-1/2 -translate-y-1/2 left-2"
+               className="p-4 w-[4.5rem] aspect-[1] cursor-pointer absolute z-[5000] top-1/2 -translate-y-1/2 left-2"
             >
                <PrevArrow />
             </button>

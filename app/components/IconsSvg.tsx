@@ -101,7 +101,7 @@ const PrevArrow = () => (
    >
       <defs id="defs1" />
       <path
-         className="fill-custom-fill"
+         className="fill-gray-50"
          d="m 256,512 a 256,256 0 1 1 0,-512 256,256 0 1 1 0,512 z M 128,256 336,384 V 128 Z"
          id="path1"
       />
@@ -117,7 +117,7 @@ const NextArrow = () => (
    >
       <defs id="defs1" />
       <path
-         className="fill-custom-fill"
+         className="fill-gray-50"
          d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM384 256L176 384V128L384 256z"
          id="path1"
       />
