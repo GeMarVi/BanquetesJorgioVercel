@@ -124,11 +124,10 @@ const Header = () => {
                <motion.div
                   key={route}
                   variants={{
-                     initial: { opacity: 0, x: -1000 },
-                     animate: { opacity: 1, x: 0 },
-                     exit: { opacity: 0 },
+                     initial: { opacity: 0, y: -10 },
+                     animate: { opacity: 1, y: 0, transition: {duration: 0.5} },
+                     exit: { opacity: 0, transition: {duration: 1} },
                   }}
-                  transition={{ ease: "backIn", duration: 0.8 }}
                   initial="initial"
                   animate="animate"
                   exit="exit"

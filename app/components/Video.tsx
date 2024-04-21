@@ -27,12 +27,8 @@ const Video: React.FC = () => {
                            ? "translateX(0)"
                            : "translateX(-200px)",
                         opacity: isInstagramInView ? 1 : 0,
-                        transition: `
-                        transform 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.3s,
-                        opacity 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.3s
-                        `,
                      }}
-                     className="flex-1 w-full px-2 lg:w-auto lg:px-0"
+                     className="flex-1 w-full px-2 lg:w-auto lg:px-0 transition-transform-opacity transition-custom-cubic duration-600 delay-300"
                   >
                      <InstagramEmbed
                         url="https://www.instagram.com/p/C3sNGCHvywO/"
@@ -46,12 +42,8 @@ const Video: React.FC = () => {
                            ? "translateX(0)"
                            : "translateX(200px)",
                         opacity: isTextInView ? 1 : 0,
-                        transition: `
-                             transform 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.3s,
-                             opacity 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.3s
-                           `,
                      }}
-                     className="flex-1"
+                     className="flex-1 transition-transform-opacity transition-custom-cubic duration-600 delay-300"
                   >
                      <p
                         ref={textRef}

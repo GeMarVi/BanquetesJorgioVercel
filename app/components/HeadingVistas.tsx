@@ -21,10 +21,9 @@ export const HeadingVistas: React.FC<Value> = ({
          style={{
             transform: isInView ? whileInView : initial,
             opacity: isInView ? 1 : 0,
-            transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.3s",
          }}
          ref={headingRef}
-         className="text-center text-gradient text-5xl lg:text-7xl font-clash"
+         className="text-center text-gradient text-5xl lg:text-7xl font-clash transition-transform-opacity transition-custom-cubic duration-600 delay-300"
       >
          {text}
       </h3>

@@ -22,15 +22,11 @@ const SobreNosotros = () => {
             <div className="h-[30rem] lg:w-[35rem]">
                <img
                   style={{
-                     transform: isInView ? "scale(1)" : "scale(0.5)",
+                     transform: isInView ? "scale(1) translateX(0)" : "scale(0.5) translateX(-200px)",
                      opacity: isInView ? 1 : 0,
-                     transition: `
-                       transform 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.3s,
-                       opacity 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.3s
-                     `,
                    }}                   
                   ref={imageRef}
-                  className="object-cover h-full w-full"
+                  className="object-cover h-full w-full transition-transform-opacity transition-custom-cubic duration-600 delay-300"
                   src={ejemplo}
                   alt="Imagen de la sección sobre nosotros"
                />

@@ -2,346 +2,355 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @font-face {
-  font-family: 'ClashDisplay-Extralight';
-  src: url('./fonts//ClashDisplay-Extralight.woff2') format('woff2'),
-    url('./fonts/ClashDisplay-Extralight.woff') format('woff'),
-    url('./fonts/ClashDisplay-Extralight.ttf') format('truetype');
-  font-weight: 200;
-  font-display: swap;
-  font-style: normal;
+   font-family: "ClashDisplay-Extralight";
+   src: url("./fonts//ClashDisplay-Extralight.woff2") format("woff2"),
+      url("./fonts/ClashDisplay-Extralight.woff") format("woff"),
+      url("./fonts/ClashDisplay-Extralight.ttf") format("truetype");
+   font-weight: 200;
+   font-display: swap;
+   font-style: normal;
 }
 
 @font-face {
-  font-family: 'ClashDisplay-Light';
-  src: url('./fonts/ClashDisplay-Light.woff2') format('woff2'),
-    url('./fonts/ClashDisplay-Light.woff') format('woff'),
-    url('./fonts/ClashDisplay-Light.ttf') format('truetype');
-  font-weight: 300;
-  font-display: swap;
-  font-style: normal;
+   font-family: "ClashDisplay-Light";
+   src: url("./fonts/ClashDisplay-Light.woff2") format("woff2"),
+      url("./fonts/ClashDisplay-Light.woff") format("woff"),
+      url("./fonts/ClashDisplay-Light.ttf") format("truetype");
+   font-weight: 300;
+   font-display: swap;
+   font-style: normal;
 }
 
 @font-face {
-  font-family: 'ClashDisplay-Regular';
-  src: url('./fonts/ClashDisplay-Regular.woff2') format('woff2'),
-    url('./fonts/ClashDisplay-Regular.woff') format('woff'),
-    url('./fonts/ClashDisplay-Regular.ttf') format('truetype');
-  font-weight: 400;
-  font-display: swap;
-  font-style: normal;
+   font-family: "ClashDisplay-Regular";
+   src: url("./fonts/ClashDisplay-Regular.woff2") format("woff2"),
+      url("./fonts/ClashDisplay-Regular.woff") format("woff"),
+      url("./fonts/ClashDisplay-Regular.ttf") format("truetype");
+   font-weight: 400;
+   font-display: swap;
+   font-style: normal;
 }
 
 @font-face {
-  font-family: 'ClashDisplay-Medium';
-  src: url('./fonts/ClashDisplay-Medium.woff2') format('woff2'),
-    url('./fonts/ClashDisplay-Medium.woff') format('woff'),
-    url('./fonts/ClashDisplay-Medium.ttf') format('truetype');
-  font-weight: 500;
-  font-display: swap;
-  font-style: normal;
+   font-family: "ClashDisplay-Medium";
+   src: url("./fonts/ClashDisplay-Medium.woff2") format("woff2"),
+      url("./fonts/ClashDisplay-Medium.woff") format("woff"),
+      url("./fonts/ClashDisplay-Medium.ttf") format("truetype");
+   font-weight: 500;
+   font-display: swap;
+   font-style: normal;
 }
 
 @font-face {
-  font-family: 'ClashDisplay-Semibold';
-  src: url('./fonts/ClashDisplay-Semibold.woff2') format('woff2'),
-    url('./fonts/ClashDisplay-Semibold.woff') format('woff'),
-    url('./fonts/ClashDisplay-Semibold.ttf') format('truetype');
-  font-weight: 600;
-  font-display: swap;
-  font-style: normal;
+   font-family: "ClashDisplay-Semibold";
+   src: url("./fonts/ClashDisplay-Semibold.woff2") format("woff2"),
+      url("./fonts/ClashDisplay-Semibold.woff") format("woff"),
+      url("./fonts/ClashDisplay-Semibold.ttf") format("truetype");
+   font-weight: 600;
+   font-display: swap;
+   font-style: normal;
 }
 
 @font-face {
-  font-family: 'ClashDisplay-Bold';
-  src: url('./fonts/ClashDisplay-Bold.woff2') format('woff2'),
-    url('./fonts/ClashDisplay-Bold.woff') format('woff'),
-    url('./fonts/ClashDisplay-Bold.ttf') format('truetype');
-  font-weight: 700;
-  font-display: swap;
-  font-style: normal;
+   font-family: "ClashDisplay-Bold";
+   src: url("./fonts/ClashDisplay-Bold.woff2") format("woff2"),
+      url("./fonts/ClashDisplay-Bold.woff") format("woff"),
+      url("./fonts/ClashDisplay-Bold.ttf") format("truetype");
+   font-weight: 700;
+   font-display: swap;
+   font-style: normal;
 }
 
 @font-face {
-  font-family: 'ClashDisplay-Variable';
-  src: url('./fonts/ClashDisplay-Variable.woff2') format('woff2'),
-    url('./fonts/ClashDisplay-Variable.woff') format('woff'),
-    url('./fonts/ClashDisplay-Variable.ttf') format('truetype');
-  font-weight: 200 700;
-  font-display: swap;
-  font-style: normal;
+   font-family: "ClashDisplay-Variable";
+   src: url("./fonts/ClashDisplay-Variable.woff2") format("woff2"),
+      url("./fonts/ClashDisplay-Variable.woff") format("woff"),
+      url("./fonts/ClashDisplay-Variable.ttf") format("truetype");
+   font-weight: 200 700;
+   font-display: swap;
+   font-style: normal;
 }
 
 /* routs*/
 .section-routes-swiper .swiper {
-  max-width: 100%;
-  height: 100%;
+   max-width: 100%;
+   height: 100%;
 }
 
 .section-routes-swiper .swiper .swiper-slide {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  height: 30rem;
-  width: 100%;
+   display: flex;
+   align-items: flex-start;
+   justify-content: center;
+   height: 30rem;
+   width: 100%;
 }
 
 @media (min-width: 1024px) {
-  .section-routes-swiper .swiper {
-    max-width: 100%;
-    height: 100%;
-  }
+   .section-routes-swiper .swiper {
+      max-width: 100%;
+      height: 100%;
+   }
 
-  .section-routes-swiper .swiper .swiper-slide {
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    height: 100%;
-    width: 100%;
-  }
+   .section-routes-swiper .swiper .swiper-slide {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      height: 100%;
+      width: 100%;
+   }
 }
 
 /* Seccion contactanos */
 .whatsapp-svg::before {
-  content: "";
-  background-image: url('../src/WhatsApp.svg');
-  background-size: cover;
-  position: absolute;
-  top: -2.5rem;
-  left: 27%;
-  width: 2rem;
-  height: 2rem;
+   content: "";
+   background-image: url("../src/WhatsApp.svg");
+   background-size: cover;
+   position: absolute;
+   top: -2.5rem;
+   left: 27%;
+   width: 2rem;
+   height: 2rem;
 }
 
 .correo-svg::before {
-  content: "";
-  background-image: url('../src/correo.svg');
-  background-size: cover;
-  position: absolute;
-  top: -2.5rem;
-  left: 23%;
-  width: 2rem;
-  height: 2rem;
+   content: "";
+   background-image: url("../src/correo.svg");
+   background-size: cover;
+   position: absolute;
+   top: -2.5rem;
+   left: 23%;
+   width: 2rem;
+   height: 2rem;
 }
 
 @layer components {
+   .text-gradient {
+      color: #ff4848;
+      background-image: -webkit-linear-gradient(0deg, #ff4848 4%, #b21f66 63%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+   }
 
+   .linea-menu::before {
+      content: "";
+      position: absolute;
+      display: inline-block;
+      width: 4.5rem;
+      height: 2px;
+      bottom: -0.3rem;
+      left: -1rem;
+   }
 
-  .text-gradient {
-    color: #FF4848;
-    background-image: -webkit-linear-gradient(0deg, #FF4848 4%, #B21F66 63%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
+   .animacionY {
+      transform: translateY(-6rem);
+   }
 
-  .linea-menu::before {
-    content: "";
-    position: absolute;
-    display: inline-block;
-    width: 4.5rem;
-    height: 2px;
-    bottom: -.3rem;
-    left: -1rem;
-  }
+   .gradient-banner {
+      background-color: rgba(19, 19, 20, 0.6);
+   }
 
-  .animacionY {
-    transform: translateY(-6rem);
-  }
+   .linea-decoracion::after {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      bottom: 1rem;
+      background-image: url("../src/");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center center;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      height: 1.5rem;
+   }
 
-  .gradient-banner {
-    background-color: rgba(19, 19, 20, 0.6);
-  }
+   .message {
+      color: rgba(88, 87, 87, 0.822);
+      font-size: 14px;
+   }
 
-  .linea-decoracion::after {
-    content: "";
-    display: inline-block;
-    position: absolute;
-    bottom: 1rem;
-    background-image: url('../src/');
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center center;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    height: 1.5rem;
-  }
+   /* formulario */
 
-  .message {
-    color: rgba(88, 87, 87, 0.822);
-    font-size: 14px;
-  }
+   .flexform {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+   }
 
-  /* formulario */
+   .form label {
+      position: relative;
+      text-transform: uppercase;
+      font-size: 0.7rem;
+   }
 
-  .flexform {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-  }
+   .form label .input + span {
+      position: absolute;
+      left: 10px;
+      top: 15px;
+      color: grey;
+      font-size: 0.9em;
+      cursor: text;
+      transition: 0.3s ease;
+   }
 
-  .form label {
-    position: relative;
-    text-transform: uppercase;
-    font-size: .7rem;
-  }
+   .form label .input:placeholder-shown + span {
+      top: 15px;
+      font-size: 0.9em;
+   }
 
-  .form label .input+span {
-    position: absolute;
-    left: 10px;
-    top: 15px;
-    color: grey;
-    font-size: 0.9em;
-    cursor: text;
-    transition: 0.3s ease;
-  }
+   .form label .input:valid + span {
+      color: gray;
+   }
 
-  .form label .input:placeholder-shown+span {
-    top: 15px;
-    font-size: 0.9em;
-  }
+   .input01 {
+      width: 100%;
+      padding: 10px 10px 30px 10px;
+   }
 
-  .form label .input:valid+span {
-    color: gray;
-  }
+   .form label .input01 + span {
+      position: absolute;
+      left: 10px;
+      top: 50px;
+      color: grey;
+      font-size: 0.9em;
+      cursor: text;
+      transition: 0.3s ease;
+   }
 
-  .input01 {
-    width: 100%;
-    padding: 10px 10px 30px 10px;
-  }
+   .form label .input01:placeholder-shown + span {
+      top: 40px;
+      font-size: 0.9em;
+   }
 
-  .form label .input01+span {
-    position: absolute;
-    left: 10px;
-    top: 50px;
-    color: grey;
-    font-size: 0.9em;
-    cursor: text;
-    transition: 0.3s ease;
-  }
+   .form label .input01:focus + span,
+   .form label .input01:valid + span {
+      top: 50px;
+      font-size: 0.7em;
+      font-weight: 600;
+   }
 
-  .form label .input01:placeholder-shown+span {
-    top: 40px;
-    font-size: 0.9em;
-  }
+   .form label .input01:valid + span {
+      color: grey;
+   }
 
-  .form label .input01:focus+span,
-  .form label .input01:valid+span {
-    top: 50px;
-    font-size: 0.7em;
-    font-weight: 600;
-  }
+   /* Btn */
+   .custom-button {
+      --green: #ff204e;
+      padding: 0.7em 2.7em;
+      letter-spacing: 0.06em;
+      position: relative;
+      border-radius: 0.6em;
+      overflow: hidden;
+      transition: all 0.3s;
+      line-height: 1.4em;
+      border: 2px solid var(--green);
+      background: linear-gradient(
+         to right,
+         rgba(182, 41, 6, 0.1) 1%,
+         transparent 40%,
+         transparent 60%,
+         rgba(231, 23, 8, 0.1) 100%
+      );
+      color: var(--green);
+      box-shadow: inset 0 0 10px rgba(228, 52, 8, 0.4),
+         0 0 9px 3px rgba(223, 49, 5, 0.1);
+   }
 
-  .form label .input01:valid+span {
-    color: grey;
-  }
+   .custom-button:hover {
+      color: #ff204e;
+      box-shadow: inset 0 0 10px rgba(211, 55, 7, 0.6),
+         0 0 9px 3px rgba(179, 54, 5, 0.2);
+   }
 
+   .custom-button::before {
+      content: "";
+      position: absolute;
+      left: -4em;
+      width: 4em;
+      height: 100%;
+      top: 0;
+      transition: transform 0.4s ease-in-out;
+      background: linear-gradient(
+         to right,
+         transparent 1%,
+         rgba(248, 18, 18, 0.1) 40%,
+         rgba(223, 12, 5, 0.1) 60%,
+         transparent 100%
+      );
+   }
 
-  /* Btn */
-  .custom-button {
-    --green: #FF204E;
-    padding: 0.7em 2.7em;
-    letter-spacing: 0.06em;
-    position: relative;
-    border-radius: 0.6em;
-    overflow: hidden;
-    transition: all 0.3s;
-    line-height: 1.4em;
-    border: 2px solid var(--green);
-    background: linear-gradient(to right, rgba(182, 41, 6, 0.1) 1%, transparent 40%, transparent 60%, rgba(231, 23, 8, 0.1) 100%);
-    color: var(--green);
-    box-shadow: inset 0 0 10px rgba(228, 52, 8, 0.4), 0 0 9px 3px rgba(223, 49, 5, 0.1);
-  }
+   .custom-button:hover::before {
+      transform: translateX(15em);
+   }
 
-  .custom-button:hover {
-    color: #FF204E;
-    box-shadow: inset 0 0 10px rgba(211, 55, 7, 0.6), 0 0 9px 3px rgba(179, 54, 5, 0.2);
-  }
+   /* btnToggle */
 
-  .custom-button::before {
-    content: "";
-    position: absolute;
-    left: -4em;
-    width: 4em;
-    height: 100%;
-    top: 0;
-    transition: transform .4s ease-in-out;
-    background: linear-gradient(to right, transparent 1%, rgba(248, 18, 18, 0.1) 40%, rgba(223, 12, 5, 0.1) 60%, transparent 100%);
-  }
+   .toggle {
+      position: relative;
+      width: 40px;
+      cursor: pointer;
+      margin: auto;
+      display: block;
+      height: 44px;
+   }
 
-  .custom-button:hover::before {
-    transform: translateX(15em);
-  }
+   .bar {
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 2px;
+      border-radius: calc(2px / 2);
+      background: #e5e7eb;
+      color: inherit;
+      opacity: 1;
+      transition: none 0.25s cubic-bezier(0.5, -0.35, 0.35, 1.5) 0s;
+   }
 
+   .bar--top {
+      bottom: calc(50% + 11px + 2px / 2);
+      transition-property: bottom, margin, transform;
+      transition-delay: calc(0s + 0.25s), 0s, 0s;
+   }
 
-  /* btnToggle */
+   .bar--middle {
+      top: calc(50% - 2px / 2);
+      transition-property: top, opacity;
+      transition-duration: 0.25s, 0s;
+      transition-delay: calc(0s + 0.25s * 1.3), calc(0s + 0.25s * 1.3);
+   }
 
-  .toggle {
-    position: relative;
-    width: 40px;
-    cursor: pointer;
-    margin: auto;
-    display: block;
-    height: 44px;
-  }
+   .bar--bottom {
+      top: calc(50% + 11px + 2px / 2);
+      transition-property: top, transform;
+      transition-delay: 0s;
+   }
 
-  .bar {
-    position: absolute;
-    left: 0;
-    right: 0;
-    height: 2px;
-    border-radius: calc(2px / 2);
-    background: #e5e7eb;
-    color: inherit;
-    opacity: 1;
-    transition: none 0.25s cubic-bezier(.5, -0.35, .35, 1.5) 0s;
-  }
+   .bar--top-active {
+      bottom: calc(50% - 11px - 2px);
+      margin-bottom: calc(11px + 2px / 2);
+      transform: rotate(45deg);
+      transition-delay: calc(0s + 0.25s * 0.3), calc(0s + 0.25s * 1.3),
+         calc(0s + 0.25s * 1.3);
+   }
 
-  .bar--top {
-    bottom: calc(50% + 11px + 2px/ 2);
-    transition-property: bottom, margin, transform;
-    transition-delay: calc(0s + 0.25s), 0s, 0s;
-  }
+   .bar--middle-active {
+      top: calc(50% + 11px);
+      opacity: 0;
+      transition-duration: 0.25s, 0s;
+      transition-delay: 0s, calc(0s + 0.25s);
+   }
 
-  .bar--middle {
-    top: calc(50% - 2px/ 2);
-    transition-property: top, opacity;
-    transition-duration: 0.25s, 0s;
-    transition-delay: calc(0s + 0.25s * 1.3), calc(0s + 0.25s * 1.3);
-  }
+   .bar--bottom-active {
+      top: calc(50% - 2px / 2);
+      transform: rotate(-45deg);
+      transition-delay: calc(0s + 0.25s * 1.3), calc(0s + 0.25s * 1.3);
+   }
 
-  .bar--bottom {
-    top: calc(50% + 11px + 2px/ 2);
-    transition-property: top, transform;
-    transition-delay: 0s;
-  }
+   /* scroll */
 
-  .bar--top-active {
-    bottom: calc(50% - 11px - 2px);
-    margin-bottom: calc(11px + 2px/ 2);
-    transform: rotate(45deg);
-    transition-delay: calc(0s + 0.25s * .3), calc(0s + 0.25s * 1.3), calc(0s + 0.25s * 1.3);
-  }
-
-  .bar--middle-active {
-    top: calc(50% + 11px);
-    opacity: 0;
-    transition-duration: 0.25s, 0s;
-    transition-delay: 0s, calc(0s + 0.25s);
-  }
-
-  .bar--bottom-active {
-    top: calc(50% - 2px/ 2);
-    transform: rotate(-45deg);
-    transition-delay: calc(0s + 0.25s * 1.3), calc(0s + 0.25s * 1.3);
-  }
-
-  /* scroll */
-
-  .animation-pause:hover {
-    animation-play-state: paused;
-  }
-
+   .animation-pause:hover {
+      animation-play-state: paused;
+   }
 }

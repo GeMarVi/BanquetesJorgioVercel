@@ -1,5 +1,4 @@
 import Btn from "./Btn";
-
 import { useRef } from "react";
 import { useInView } from "framer-motion";
 
@@ -24,19 +23,11 @@ const CardServicios: React.FC<CardServicio> = ({
    return (
       <div
          ref={cardRefs}
-         style={{
-            transform: isInView ? "scale(1)" : "scale(0.7)",
-            opacity: isInView ? 1 : 0,
-            transition: `
-           transform 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.1s,
-           opacity 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.1s
-         `,
-         }}
-         className="relative rounded-xl flex w-auto flex-col text-heading bg-secundario"
+         className={`relative rounded-xl flex w-auto flex-col text-heading bg-secundario transition-transform-opacity transition-custom-cubic duration-600 ${isInView ? "scale-100 opacity-100" : "scale-75 opacity-0"}`}
       >
          <div className="relative mx-4 rounded-xl -mt-6 h-60 w-auto overflow-hidden bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40">
             <img
-               className="object-cover h-full w-full transform hover:scale-110 transition duration-300"
+               className="object-cover h-full w-full"
                src={src}
                alt={`Imagen donde se ve el servicio de ${alt} de banquetes Jorgio`}
             />

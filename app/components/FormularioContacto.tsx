@@ -24,7 +24,7 @@ const FormularioContacto = (data: ActionData) => {
   ]
 
   return (
-    <Form method="post" className="flex flex-col relative p-8 gap-4 flex-1 lg:mt-0 bg-secundario">
+    <Form method="post" className="flex flex-col relative p-8 gap-4 lg:mt-0 bg-secundario">
       <h4 className="font-variable text-heading text-2xl mb-2 font-normal">Solicita una cotización y nuestro equipo se pondrá en contacto contigo lo mas pronto posible</h4>
       <div>
         <label>
