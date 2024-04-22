@@ -3,7 +3,7 @@ import { MetaFunction } from "@vercel/remix";
 import { HeadingVistas } from "~/components/HeadingVistas";
 import Btn from "../components/Btn"
 import parrillada from "../src/Parrillada.webp"
-import espada3 from "../src/parrillada1.webp"
+import espada3 from "../src/CardServicios/parrillada1.webp"
 import ListaCarnes from "~/components/ListaCarnes";
 
 import ensalada1 from "../src/parrilladas/ensalada-1.webp"

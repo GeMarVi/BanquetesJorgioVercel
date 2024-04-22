@@ -3,7 +3,7 @@ import { MetaFunction } from "@vercel/remix";
 import { HeadingVistas } from "~/components/HeadingVistas";
 import Btn from "../components/Btn"
 import dj2 from "../src/dj2.webp"
-import meseros from "../src/meseros.webp"
+import meseros from "../src/CardServicios/meseros.webp"
 import ListaCarnes from "~/components/ListaCarnes";
 import SwiperRoutesImages from "~/components/SwiperRoutesImages";
 

@@ -25,12 +25,6 @@ export default {
          textColor: {
             heading: "#EEEEEE",
             paragraph: "#00ADB5",
-            "heading-1": "#C4FB6D",
-            "heading-2": "#FFE227",
-            "heading-3": "#0079FF",
-            "heading-4": "#A555EC",
-            "heading-5": "#F38EFF",
-            "heading-6": "#F2613F",
             dark: "#222831",
          },
          borderColor: {

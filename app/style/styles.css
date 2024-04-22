@@ -350,7 +350,7 @@
 
    /* scroll */
 
-   .animation-pause:hover {
+   body .animation-pause {
       animation-play-state: paused;
    }
 }

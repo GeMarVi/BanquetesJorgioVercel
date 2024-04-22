@@ -28,7 +28,7 @@ const AgendaTuCita = (data: ActionData) => {
          <div style={{
             transform: isFormInView ? "scale(1)" : "scale(0.7)",
             opacity: isFormInView ? 1 : 0,
-         }} className="transition-transform-opacity transition-custom-cubic duration-600 delay-300 flex flex-col lg:flex-row justify-between lg:items-stretch mx-auto lg:h-auto mt-32">
+         }} className="transition-transform-opacity transition-custom-cubic duration-600 delay-300 flex flex-col lg:flex-row justify-between lg:items-stretch mx-auto lg:h-auto mt-24">
             <div ref={formRef} className="flex-1">
                <FormularioContacto
                   nombre={data.nombre}

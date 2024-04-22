@@ -2,10 +2,7 @@ import { MetaFunction } from "@vercel/remix";
 import { HeadingVistas } from "~/components/HeadingVistas";
 
 import Btn from "../components/Btn"
-import espada from "../src/espadas-uno.webp"
-import espada2 from "../src/espadas-dos.webp"
-import espada3 from "../src/espadas-tres.webp"
-import ListaCarnes from "~/components/ListaCarnes";
+import ListaCarnes from "../components/ListaCarnes";
 
 import ensalada1 from "../src/parrilladas/ensalada-1.webp"
 import ensalada2 from "../src/parrilladas/ensalada-2.webp"
@@ -57,12 +54,6 @@ const espadasBrasilenas = () => {
         "Limones",
         "Pan de ajo",
         "Piña asada con canela"]
-
-    const images = [
-        {title: "espadas brasileñas", src: espada},
-        {title: "espadas brasileñas", src: espada2},
-        {title: "espadas brasileñas", src: espada3},
-    ]
 
     const ensaladas = [
         {title: "ensaladas y guarniciones", src: ensalada1},

@@ -3,7 +3,6 @@ import { HeadingVistas } from "./HeadingVistas";
 import { useInView } from "framer-motion";
 import Video from "./Video";
 
-
 const AunNoNosConoces = () => {
    const instagramRef = useRef(null);
    const textRef = useRef(null);
@@ -14,12 +13,12 @@ const AunNoNosConoces = () => {
    return (
       <>
          <section className="bg-primario w-screen mx-auto pt-32 lg:pt-40 overflow-hidden lg:overflow-visible">
+            <HeadingVistas
+               text="¿Aun no nos conoces?"
+               initial="translateY(150px)"
+               whileInView="translateY(0)"
+            />
             <div className="max-w-6xl mx-auto flex flex-col items-center justify-center px-2 lg:px-0 gap-8">
-               <HeadingVistas
-                  text="¿Aun no nos conoces?"
-                  initial="translateY(150px)"
-                  whileInView="translateY(0)"
-               />
                <div className="flex flex-col-reverse mt-24 lg:flex-row gap-16 items-center">
                   <div
                      ref={instagramRef}
@@ -40,7 +39,7 @@ const AunNoNosConoces = () => {
                            : "translateX(200px)",
                         opacity: isTextInView ? 1 : 0,
                      }}
-                     className="flex-1 transition-transform-opacity transition-custom-cubic duration-600 delay-300"
+                     className="lg:flex-1 transition-transform-opacity transition-custom-cubic duration-600 delay-300"
                   >
                      <p
                         ref={textRef}

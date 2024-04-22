@@ -18,7 +18,7 @@ const SobreNosotros = () => {
             initial="translateX(-200px)"
             whileInView="translateX(0)"
          />
-         <div className="flex lg:w-auto lg:items-center flex-col-reverse lg:flex-row mt-24 lg:h-min lg:gap-8 bg-transparent lg:pt-20">
+         <div className="flex lg:w-auto lg:items-center flex-col-reverse lg:flex-row mt-24 lg:h-min lg:gap-8 bg-transparent">
             <div className="h-[30rem] lg:w-[35rem]">
                <img
                   style={{
@@ -51,10 +51,10 @@ const SobreNosotros = () => {
                </p>
                <p className="text-heading text-center lg:text-left text-xl lg:text-2xl antialiased font-monse mb-6">
                   Especializados en el servicio de{" "}
-                  <strong className="text-gradient-6">
+                  <strong className="text-gradient">
                      Espadas Brasileñas
                   </strong>{" "}
-                  y <strong className="text-gradient-6"> Parrilladas</strong>{" "}
+                  y <strong className="text-gradient"> Parrilladas</strong>{" "}
                   brindadando un servicio de alta calidad en todo momento
                </p>
                <p className="antialiased text-center lg:text-left text-xl lg:text-2xl text-heading font-monse mb-6">

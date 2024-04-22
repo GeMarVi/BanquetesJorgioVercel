@@ -1,5 +1,3 @@
-import Btn from "./Btn";
-
 import { HeadingVistas } from "./HeadingVistas";
 import { cardsServicios } from "../utils/staticInfo";
 import CardServicios from "./CardServicios";

@@ -3,7 +3,7 @@ import type { ActionFunctionArgs } from "@vercel/remix";
 import { json, MetaFunction } from "@vercel/remix";
 
 import AgendaTuCita from "../components/AgendaTuCita"
-import Blog from "../components/Blog"
+import Testimoniales from "../components/Testimoniales"
 import Servicios from "../components/Servicios"
 import SobreNosotros from "../components/SobreNosotros";
 
@@ -68,7 +68,7 @@ export default function Index() {
       <main className="bg-transparent">
         <SobreNosotros />
         <Servicios />
-        <Blog />
+        <Testimoniales />
         <AunNoNosConoces />
         <AgendaTuCita
           nombre={actionData?.errors.nombre}
