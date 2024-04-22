@@ -55,7 +55,7 @@ export default {
             "custom-cubic": "cubic-bezier(0.17, 0.55, 0.55, 1)",
          },
          delay: {
-            "300": "0.3s",
+            "300": "0.4s",
          },
       },
    },
