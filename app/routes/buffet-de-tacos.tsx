@@ -5,6 +5,10 @@ import Btn from "../components/Btn"
 import tacos1 from "../src/tacos1.webp"
 import tacos2 from "../src/tacos2.webp"
 import tacos3 from "../src/CardServicios/tacos.webp"
+import taco from "../src/tacos/tacos-1.webp"
+import taco2 from "../src/tacos/tacos-2.webp"
+import taco3 from "../src/tacos/tacos-3.webp"
+
 import ListaCarnes from "~/components/ListaCarnes";
 import SwiperRoutesImages from "~/components/SwiperRoutesImages";
 
@@ -44,9 +48,12 @@ const tacos = () => {
       ];
       
       const images = [
+        {title: "Buffet de tacos", src: tacos3},
+        {title: "Buffet de tacos", src: taco},
+        {title: "Buffet de tacos", src: taco2},
+        {title: "Buffet de tacos", src: taco3},
         {title: "Buffet de tacos", src: tacos1},
         {title: "Buffet de tacos", src: tacos2},
-        {title: "Buffet de tacos", src: tacos3},
       ]
 
     return (

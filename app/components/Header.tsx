@@ -56,7 +56,7 @@ const Header = () => {
          description =
             "Tenemos todos los accesorios que requieres para tu evento";
          break;
-      case "/tacos":
+      case "/buffet-de-tacos":
          title = "Buffet de Tacos";
          description = "Para los amantes de los tacos";
          break;
@@ -82,7 +82,7 @@ const Header = () => {
       case "/mobiliario":
          banner = bannerMoviliario;
          break;
-      case "/tacos":
+      case "/buffet-de-tacos":
          banner = bannerTacos;
          break;
       case "/personal":

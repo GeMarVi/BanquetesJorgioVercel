@@ -3,6 +3,12 @@ import { MetaFunction } from "@vercel/remix";
 import { HeadingVistas } from "~/components/HeadingVistas";
 import Btn from "../components/Btn"
 import dj2 from "../src/dj2.webp"
+import dj from "../src/dj/dj-1.webp"
+import dj3 from "../src/dj/dj-2.webp"
+
+import barman from "../src/barman/barman-1.webp"
+import barman2 from "../src/barman/barman-2.webp"
+
 import meseros from "../src/CardServicios/meseros.webp"
 import ListaCarnes from "~/components/ListaCarnes";
 import SwiperRoutesImages from "~/components/SwiperRoutesImages";
@@ -25,11 +31,12 @@ const moviliario = () => {
         {title: "Meseros", src: meseros},
       ]
      const images2 = [
-        {title: "Barman", src: meseros},
-        {title: "Barman", src: meseros},
+        {title: "Barman", src: barman},
+        {title: "Barman", src: barman2},
       ]
      const images3 = [
-        {title: "Dj", src: dj2},
+        {title: "Dj", src: dj},
+        {title: "Dj", src: dj3},
         {title: "Dj", src: dj2},
       ]
 
