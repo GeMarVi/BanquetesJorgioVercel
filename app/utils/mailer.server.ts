@@ -10,8 +10,8 @@ const transport = nodemailer.createTransport({
    }
 });
 
-const sendEmail = (name: string, lastName: string, email: string, phone: string, message: string) => {
-   return transport.sendMail({
+const sendEmail = async (name: string, lastName: string, email: string, phone: string, message: string, event: string, persons: string, place:string ) => {
+   return await transport.sendMail({
       subject: "Cotización de servicio",
       bcc: ["gerson10mtzvilla@gmail.com"],
       from: "gerson10mtzvilla@gmail.com",
@@ -21,8 +21,17 @@ const sendEmail = (name: string, lastName: string, email: string, phone: string,
        <p>Un posible cliente se ha contactado a través del formulario de tu página web. Aquí tienes los detalles:</p>
        <ul>
          <li>Nombre: ${name} ${lastName}</li>
+         <br/>
          <li>Email: ${email}</li>
+         <br/>
          <li>Teléfono: ${phone}</li>
+         <br/>
+         <li>Tipo de evento: ${event}</li>
+         <br/>
+         <p>El contempla:</p>
+         <li>${persons} personas</li>
+         <br/>
+         <li>lugar: ${place}</li>
          <li>Mensaje: ${message}</li>
        </ul>
        `

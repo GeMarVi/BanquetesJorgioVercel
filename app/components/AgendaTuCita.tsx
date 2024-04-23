@@ -10,7 +10,12 @@ type ActionData = {
    email?: string;
    telefono?: string;
    mensaje?: string;
+   alcaldia?: string;
+   edomex?: string;
+   personas?: string;
+   evento?: string;
 };
+
 
 const AgendaTuCita = (data: ActionData) => {
    const formRef = useRef(null);
@@ -31,11 +36,7 @@ const AgendaTuCita = (data: ActionData) => {
          }} className="transition-transform-opacity transition-custom-cubic duration-600 delay-300 flex flex-col lg:flex-row justify-between lg:items-stretch mx-auto lg:h-auto mt-24">
             <div ref={formRef} className="flex-1">
                <FormularioContacto
-                  nombre={data.nombre}
-                  apellido={data.apellido}
-                  email={data.email}
-                  telefono={data.telefono}
-                  mensaje={data.mensaje}
+                 data={data}
                />
             </div>
             <div
