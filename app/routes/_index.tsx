@@ -23,66 +23,76 @@ export async function action({ request }: ActionFunctionArgs) {
    const evento = String(formData.get("evento"));
    const numeroPersonas = String(formData.get("numero-personas"));
 
-   const errors: {
+   const response: {
       nombre?: string;
       apellido?: string;
       email?: string;
       telefono?: string;
       mensaje?: string;
-      alcaldia?: string;
-      edomex?: string;
+      lugar?: string;
       evento?: string;
       personas?: string;
+      error?: string;
+      succes?: string;
    } = {};
+
    const emailRegex =
       /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
    const phoneRegex = /^\d{10}$/;
 
-   if (nombre.trim() === "") {
-      errors.nombre = " El campo no puede ir vacío";
-   }
-   if (apellido.trim() === "") {
-      errors.apellido = " El campo no puede ir vacío";
-   }
-   if (!emailRegex.test(email)) {
-      errors.email = " Email no valido";
-   }
-   if (email.trim() === "") {
-      errors.email = " El campo no puede ir vacío";
-   }
-  
-   if (telefono.trim() === "") {
-      errors.telefono = " El campo no puede estar vacío";
-   }
-   if (!phoneRegex.test(telefono)) {
-      errors.telefono = " El telefono debe contener 10 digitos";
-   }
-   if (mensaje.trim() === "") {
-      errors.mensaje = " El campo no puede ir vacío";
+   if (nombre.trim() === "") response.nombre = " El campo no puede ir vacío";
+
+   if (apellido.trim() === "")
+      response.apellido = " El campo no puede ir vacío";
+
+   if (!emailRegex.test(email)) response.email = " Email no valido";
+
+   if (email.trim() === "") response.email = " El campo no puede ir vacío";
+
+   if (telefono.trim() === "")
+      response.telefono = " El campo no puede estar vacío";
+
+   if (!phoneRegex.test(telefono))
+      response.telefono = " El telefono debe contener 10 digitos";
+
+   if (mensaje.trim() === "") response.mensaje = " El campo no puede ir vacío";
+
+   if (!alcaldias.includes(alcaldia) && !municipios.includes(edomex))
+      response.lugar = "Selecciona una opción";
+
+   if (!eventos.includes(evento)) response.evento = " Selecciona una opción";
+
+   if (numeroPersonas.trim() === "")
+      response.personas = " El campo no puede ir vacío";
+
+   if (Number(numeroPersonas) > 100000)
+      response.personas = " cantidad no válida";
+
+   if (Object.keys(response).length > 0) {
+      return json({ response });
    }
 
-   if (!alcaldias.includes(alcaldia)) {
-      errors.alcaldia = " valor invalido";
+   const result = await sendEmail(
+      nombre,
+      apellido,
+      email,
+      telefono,
+      mensaje,
+      alcaldia,
+      numeroPersonas,
+      evento
+   );
+
+   if (result) {
+      console.log(result);
+      response.succes = "Mensaje enviado pronto nos comunicaremos contigo";
+      return json({ response });
    }
 
-   if (!municipios.includes(edomex)) {
-      errors.edomex = " valor invalido";
-   }
-
-   if (!eventos.includes(evento)) {
-      errors.evento = " valor invalido";
-   }
-   if (numeroPersonas.trim() === "") {
-      errors.personas = " El campo no puede ir vacío";
-   }
-
-   if (Object.keys(errors).length > 0) {
-      return json({ errors });
-   } else {
-
-      await sendEmail(nombre, apellido, email, telefono, mensaje, alcaldia, numeroPersonas, evento);
-      return null;
-   }
+   console.log("error jaja", result);
+   response.error =
+      "Hubo un error al enviar el mensaje por favor intenta con otro medio de contacto";
+   return json({ response });
 }
 
 export const meta: MetaFunction = () => {
@@ -99,6 +109,18 @@ export const meta: MetaFunction = () => {
 export default function Index() {
    const actionData = useActionData<typeof action>();
 
+   const values = {
+      nombre: actionData?.response.nombre,
+      apellido: actionData?.response.apellido,
+      email: actionData?.response.email,
+      telefono: actionData?.response.telefono,
+      mensaje: actionData?.response.mensaje,
+      lugar: actionData?.response.lugar,
+      personas: actionData?.response.personas,
+      evento: actionData?.response.evento,
+      error: actionData?.response.error,
+      succes: actionData?.response.succes,
+   };
    return (
       <>
          <main className="bg-transparent">
@@ -106,17 +128,7 @@ export default function Index() {
             <Servicios />
             <Testimoniales />
             <AunNoNosConoces />
-            <AgendaTuCita
-               nombre={actionData?.errors.nombre}
-               apellido={actionData?.errors.apellido}
-               email={actionData?.errors.email}
-               telefono={actionData?.errors.telefono}
-               mensaje={actionData?.errors.mensaje}
-               alcaldia={actionData?.errors.alcaldia}
-               edomex={actionData?.errors.edomex}
-               evento={actionData?.errors.evento}
-               personas={actionData?.errors.personas}
-            />
+            <AgendaTuCita data={values} />
          </main>
       </>
    );

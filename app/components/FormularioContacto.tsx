@@ -1,9 +1,10 @@
 import { Form } from "@remix-run/react";
 import Btn from "./Btn";
-import { municipios, alcaldias, eventos } from "../utils/staticInfo"
+import { municipios, alcaldias, eventos } from "../utils/staticInfo";
+import { useState } from "react";
 
 type prop = {
-   data: data
+   data: data;
 };
 
 type data = {
@@ -12,18 +13,37 @@ type data = {
    email?: string;
    telefono?: string;
    mensaje?: string;
-   alcaldia?: string;
-   edomex?: string;
+   lugar?: string;
    personas?: string;
    evento?: string;
+   error?: string;
+   succes?: string;
 };
 
+const FormularioContacto: React.FC<prop> = ({ data }) => {
+   const {
+      nombre,
+      apellido,
+      email,
+      telefono,
+      evento,
+      mensaje,
+      lugar,
+      personas,
+      error,
+      succes,
+   } = data;
+   const [place, setPlace] = useState("");
+   const [spinner, setSpinner] = useState(false);
 
-const FormularioContacto: React.FC<prop> = ( {data} ) => {
-  
+   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+      setPlace(e.target.id);
+   };
+
    return (
       <Form
          method="post"
+         noValidate
          className="flex flex-col relative p-8 gap-4 lg:mt-0 bg-secundario"
       >
          <h4 className="font-variable text-heading text-2xl mb-2 font-normal">
@@ -36,14 +56,16 @@ const FormularioContacto: React.FC<prop> = ( {data} ) => {
                   Nombre
                </span>
                {data.nombre ? (
-                  <span className="text-red-600">{data?.nombre}</span>
+                  <span className="text-red-500 font-Inter text-sm">
+                     {data?.nombre}
+                  </span>
                ) : null}
             </label>
             <input
                name="nombre"
                id="nombre"
                type="text"
-               className="w-full p-2 bg-primario outline-none border border-gray-500 bg-clip-border"
+               className="w-full p-2 bg-primario outline-none border border-gray-500 bg-clip-border text-gray-100"
             />
          </div>
 
@@ -53,14 +75,16 @@ const FormularioContacto: React.FC<prop> = ( {data} ) => {
                   Apellido
                </span>
                {data?.apellido ? (
-                  <span className="text-red-600">{data?.apellido}</span>
+                  <span className="text-red-500 font-Inter text-sm">
+                     {data?.apellido}
+                  </span>
                ) : null}
             </label>
             <input
                name="apellido"
                id="apellido"
                type="text"
-               className="w-full p-2 bg-primario outline-none border border-gray-500 bg-clip-border"
+               className="w-full p-2 bg-primario outline-none border border-gray-500 bg-clip-border text-gray-100"
             />
          </div>
 
@@ -70,14 +94,16 @@ const FormularioContacto: React.FC<prop> = ( {data} ) => {
                   Email
                </span>
                {data?.email ? (
-                  <span className="text-red-600">{data?.email}</span>
+                  <span className="text-red-500 font-Inter text-sm">
+                     {data?.email}
+                  </span>
                ) : null}
             </label>
             <input
                name="email"
                id="email"
                type="email"
-               className="w-full p-2 bg-primario outline-none border border-gray-500 bg-clip-border"
+               className="w-full p-2 bg-primario outline-none border border-gray-500 bg-clip-border text-gray-100"
             />
          </div>
 
@@ -87,33 +113,68 @@ const FormularioContacto: React.FC<prop> = ( {data} ) => {
                   Telefono de Contacto
                </span>
                {data?.telefono ? (
-                  <span className="text-red-600">{data?.telefono}</span>
+                  <span className="text-red-500 font-Inter text-sm">
+                     {data?.telefono}
+                  </span>
                ) : null}
             </label>
             <input
                id="telefono"
                type="tel"
                name="telefono"
-               className="w-full p-2 bg-primario outline-none border border-gray-500 bg-clip-border"
+               className="w-full p-2 bg-primario outline-none border border-gray-500 bg-clip-border text-gray-100"
             />
          </div>
 
          <div>
             <h5 className="font-variable text-lg font-normal text-heading mb-2">
-               ¿Donde es tu evento?
+               ¿Donde es tu evento?{" "}
+               {data?.lugar ? (
+                  <span className="text-red-500 text-sm font-Inter">
+                     {data.lugar}
+                  </span>
+               ) : null}
             </h5>
-            <div className="flex gap-2 justify-between items-center">
-               <div className="flex-1">
-                  <label htmlFor="alcaldias">
-                     <span className="font-variable text-lg  font-normal text-heading">
-                        CDMX
-                     </span>
-                     {data?.alcaldia ? (
-                        <span className="text-red-600">{data?.alcaldia}</span>
-                     ) : null}
+            <div className="flex justify-between items-center">
+               <div className="dark:bg-black/10 flex gap-4 justify-between items-center">
+                  <label
+                     htmlFor="cdmx"
+                     className="text-gray-100 font-variable text-lg"
+                  >
+                     Ciudad de México
                   </label>
+                  <input
+                     id="cdmx"
+                     name="cdmx"
+                     className="dark:border-white-400/20 dark:scale-100 transition-all duration-500 ease-in-out dark:hover:scale-110 dark:checked:scale-100 w-6 h-6"
+                     type="checkbox"
+                     onChange={handleChange}
+                     checked={place === "cdmx"}
+                  />
+               </div>
+
+               <div className="dark:bg-black/10 flex gap-4 justify-between items-center">
+                  <label
+                     htmlFor="edomex-label"
+                     className="text-gray-100 font-variable text-lg"
+                  >
+                     Estado de México
+                  </label>
+                  <input
+                     id="edomex-label"
+                     name="edomex-label"
+                     className="dark:border-white-400/20 dark:scale-100 transition-all duration-500 ease-in-out dark:hover:scale-110 dark:checked:scale-100 w-6 h-6"
+                     type="checkbox"
+                     onChange={handleChange}
+                     checked={place === "edomex-label"}
+                  />
+               </div>
+            </div>
+            {place === "cdmx" ? (
+               <div className="flex-1">
+                  <label htmlFor="alcaldias"></label>
                   <select
-                  id="alcaldias"
+                     id="alcaldias"
                      className="h-[2rem] w-full font-Inter px-2 text-heading text-sm border border-gray-500 bg-primario outline-none"
                      defaultValue={"Elige una opción"}
                      name="alcaldia"
@@ -123,7 +184,7 @@ const FormularioContacto: React.FC<prop> = ( {data} ) => {
                         value={"Elige una opción"}
                         hidden
                      >
-                        Elige una opción
+                        Elige una Alcaldía
                      </option>
                      {alcaldias.map((alcaldia, index) => (
                         <option
@@ -136,15 +197,9 @@ const FormularioContacto: React.FC<prop> = ( {data} ) => {
                      ))}
                   </select>
                </div>
+            ) : place === "edomex-label" ? (
                <div className="flex-1">
-                  <label htmlFor="edomex">
-                     <span className="font-variable text-lg  font-normal text-heading">
-                        EdoMex
-                     </span>
-                     {data?.edomex ? (
-                        <span className="text-red-600">{data?.edomex}</span>
-                     ) : null}
-                  </label>
+                  <label htmlFor="edomex"></label>
                   <select
                      className="h-[2rem] w-full font-Inter px-2 text-heading text-sm border border-gray-500 bg-primario outline-none"
                      id="edomex"
@@ -156,7 +211,7 @@ const FormularioContacto: React.FC<prop> = ( {data} ) => {
                         value={"Elige una opción"}
                         hidden
                      >
-                        Elige una opción
+                        Elige un municipio
                      </option>
                      {municipios.map((municipio, index) => (
                         <option
@@ -169,7 +224,7 @@ const FormularioContacto: React.FC<prop> = ( {data} ) => {
                      ))}
                   </select>
                </div>
-            </div>
+            ) : null}
          </div>
 
          <div>
@@ -178,14 +233,16 @@ const FormularioContacto: React.FC<prop> = ( {data} ) => {
                   ¿Cuantas personas contemplas para tu evento?
                </span>
                {data?.personas ? (
-                  <span className="text-red-600">{data?.personas}</span>
+                  <span className="text-red-500 font-Inter text-sm">
+                     {data?.personas}
+                  </span>
                ) : null}
             </label>
             <input
                type="number"
                id="numero-personas"
                name="numero-personas"
-               className="w-full p-2 bg-primario outline-none border border-gray-500 bg-clip-border"
+               className="w-full p-2 bg-primario outline-none border border-gray-500 bg-clip-border text-gray-100"
             />
          </div>
 
@@ -195,7 +252,9 @@ const FormularioContacto: React.FC<prop> = ( {data} ) => {
                   ¿Que tipo de evento es?
                </span>
                {data?.evento ? (
-                  <span className="text-red-600">{data?.evento}</span>
+                  <span className="text-red-500 font-Inter text-sm">
+                     {data?.evento}
+                  </span>
                ) : null}
             </label>
             <select
@@ -229,16 +288,23 @@ const FormularioContacto: React.FC<prop> = ( {data} ) => {
                   Cuentanos mas acerca de tu evento
                </span>
                {data?.mensaje ? (
-                  <span className="text-red-600">{data?.mensaje}</span>
+                  <span className="text-red-500 font-Inter text-sm">
+                     {data?.mensaje}
+                  </span>
                ) : null}
             </label>
             <textarea
                name="mensaje"
                id="mensaje"
-               className="w-full p-2 bg-primario outline-none border border-gray-500 bg-clip-border"
+               className="w-full p-2 bg-primario outline-none border border-gray-500 bg-clip-border text-gray-100"
             ></textarea>
          </div>
-         <Btn target={false} isLink={false} route="/" value="Enviar" />
+         <div className="flex gap-6">
+            <Btn target={false} isLink={false} route="/" value="Enviar" />
+
+            {error && <p className="text-gray-100 font-Inter text-lg">{error}</p>}
+            {succes && <p className="text-gray-100 font-Inter text-lg">{succes}</p>}
+         </div>
       </Form>
    );
 };

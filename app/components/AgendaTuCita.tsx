@@ -4,20 +4,24 @@ import { HeadingVistas } from "./HeadingVistas";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 
-type ActionData = {
+type prop = {
+   data: data;
+};
+
+type data = {
    nombre?: string;
    apellido?: string;
    email?: string;
    telefono?: string;
    mensaje?: string;
-   alcaldia?: string;
-   edomex?: string;
+   lugar?: string;
    personas?: string;
    evento?: string;
+   error?: string;
+   succes?: string
 };
 
-
-const AgendaTuCita = (data: ActionData) => {
+const AgendaTuCita: React.FC<prop> = ({ data }) => {
    const formRef = useRef(null);
    const contactRef = useRef(null);
    const isFormInView = useInView(formRef, { once: true });
