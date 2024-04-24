@@ -1,7 +1,8 @@
 import { Form } from "@remix-run/react";
 import Btn from "./Btn";
 import { municipios, alcaldias, eventos } from "../utils/staticInfo";
-import { useState } from "react";
+import { useEffect, useState, useRef } from "react";
+import { Close, Warning } from "./IconsSvg";
 
 type prop = {
    data: data;
@@ -21,29 +22,43 @@ type data = {
 };
 
 const FormularioContacto: React.FC<prop> = ({ data }) => {
-   const {
-      nombre,
-      apellido,
-      email,
-      telefono,
-      evento,
-      mensaje,
-      lugar,
-      personas,
-      error,
-      succes,
-   } = data;
+   const dialogRef = useRef<HTMLDialogElement>(null);
+
+   const { error, succes, } = data;
+
+   useEffect(() => {
+
+      if (error !== undefined || succes !== undefined) {
+         dialogRef.current?.showModal();
+      }
+   }, [error, succes])
+
+   useEffect(() => {
+      // Verificar si se han recibido los datos y elimina el spinner
+      if (data) {
+         setSpinner(false)
+      }
+   }, [data]);
+
+
    const [place, setPlace] = useState("");
    const [spinner, setSpinner] = useState(false);
 
    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
       setPlace(e.target.id);
    };
+   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+      setSpinner(true);
+   };
+   const handleClose = () => {
+      dialogRef.current?.close();
+   }
 
    return (
       <Form
          method="post"
          noValidate
+         onSubmit={handleSubmit}
          className="flex flex-col relative p-8 gap-4 lg:mt-0 bg-secundario"
       >
          <h4 className="font-variable text-heading text-2xl mb-2 font-normal">
@@ -301,9 +316,16 @@ const FormularioContacto: React.FC<prop> = ({ data }) => {
          </div>
          <div className="flex gap-6">
             <Btn target={false} isLink={false} route="/" value="Enviar" />
+            {spinner ? (<div className={`flex-col gap-4 w-max flex items-center justify-center`}>
+               <div className="w-10 h-10 border-4 text-blue-400 text-4xl animate-spin border-gray-300 flex items-center justify-center border-t-blue-400 rounded-full">
 
-            {error && <p className="text-gray-100 font-Inter text-lg">{error}</p>}
-            {succes && <p className="text-gray-100 font-Inter text-lg">{succes}</p>}
+               </div>
+            </div>) : null}
+            <dialog className="bg-gray-700 overflow-visible text-center w-[90vw] md:w-[30rem] p-8 rounded-lg" ref={dialogRef}>
+               {error ? <div className="flex flex-col items-center gap-3"><p className="font-variable text-gray-100 text-4xl font-normal">{error}</p><Warning/></div> : null}
+               {succes ?<div className="flex flex-col items-center gap-3"><p className="font-variable text-green-500 text-4xl font-normal">{succes}</p></div> : null}
+               <div onClick={handleClose} className="absolute z-[5000] -top-4  -right-4"><Close /></div>
+            </dialog>
          </div>
       </Form>
    );
