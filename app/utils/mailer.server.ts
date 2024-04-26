@@ -10,7 +10,7 @@ const transport = nodemailer.createTransport({
    }
 });
 
-const sendEmail = async (name: string, lastName: string, email: string, phone: string, message: string, event: string, persons: string, place:string ) => {
+const sendEmail = async (name: string, lastName: string, email: string, phone: string, message: string, place:string, persons: string, event: string, fecha: string) => {
    try {
       await transport.sendMail({
          subject: "Cotización de servicio",
@@ -29,10 +29,12 @@ const sendEmail = async (name: string, lastName: string, email: string, phone: s
             <br/>
             <li>Tipo de evento: ${event}</li>
             <br/>
-            <p>El contempla:</p>
-            <li>${persons} personas</li>
+            <li>La fecha es: ${fecha}</li>
             <br/>
-            <li>lugar: ${place}</li>
+            <li>Se contemplan: ${persons} personas</li>
+            <br/>
+            <li>Lugar del evento: ${place}</li>
+            <br/>
             <li>Mensaje: ${message}</li>
           </ul>
           `

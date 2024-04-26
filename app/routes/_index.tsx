@@ -19,6 +19,7 @@ export async function action({ request }: ActionFunctionArgs) {
    const telefono = String(formData.get("telefono"));
    const mensaje = String(formData.get("mensaje"));
    const alcaldia = String(formData.get("alcaldia"));
+   const fecha = String(formData.get("fecha"));
    const edomex = String(formData.get("edomex"));
    const evento = String(formData.get("evento"));
    const numeroPersonas = String(formData.get("numero-personas"));
@@ -32,6 +33,7 @@ export async function action({ request }: ActionFunctionArgs) {
       lugar?: string;
       evento?: string;
       personas?: string;
+      fecha?: string;
       error?: string;
       succes?: string;
    } = {};
@@ -62,6 +64,19 @@ export async function action({ request }: ActionFunctionArgs) {
 
    if (!eventos.includes(evento)) response.evento = " Selecciona una opción";
 
+   if (fecha.trim() !== "") {
+      const currentDate = new Date();
+      const selected = new Date(fecha);
+      if (selected <= currentDate) {
+         response.fecha =
+            "La fecha seleccionada debe ser mayor que la fecha actual";
+      }
+   }
+
+   if (fecha.trim() === "") {
+      response.fecha = "Porfavor selecciona una fecha";
+   }
+
    if (numeroPersonas.trim() === "")
       response.personas = " El campo no puede ir vacío";
 
@@ -80,16 +95,15 @@ export async function action({ request }: ActionFunctionArgs) {
       mensaje,
       alcaldia,
       numeroPersonas,
-      evento
+      evento,
+      fecha
    );
 
    if (result) {
-      console.log(result);
       response.succes = "Mensaje enviado pronto nos comunicaremos contigo";
       return json({ response });
    }
 
-   console.log("error jaja", result);
    response.error =
       "Hubo un error al enviar el mensaje por favor intenta con otro medio de contacto";
    return json({ response });
@@ -117,6 +131,7 @@ export default function Index() {
       mensaje: actionData?.response.mensaje,
       lugar: actionData?.response.lugar,
       personas: actionData?.response.personas,
+      fecha: actionData?.response.fecha,
       evento: actionData?.response.evento,
       error: actionData?.response.error,
       succes: actionData?.response.succes,

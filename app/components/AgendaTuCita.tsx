@@ -17,6 +17,7 @@ type data = {
    lugar?: string;
    personas?: string;
    evento?: string;
+   fecha?: string;
    error?: string;
    succes?: string
 };

@@ -2,7 +2,7 @@ import { Form } from "@remix-run/react";
 import Btn from "./Btn";
 import { municipios, alcaldias, eventos } from "../utils/staticInfo";
 import { useEffect, useState, useRef } from "react";
-import { Close, Warning } from "./IconsSvg";
+import { Close, Warning, Checked } from "./IconsSvg";
 
 type prop = {
    data: data;
@@ -17,47 +17,55 @@ type data = {
    lugar?: string;
    personas?: string;
    evento?: string;
+   fecha?: string;
    error?: string;
    succes?: string;
 };
 
 const FormularioContacto: React.FC<prop> = ({ data }) => {
-   const dialogRef = useRef<HTMLDialogElement>(null);
 
-   const { error, succes, } = data;
+   const { nombre, apellido, email, telefono, mensaje, lugar, personas, evento, fecha, error, succes, } = data;
+
+   const dialogRef = useRef<HTMLDialogElement>(null);
+   const formRef = useRef<HTMLFormElement>(null);
+
+   const [place, setPlace] = useState(""); //Para validar el input lugar
+   const [spinner, setSpinner] = useState(false);
 
    useEffect(() => {
-
-      if (error !== undefined || succes !== undefined) {
+    // Verificar si se ha recibido un mensaje de exito o de error y borrar el spinner
+      if (error || succes ) {
          dialogRef.current?.showModal();
+         setSpinner(false);
+      }
+      if(succes){
+         formRef.current?.reset();
       }
    }, [error, succes])
 
    useEffect(() => {
-      // Verificar si se han recibido los datos y elimina el spinner
-      if (data) {
-         setSpinner(false)
+      if ([nombre,apellido,email,telefono,mensaje,lugar,personas,evento,fecha].some(value => value?.trim() !== "")) {
+         setSpinner(false);
       }
    }, [data]);
-
-
-   const [place, setPlace] = useState("");
-   const [spinner, setSpinner] = useState(false);
 
    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
       setPlace(e.target.id);
    };
-   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
       setSpinner(true);
    };
    const handleClose = () => {
       dialogRef.current?.close();
+      data.succes = undefined;
+      data.error = undefined;
    }
 
    return (
       <Form
          method="post"
          noValidate
+         ref={formRef}
          onSubmit={handleSubmit}
          className="flex flex-col relative p-8 gap-4 lg:mt-0 bg-secundario"
       >
@@ -150,8 +158,8 @@ const FormularioContacto: React.FC<prop> = ({ data }) => {
                   </span>
                ) : null}
             </h5>
-            <div className="flex justify-between items-center">
-               <div className="dark:bg-black/10 flex gap-4 justify-between items-center">
+            <div className="flex justify-between gap-12 lg:gap-2 items-center">
+               <div className="flex gap-4 justify-between items-center">
                   <label
                      htmlFor="cdmx"
                      className="text-gray-100 font-variable text-lg"
@@ -168,7 +176,7 @@ const FormularioContacto: React.FC<prop> = ({ data }) => {
                   />
                </div>
 
-               <div className="dark:bg-black/10 flex gap-4 justify-between items-center">
+               <div className="flex gap-4 justify-between items-center">
                   <label
                      htmlFor="edomex-label"
                      className="text-gray-100 font-variable text-lg"
@@ -262,6 +270,25 @@ const FormularioContacto: React.FC<prop> = ({ data }) => {
          </div>
 
          <div>
+            <label htmlFor="fecha">
+               <span className="font-variable text-lg  font-normal text-heading">
+                  Fecha del evento
+               </span>
+               {data?.fecha ? (
+                  <span className="text-red-500 font-Inter text-sm">
+                     {data?.fecha}
+                  </span>
+               ) : null}
+            </label>
+            <input
+               type="date"
+               id="fecha"
+               name="fecha"
+               className="w-full p-2 bg-primario outline-none border border-gray-500 bg-clip-border text-gray-100"
+            />
+         </div>
+
+         <div>
             <label htmlFor="evento">
                <span className="font-variable text-lg  font-normal text-heading">
                   ¿Que tipo de evento es?
@@ -323,8 +350,8 @@ const FormularioContacto: React.FC<prop> = ({ data }) => {
             </div>) : null}
             <dialog className="bg-gray-700 overflow-visible text-center w-[90vw] md:w-[30rem] p-8 rounded-lg" ref={dialogRef}>
                {error ? <div className="flex flex-col items-center gap-3"><p className="font-variable text-gray-100 text-4xl font-normal">{error}</p><Warning/></div> : null}
-               {succes ?<div className="flex flex-col items-center gap-3"><p className="font-variable text-green-500 text-4xl font-normal">{succes}</p></div> : null}
-               <div onClick={handleClose} className="absolute z-[5000] -top-4  -right-4"><Close /></div>
+               {succes ?<div className="flex flex-col items-center gap-3"><p className="font-variable text-green-500 text-4xl font-normal">{succes}</p><Checked/></div> : null}
+               <div onClick={handleClose} className="absolute z-[5000] -top-4 w-10 h-10 -right-4"><Close /></div>
             </dialog>
          </div>
       </Form>

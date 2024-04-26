@@ -77,7 +77,7 @@ const Testimoniales = () => {
                 <div className='overflow-hidden'>
                     <motion.div
                         variants={variants}
-                        animate="animate"
+                        animate= { isInView ? "animate" : ""}
                         initial="initial"
                         exit="exit"
                         key={infoClients[index].src}

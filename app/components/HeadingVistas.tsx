@@ -20,10 +20,10 @@ export const HeadingVistas: React.FC<Value> = ({
       <h3
          style={{
             transform: isInView ? whileInView : initial,
-            opacity: isInView ? 1 : 0,
+                  opacity: isInView ? 1 : 0,
          }}
          ref={headingRef}
-         className="text-center text-gradient text-5xl lg:text-7xl font-clash transition-transform-opacity transition-custom-cubic duration-600 delay-300"
+             className="text-center text-gradient text-5xl lg:text-7xl font-clash transition-transform-opacity transition-custom-cubic duration-600 delay-300"
       >
          {text}
       </h3>

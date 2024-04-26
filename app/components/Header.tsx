@@ -24,13 +24,13 @@ const Header = () => {
 
    useEffect(() => {
       if (active) {
-         document.body.style.overflow = "hidden";
+         document.body.style.position = "fixed";
       } else {
-         document.body.style.overflow = "unset";
+         document.body.style.position = "relative";
       }
 
       return () => {
-         document.body.style.overflow = "unset";
+         document.body.style.position = "relative";
       };
    }, [active]);
 

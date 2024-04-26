@@ -137,13 +137,16 @@ const Pause = () => (
 );
 
 const Close = () => (
-   <svg className="w-8 h-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path className="fill-gray-50" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm97.9-320l-17 17-47 47 47 47 17 17L320 353.9l-17-17-47-47-47 47-17 17L158.1 320l17-17 47-47-47-47-17-17L192 158.1l17 17 47 47 47-47 17-17L353.9 192z"/></svg>
+   <svg className="w-auto h-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path className="fill-gray-50" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm97.9-320l-17 17-47 47 47 47 17 17L320 353.9l-17-17-47-47-47 47-17 17L158.1 320l17-17 47-47-47-47-17-17L192 158.1l17 17 47 47 47-47 17-17L353.9 192z"/></svg>
 );
+
 const Warning = () => (
    <svg className="w-16 h-16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path className="fill-red-500" d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm0-384c-13.3 0-24 10.7-24 24V264c0 13.3 10.7 24 24 24s24-10.7 24-24V152c0-13.3-10.7-24-24-24zm32 224a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z"/></svg>
 );
 
-
+const Checked = () => (
+   <svg className="w-16 h-16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path className="fill-green-500" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>
+);
 
 export {
    DjIcon,
@@ -158,5 +161,6 @@ export {
    Play,
    Pause,
    Close,
-   Warning
+   Warning,
+   Checked
 };
