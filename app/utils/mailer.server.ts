@@ -14,7 +14,7 @@ const sendEmail = async (name: string, lastName: string, email: string, phone: s
    try {
       await transport.sendMail({
          subject: "Cotización de servicio",
-         bcc: ["gerson10mtzvilla@gmail.com"],
+         bcc: ["gerson10mtzvilla@gmail.com","jdeleon230@hotmail.com"],
          from: "gerson10mtzvilla@gmail.com",
    
          html: `

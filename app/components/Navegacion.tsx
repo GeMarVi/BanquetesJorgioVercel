@@ -1,4 +1,4 @@
-import { Link, useLocation } from "@remix-run/react";
+import { Link, Navigate, useLocation, useNavigate } from "@remix-run/react";
 import Btn from "./Btn";
 
 interface NavegacionProps {
@@ -7,11 +7,19 @@ interface NavegacionProps {
 }
 
 const Navegacion: React.FC<NavegacionProps> = ({ active, setActive }) => {
+   const navigate = useNavigate();
    const location = useLocation().pathname;
 
    const handleClick = () => {
       setActive(false);
    };
+
+   const handleClickBtn = () => {
+      if (location !== "/") {
+         navigate("/");
+      }
+   };
+
    return (
       <nav
          className={
@@ -84,7 +92,7 @@ const Navegacion: React.FC<NavegacionProps> = ({ active, setActive }) => {
          >
             Mobiliario
          </Link>
-         <div className="mr-4 hidden lg:block">
+         <div onClick={handleClickBtn} className="mr-4 hidden lg:block">
             <Btn target={false} isLink={false} route="" value="Contacto" />
          </div>
       </nav>
