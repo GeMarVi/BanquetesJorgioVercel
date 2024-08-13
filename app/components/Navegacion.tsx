@@ -1,5 +1,7 @@
-import { Link, Navigate, useLocation, useNavigate } from "@remix-run/react";
+import { Link, useLocation, useNavigate } from "@remix-run/react";
 import Btn from "./Btn";
+import { useScrollContext } from "~/context/scrollContext";
+import { animate } from "framer-motion";
 
 interface NavegacionProps {
    active: boolean;
@@ -10,14 +12,30 @@ const Navegacion: React.FC<NavegacionProps> = ({ active, setActive }) => {
    const navigate = useNavigate();
    const location = useLocation().pathname;
 
+   const { formRef } = useScrollContext();
+
    const handleClick = () => {
       setActive(false);
    };
 
    const handleClickBtn = () => {
-      if (location !== "/") {
-         navigate("/");
+      if(location !== "/"){
+         navigate("/")
       }
+
+      setTimeout(() => {
+         if (formRef.current) {
+         const targetPosition = formRef.current.getBoundingClientRect().top;
+
+         animate(window.scrollY, targetPosition, {
+            type: "spring",
+            stiffness: 100,
+            damping: 20,
+            duration: 4, 
+            onUpdate: (latest) => window.scrollTo(0, latest),
+         });
+      }
+      }, 1000);
    };
 
    return (

@@ -3,6 +3,7 @@ import bgContacto from "../src/Mobiliario.webp";
 import { HeadingVistas } from "./HeadingVistas";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
+import { Link } from "@remix-run/react";
 
 type prop = {
    data: data;
@@ -59,12 +60,12 @@ const AgendaTuCita: React.FC<prop> = ({ data }) => {
                   Si prefieres comunicate con nosotros por WhatsApp o Correo
                </p>
                <div className="flex flex-col gap-2 items-center">
-                  <a
-                     href="#"
+                  <Link
+                     to="https://wa.link/jorgio"
                      className="whatsapp-svg text-gray-50 relative font-variable font-normal"
                   >
                      WhatsApp
-                  </a>
+                  </Link>
                   <p className="text-gray-100 relative font-Inter font-normal">
                      55-39-38-7834
                   </p>

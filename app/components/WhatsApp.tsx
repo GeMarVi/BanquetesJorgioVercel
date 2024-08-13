@@ -40,7 +40,7 @@ const WhatsApp = () => {
                {message}
             </div>
          )}
-         <Link target="blank" to={"https://wa.link/jorgio"}>
+         <Link target="_blank" to={"https://wa.link/jorgio"}>
             <img
                className="w-10 lg:w-11 object-contain"
                src={whatsApp}

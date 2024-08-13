@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import { Link, useLocation } from "@remix-run/react";
-import { AnimatePresence, motion } from "framer-motion";
+import { Link, useLocation, useNavigate } from "@remix-run/react";
+import { AnimatePresence, motion, animate } from "framer-motion";
 
 import logo from "../src/logo.svg";
 import bannerPrincipal from "../src/banners/hero.webp";
@@ -12,11 +12,13 @@ import bannerMoviliario from "../src/banners/mobiliario-banner.jpg";
 import Navegacion from "../components/Navegacion";
 import Btn from "./Btn";
 import BtnToggle from "./BtnToggle";
+import { useScrollContext } from "~/context/scrollContext";
 
 const Header = () => {
    const [active, setActive] = useState(false);
-
+   const {formRef} = useScrollContext();
    const route = useLocation().pathname;
+   const navigate = useNavigate();
 
    const handleClick = () => {
       setActive(!active);
@@ -92,6 +94,26 @@ const Header = () => {
          banner = "Page Not Found";
    }
 
+   const handleScroll = () => {
+      if(route !== "/"){
+         navigate("/")
+      }
+
+      setTimeout(() => {
+         if (formRef.current) {
+         const targetPosition = formRef.current.getBoundingClientRect().top;
+
+         animate(window.scrollY, targetPosition, {
+            type: "spring",
+            stiffness: 100,
+            damping: 20,
+            duration: 4, 
+            onUpdate: (latest) => window.scrollTo(0, latest),
+         });
+      }
+      }, 1000);
+   }
+
    return (
       <header
          style={{ backgroundImage: `url(${banner})` }}
@@ -157,7 +179,7 @@ const Header = () => {
                      >
                         "{description}"
                      </p>
-                     <div className="lg:hidden flex justify-center relative">
+                     <div onClick={handleScroll} className="lg:hidden flex justify-center relative">
                         <Btn
                            target={false}
                            isLink={false}

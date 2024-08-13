@@ -3,6 +3,7 @@ import Btn from "./Btn";
 import { municipios, alcaldias, eventos } from "../utils/staticInfo";
 import { useEffect, useState, useRef } from "react";
 import { Close, Warning, Checked } from "./IconsSvg";
+import { useScrollContext } from "~/context/scrollContext";
 
 type prop = {
    data: data;
@@ -23,12 +24,12 @@ type data = {
 };
 
 const FormularioContacto: React.FC<prop> = ({ data }) => {
+   const { formRef } = useScrollContext(); 
 
    const { nombre, apellido, email, telefono, mensaje, lugar, personas, evento, fecha, error, succes, } = data;
 
    const dialogRef = useRef<HTMLDialogElement>(null);
-   const formRef = useRef<HTMLFormElement>(null);
-
+   
    const [place, setPlace] = useState(""); //Para validar el input lugar
    const [spinner, setSpinner] = useState(false);
 
