@@ -25,13 +25,15 @@ const BtnCotizarServicio = () => {
    };
 
    return (
-      <div onClick={handleClickBtn} className="flex justify-center">
-         <Btn
-            target={false}
-            isLink={true}
-            route="#"
-            value="Cotiza tu servicio"
-         />
+      <div className="flex justify-center">
+         <span onClick={handleClickBtn}>
+            <Btn
+               target={false}
+               isLink={true}
+               route="#"
+               value="Cotiza tu servicio"
+            />
+         </span>
       </div>
    );
 };
