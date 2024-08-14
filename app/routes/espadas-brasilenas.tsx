@@ -19,6 +19,7 @@ import espadas5 from "../src/espadas/espadas-5.webp"
 import espadas6 from "../src/espadas/espadas-6.webp"
 
 import SwiperRoutesImages from "~/components/SwiperRoutesImages"
+import BtnCotizarServicio from "~/components/BtnCotizarServicio";
 
 export const meta: MetaFunction = () => {
     return [
@@ -93,9 +94,7 @@ const espadasBrasilenas = () => {
                 <p className="text-heading text-center font-Inter flex-1 text-2xl">Nuestro servicio incluye Gauchos, dos horas de servicio, tablón para ensaladas y parrilla.</p>
                 <p className="text-heading text-center font-Inter flex-1 text-2xl">Si no encuentras algún artículo que buscas en nuestro catálogo, contáctanos y haznos saber todas tus dudas.</p>
             </div>
-            <div className="flex justify-center">
-                <Btn target={false} isLink={true} route="#" value="Cotiza tu servicio" />
-            </div>
+            <BtnCotizarServicio />
         </main >
     )}
 

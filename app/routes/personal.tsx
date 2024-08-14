@@ -12,6 +12,7 @@ import barman2 from "../src/barman/barman-2.webp"
 import meseros from "../src/CardServicios/meseros.webp"
 import ListaCarnes from "~/components/ListaCarnes";
 import SwiperRoutesImages from "~/components/SwiperRoutesImages";
+import BtnCotizarServicio from "~/components/BtnCotizarServicio";
 
 export const meta: MetaFunction = () => {
     return [
@@ -65,9 +66,7 @@ const moviliario = () => {
                 <p className="text-heading text-center font-Inter flex-1 text-2xl pt-16 pb-16">Si no encuentras algún artículo que buscas en nuestro catálogo, contáctanos y haznos saber todas tus dudas.</p>
             </div>
 
-            <div className="flex justify-center">
-                <Btn target={false} isLink={true} route="#" value="Cotiza tu servicio" />
-            </div>
+            <BtnCotizarServicio />
         </main >
     )
 }

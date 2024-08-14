@@ -27,6 +27,7 @@ import periqueras1 from "../src/mobiliario/periqueras-1.webp"
 import periqueras2 from "../src/mobiliario/periqueras-2.webp"
 import periqueras3 from "../src/mobiliario/periqueras-3.webp"
 import { HeadingVistas } from "../components/HeadingVistas";
+import BtnCotizarServicio from "~/components/BtnCotizarServicio";
 
 
 ListaCarnes
@@ -110,9 +111,7 @@ const moviliario = () => {
                 <p className="text-heading text-center font-Inter flex-1 text-2xl pt-16 pb-16">Si no encuentras algún artículo que buscas en nuestro catálogo, contáctanos y haznos saber todas tus dudas.</p>
             </div>
 
-            <div className="flex justify-center">
-                <Btn target={false} isLink={true} route="#" value="Cotiza tu servicio" />
-            </div>
+            <BtnCotizarServicio />
         </main >
     )
 }
