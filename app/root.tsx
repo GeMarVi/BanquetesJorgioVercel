@@ -49,6 +49,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
             <link rel="icon" href="/jorgio-favicon.ico" />
             <Meta />
             <Links />
+            <meta name="google-site-verification" content="4IaUCpqJt5GrJRAGLcfxasGQujb_PGdpFtb7kN7_SR0" />
          </head>
          <body className="bg-primario relative -z-50 overflow-x-hidden">
             <ScrollProvider>
