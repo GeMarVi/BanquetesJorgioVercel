@@ -12,6 +12,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import WhatsApp from "./components/WhatsApp";
 import { ScrollProvider } from "./context/scrollContext";
+import { ClientOnly } from "remix-utils/client-only";
 
 export const links: LinksFunction = () => [
    { rel: "stylesheet", href: styles },
@@ -58,6 +59,26 @@ export function Layout({ children }: { children: React.ReactNode }) {
                {children}
                <ScrollRestoration />
                <Scripts />
+               <ClientOnly>
+          {() => (
+            <>
+              <script
+                async
+                src="https://www.googletagmanager.com/gtag/js?id=AW-16671910917"
+              ></script>
+              <script
+                dangerouslySetInnerHTML={{
+                  __html: `
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+                    gtag('config', 'AW-16671910917');
+                  `,
+                }}
+              ></script>
+            </>
+          )}
+        </ClientOnly>
                <Footer />
             </ScrollProvider>
          </body>
