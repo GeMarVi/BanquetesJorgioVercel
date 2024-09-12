@@ -39,8 +39,6 @@ const Footer = () => {
                         />
                      </a>
                      <a
-                        <
-                        </ 
                         className="cursor-pointer hover:scale-105 ease-linear"
                         target="_blank"
                         href="https://www.tiktok.com/@jorgio_parrilladas?_t=8pfdtYBUXun&_r=1"
