@@ -19,7 +19,7 @@ const Footer = () => {
                      <a
                         className="cursor-pointer hover:scale-105 ease-linear"
                         target="_blank"
-                        href="https://www.instagram.com/banquetes_jorgio?igsh=MW9qeTlhYnpleHpodQ=="
+                        href="https://www.instagram.com/jorgio_parrilladas?igsh=MW9qeTlhYnpleHpodQ=="
                      >
                         <img
                            className="w-12 h-12"
@@ -30,7 +30,7 @@ const Footer = () => {
                      <a
                         className="cursor-pointer hover:scale-105 ease-linear"
                         target="_blank"
-                        href="https://www.facebook.com/share/c4r2oYyVo9ZGmD94/?mibextid=LQQJ4d"
+                        href="https://www.facebook.com/JorgioParrilladas?mibextid=LQQJ4d"
                      >
                         <img
                            className="w-12 h-12"
@@ -41,7 +41,7 @@ const Footer = () => {
                      <a
                         className="cursor-pointer hover:scale-105 ease-linear"
                         target="_blank"
-                        href="https://www.tiktok.com/@banquetes_jorgio0?_t=8onbzwOCo6f&_r=1"
+                        href="www.tiktok.com/@jorgio_parrilladas"
                      >
                         <img
                            className="w-12 h-12"
