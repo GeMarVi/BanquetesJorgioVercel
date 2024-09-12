@@ -39,9 +39,11 @@ const Footer = () => {
                         />
                      </a>
                      <a
+                        <
+                        </ 
                         className="cursor-pointer hover:scale-105 ease-linear"
                         target="_blank"
-                        href="www.tiktok.com/@jorgio_parrilladas"
+                        href="https://www.tiktok.com/@jorgio_parrilladas?_t=8pfdtYBUXun&_r=1"
                      >
                         <img
                            className="w-12 h-12"
