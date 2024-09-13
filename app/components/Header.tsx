@@ -16,7 +16,7 @@ import { useScrollContext } from "~/context/scrollContext";
 
 const Header = () => {
    const [active, setActive] = useState(false);
-   const {formRef} = useScrollContext();
+   const { formRef } = useScrollContext();
    const route = useLocation().pathname;
    const navigate = useNavigate();
 
@@ -95,28 +95,31 @@ const Header = () => {
    }
 
    const handleScroll = () => {
-      if(route !== "/"){
+      if (route !== "/") {
          navigate("/")
       }
 
       setTimeout(() => {
          if (formRef.current) {
-         const targetPosition = formRef.current.getBoundingClientRect().top;
+            const targetPosition = formRef.current.getBoundingClientRect().top;
 
-         animate(window.scrollY, targetPosition, {
-            type: "spring",
-            stiffness: 100,
-            damping: 20,
-            duration: 4, 
-            onUpdate: (latest) => window.scrollTo(0, latest),
-         });
-      }
+            animate(window.scrollY, targetPosition, {
+               type: "spring",
+               stiffness: 100,
+               damping: 20,
+               duration: 4,
+               onUpdate: (latest) => window.scrollTo(0, latest),
+            });
+         }
       }, 1000);
    }
 
    return (
       <header
-         style={{ backgroundImage: `url(${banner})` }}
+         style={{
+            backgroundImage: `url(${banner})`,
+            display: route === "/politicas-de-privacidad" ? "none" : "flex", // Aplica display: none si la ruta es "/politicas"
+         }}
          className="flex flex-col justify-between relative mb-32 lg:mb-40 bg-center bg-no-repeat bg-cover h-screen text-white -z-20 overflow-hidden"
       >
          <div className="absolute w-full h-full top-0 bottom-0 left-0 right-0 bg-gradient-to-b from-black via-transparent to-transparent"></div>
@@ -147,8 +150,8 @@ const Header = () => {
                   key={route}
                   variants={{
                      initial: { opacity: 0, y: -10 },
-                     animate: { opacity: 1, y: 0, transition: {duration: 0.5} },
-                     exit: { opacity: 0, transition: {duration: 1} },
+                     animate: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+                     exit: { opacity: 0, transition: { duration: 1 } },
                   }}
                   initial="initial"
                   animate="animate"
@@ -162,20 +165,18 @@ const Header = () => {
                         </h1>
                      ) : null}
                      <p
-                        className={`font-clash ${
-                           route != "/"
+                        className={`font-clash ${route != "/"
                               ? "font-[900] text-5xl text-center lg:text-left lg:text-7xl"
                               : "text-3xl lg:text-5xl text-center lg:text-left font-normal"
-                        }`}
+                           }`}
                      >
                         {title}
                      </p>
                      <p
-                        className={`font-variable max-w-[50rem] ${
-                           route !== "/"
+                        className={`font-variable max-w-[50rem] ${route !== "/"
                               ? "text-3xl text-center lg:text-left font-normal"
                               : "text-2xl text-center lg:text-left font-light"
-                        }`}
+                           }`}
                      >
                         "{description}"
                      </p>

@@ -133,7 +133,13 @@ const Footer = () => {
             </nav>
             <p className="text-center mt-12 px-41 text-heading pb-4">
                &copy; {year} JORGIO Espadas Brasileñas y Parriladas. Todos los
-               derechos reservados.
+               derechos reservados.  | <Link
+                  prefetch="intent"
+                  className="font-Inter text-blue-600 font-normal w-max"
+                  to="politicas-de-privacidad"
+               >
+                   POLITICAS DE PRIVACIDAD
+               </Link>
             </p>
          </div>
       </footer>
