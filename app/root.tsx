@@ -7,12 +7,19 @@ import {
 } from "@remix-run/react";
 import type { LinksFunction } from "@vercel/remix";
 
+declare global {
+   interface Window {
+      fbq: any;
+   }
+}
+
 import styles from "~/style/styles.css?url";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import WhatsApp from "./components/WhatsApp";
 import { ScrollProvider } from "./context/scrollContext";
 import { ClientOnly } from "remix-utils/client-only";
+import { useEffect } from "react";
 
 export const links: LinksFunction = () => [
    { rel: "stylesheet", href: styles },
@@ -39,6 +46,39 @@ export const links: LinksFunction = () => [
 ];
 
 export function Layout({ children }: { children: React.ReactNode }) {
+
+   useEffect(() => {
+      // Verifica que el código sólo se ejecute en el cliente
+      if (typeof window !== "undefined") {
+         (function (f: any, b: any, e: any, v: any, n: any, t: any, s: any) {
+            if (f.fbq) return;
+            n = f.fbq = function () {
+               n.callMethod
+                  ? n.callMethod.apply(n, arguments)
+                  : n.queue.push(arguments);
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = true;
+            n.version = '2.0';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = true;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s);
+         })(
+            window,
+            document,
+            'script',
+            'https://connect.facebook.net/en_US/fbevents.js'
+         );
+
+         window.fbq('init', '1260949948413025'); // Coloca tu ID de Pixel aquí
+         window.fbq('track', 'PageView'); // Seguimiento de PageView
+      }
+   }, []);
+
    return (
       <html lang="es" className="overflow-x-hidden">
          <head>
@@ -51,6 +91,15 @@ export function Layout({ children }: { children: React.ReactNode }) {
             <Meta />
             <Links />
             <meta name="google-site-verification" content="4IaUCpqJt5GrJRAGLcfxasGQujb_PGdpFtb7kN7_SR0" />
+            <noscript>
+               <img
+                  height="1"
+                  width="1"
+                  style={{ display: "none" }}
+                  src="https://www.facebook.com/tr?id=1260949948413025&ev=PageView&noscript=1"
+                  alt=""
+               />
+            </noscript>
          </head>
          <body className="bg-primario relative -z-50 overflow-x-hidden">
             <ScrollProvider>
@@ -60,25 +109,25 @@ export function Layout({ children }: { children: React.ReactNode }) {
                <ScrollRestoration />
                <Scripts />
                <ClientOnly>
-          {() => (
-            <>
-              <script
-                async
-                src="https://www.googletagmanager.com/gtag/js?id=AW-16671910917"
-              ></script>
-              <script
-                dangerouslySetInnerHTML={{
-                  __html: `
+                  {() => (
+                     <>
+                        <script
+                           async
+                           src="https://www.googletagmanager.com/gtag/js?id=AW-16671910917"
+                        ></script>
+                        <script
+                           dangerouslySetInnerHTML={{
+                              __html: `
                     window.dataLayer = window.dataLayer || [];
                     function gtag(){dataLayer.push(arguments);}
                     gtag('js', new Date());
                     gtag('config', 'AW-16671910917');
                   `,
-                }}
-              ></script>
-            </>
-          )}
-        </ClientOnly>
+                           }}
+                        ></script>
+                     </>
+                  )}
+               </ClientOnly>
                <Footer />
             </ScrollProvider>
          </body>
