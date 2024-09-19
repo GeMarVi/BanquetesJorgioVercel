@@ -6,13 +6,6 @@ import {
    ScrollRestoration,
 } from "@remix-run/react";
 import type { LinksFunction } from "@vercel/remix";
-
-declare global {
-   interface Window {
-      fbq: any;
-   }
-}
-
 import styles from "~/style/styles.css?url";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -20,6 +13,13 @@ import WhatsApp from "./components/WhatsApp";
 import { ScrollProvider } from "./context/scrollContext";
 import { ClientOnly } from "remix-utils/client-only";
 import { useEffect } from "react";
+
+declare global {
+   interface Window {
+      fbq: any;
+      gtag: any;
+   }
+}
 
 export const links: LinksFunction = () => [
    { rel: "stylesheet", href: styles },
@@ -46,10 +46,9 @@ export const links: LinksFunction = () => [
 ];
 
 export function Layout({ children }: { children: React.ReactNode }) {
-
    useEffect(() => {
-      // Verifica que el código sólo se ejecute en el cliente
       if (typeof window !== "undefined") {
+         // Facebook Pixel
          (function (f: any, b: any, e: any, v: any, n: any, t: any, s: any) {
             if (f.fbq) return;
             n = f.fbq = function () {
@@ -67,14 +66,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
             t.src = v;
             s = b.getElementsByTagName(e)[0];
             s.parentNode.insertBefore(t, s);
-         })(
-            window,
-            document,
-            'script',
-            'https://connect.facebook.net/en_US/fbevents.js'
-         );
+         })(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
 
-         window.fbq('init', '1260949948413025'); // Coloca tu ID de Pixel aquí
+         window.fbq('init', '1260949948413025'); // ID de Pixel de Facebook
          window.fbq('track', 'PageView'); // Seguimiento de PageView
       }
    }, []);
@@ -83,10 +77,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <html lang="es" className="overflow-x-hidden">
          <head>
             <meta charSet="utf-8" />
-            <meta
-               name="viewport"
-               content="width=device-width, initial-scale=1"
-            />
+            <meta name="viewport" content="width=device-width, initial-scale=1" />
             <link rel="icon" href="/jorgio-favicon.ico" />
             <Meta />
             <Links />
@@ -118,13 +109,13 @@ export function Layout({ children }: { children: React.ReactNode }) {
                         <script
                            dangerouslySetInnerHTML={{
                               __html: `
-                    window.dataLayer = window.dataLayer || [];
-                    function gtag(){dataLayer.push(arguments);}
-                    gtag('js', new Date());
-                    gtag('config', 'AW-16671910917');
-                  `,
+                                window.dataLayer = window.dataLayer || [];
+                                function gtag(){dataLayer.push(arguments);}
+                                gtag('js', new Date());
+                                gtag('config', 'AW-16671910917');
+                              `,
                            }}
-                        ></script>
+                        />
                      </>
                   )}
                </ClientOnly>
