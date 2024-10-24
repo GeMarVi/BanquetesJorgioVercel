@@ -68,7 +68,7 @@ const FormularioContacto: React.FC<prop> = ({ data }) => {
          noValidate
          ref={formRef}
          onSubmit={handleSubmit}
-         className="flex flex-col relative p-8 gap-4 lg:mt-0 bg-secundario"
+         className="flex flex-col relative p-8 pb-2 gap-4 lg:mt-0 bg-secundario"
       >
          <h4 className="font-variable text-heading text-2xl mb-2 font-normal">
             Solicita una cotización y nuestro equipo se pondrá en contacto
@@ -78,7 +78,7 @@ const FormularioContacto: React.FC<prop> = ({ data }) => {
             <label htmlFor="nombre">
                <span className="font-variable text-lg  font-normal text-heading">
                   Nombre
-               </span>
+               </span><span className="text-gray-300"> *</span>
                {data.nombre ? (
                   <span className="text-red-500 font-Inter text-sm">
                      {data?.nombre}
@@ -97,7 +97,7 @@ const FormularioContacto: React.FC<prop> = ({ data }) => {
             <label htmlFor="apellido">
                <span className="font-variable text-lg  font-normal text-heading">
                   Apellido
-               </span>
+               </span><span className="text-gray-300"> *</span>
                {data?.apellido ? (
                   <span className="text-red-500 font-Inter text-sm">
                      {data?.apellido}
@@ -116,7 +116,7 @@ const FormularioContacto: React.FC<prop> = ({ data }) => {
             <label htmlFor="email">
                <span className="font-variable text-lg  font-normal text-heading">
                   Email
-               </span>
+               </span><span className="text-gray-300"> *</span>
                {data?.email ? (
                   <span className="text-red-500 font-Inter text-sm">
                      {data?.email}
@@ -135,7 +135,7 @@ const FormularioContacto: React.FC<prop> = ({ data }) => {
             <label htmlFor="telefono">
                <span className="font-variable text-lg  font-normal text-heading">
                   Telefono de Contacto
-               </span>
+               </span><span className="text-gray-300"> *</span>
                {data?.telefono ? (
                   <span className="text-red-500 font-Inter text-sm">
                      {data?.telefono}
@@ -152,7 +152,7 @@ const FormularioContacto: React.FC<prop> = ({ data }) => {
 
          <div>
             <h5 className="font-variable text-lg font-normal text-heading mb-2">
-               ¿Donde es tu evento?{" "}
+               ¿Donde es tu evento?{" "}<span className="text-gray-300"> *</span>
                {data?.lugar ? (
                   <span className="text-red-500 text-sm font-Inter">
                      {data.lugar}
@@ -254,7 +254,7 @@ const FormularioContacto: React.FC<prop> = ({ data }) => {
          <div>
             <label htmlFor="numero-personas">
                <span className="font-variable text-lg  font-normal text-heading">
-                  ¿Cuantas personas contemplas para tu evento?
+                  ¿Cuantas personas contemplas para tu evento? <span>Cantidad minima 50 personas</span><span className="text-gray-300"> *</span>
                </span>
                {data?.personas ? (
                   <span className="text-red-500 font-Inter text-sm">
@@ -274,7 +274,7 @@ const FormularioContacto: React.FC<prop> = ({ data }) => {
             <label htmlFor="fecha">
                <span className="font-variable text-lg  font-normal text-heading">
                   Fecha del evento
-               </span>
+               </span><span className="text-gray-300"> *</span>
                {data?.fecha ? (
                   <span className="text-red-500 font-Inter text-sm">
                      {data?.fecha}
@@ -293,7 +293,7 @@ const FormularioContacto: React.FC<prop> = ({ data }) => {
             <label htmlFor="evento">
                <span className="font-variable text-lg  font-normal text-heading">
                   ¿Que tipo de evento es?
-               </span>
+               </span><span className="text-gray-300"> *</span>
                {data?.evento ? (
                   <span className="text-red-500 font-Inter text-sm">
                      {data?.evento}
@@ -355,6 +355,7 @@ const FormularioContacto: React.FC<prop> = ({ data }) => {
                <div onClick={handleClose} className="absolute z-[5000] -top-4 w-10 h-10 -right-4"><Close /></div>
             </dialog>
          </div>
+         <p className="text-gray-400 text-right font-variable">* Campos obligatorios</p>
       </Form>
    );
 };

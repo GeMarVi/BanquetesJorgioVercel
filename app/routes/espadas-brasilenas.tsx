@@ -90,9 +90,10 @@ const espadasBrasilenas = () => {
                 <SwiperRoutesImages urls={ensaladas} />
             </div>
             <hr className="h-[2px] w-full min-w-[18rem] border-t-0 bg-transparent bg-gradient-to-r from-transparent via-white to-transparent bg-center md:my-9"></hr>
-            <div className="flex flex-col lg:flex-row gap-4 lg:gap-8 my-16">
-                <p className="text-heading text-center font-Inter flex-1 text-2xl">Nuestro servicio incluye Gauchos, dos horas de servicio, tablón para ensaladas y parrilla.</p>
-                <p className="text-heading text-center font-Inter flex-1 text-2xl">Si no encuentras algún artículo que buscas en nuestro catálogo, contáctanos y haznos saber todas tus dudas.</p>
+            <div className="flex flex-col gap-4 lg:gap-8 my-16">
+                <p className="text-heading text-center font-Inter flex-1 text-xl">Nuestro servicio incluye Gauchos, dos horas de servicio, tablón para ensaladas y parrilla.</p>
+                <p className="text-heading text-center font-Inter flex-1 text-xl">Si no encuentras algún artículo que buscas en nuestro catálogo, contáctanos y haznos saber todas tus dudas.</p>
+                <p className="text-heading text-center font-Inter flex-1 text-xl">Pedido minimo para 50 personas.</p>
             </div>
             <BtnCotizarServicio />
         </main >

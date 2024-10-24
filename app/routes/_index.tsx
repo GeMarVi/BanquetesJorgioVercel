@@ -57,10 +57,8 @@ export async function action({ request }: ActionFunctionArgs) {
    if (!phoneRegex.test(telefono))
       response.telefono = " El telefono debe contener 10 digitos";
 
-   if (mensaje.trim() === "") response.mensaje = " El campo no puede ir vacío";
-
    if (!alcaldias.includes(alcaldia) && !municipios.includes(edomex))
-      response.lugar = "Selecciona una opción";
+      response.lugar = " Selecciona una opción";
 
    if (!eventos.includes(evento)) response.evento = " Selecciona una opción";
 
@@ -69,19 +67,22 @@ export async function action({ request }: ActionFunctionArgs) {
       const selected = new Date(fecha);
       if (selected <= currentDate) {
          response.fecha =
-            "La fecha seleccionada debe ser mayor que la fecha actual";
+            " La fecha seleccionada debe ser mayor que la fecha actual";
       }
    }
 
    if (fecha.trim() === "") {
-      response.fecha = "Porfavor selecciona una fecha";
+      response.fecha = " Porfavor selecciona una fecha";
    }
+
+   if (Number(numeroPersonas) < 50)
+      response.personas = " El Pedido minimo es para 50 personas";
 
    if (numeroPersonas.trim() === "")
       response.personas = " El campo no puede ir vacío";
 
    if (Number(numeroPersonas) > 100000)
-      response.personas = " cantidad no válida";
+      response.personas = " Cantidad no válida";
 
    if (Object.keys(response).length > 0) {
       return json({ response });

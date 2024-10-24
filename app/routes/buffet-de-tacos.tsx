@@ -80,7 +80,8 @@ const tacos = () => {
             </div>
             <hr className="h-[2px] w-full min-w-[18rem] border-t-0 bg-transparent bg-gradient-to-r from-transparent via-white to-transparent bg-center md:my-9"></hr>
             <div className="">
-                <p className="text-heading text-center font-Inter flex-1 text-2xl pt-16 pb-16">Si no encuentras algún artículo que buscas en nuestro catálogo, contáctanos y haznos saber todas tus dudas.</p>
+                <p className="text-heading text-center font-Inter flex-1 text-xl pt-16 pb-16">Si no encuentras algún artículo que buscas en nuestro catálogo, contáctanos y haznos saber todas tus dudas.</p>
+                <p className="text-heading text-center font-Inter flex-1 text-xl pb-16">Pedido minimo para 50 personas.</p>
             </div>
             <BtnCotizarServicio />
         </main >
