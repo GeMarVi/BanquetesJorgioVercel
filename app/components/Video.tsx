@@ -1,16 +1,15 @@
-import { InstagramEmbed } from "react-social-media-embed";
-import { ClientOnly } from "remix-utils/client-only";
+import LiteYouTubeEmbed from 'react-lite-youtube-embed';
+import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css'
+import espadas from "../src/espadas-fondo-video.webp"
 
 const Video = () => {
    return (
-      <ClientOnly fallback={null}>
-			{() => <InstagramEmbed
-         url="https://www.instagram.com/p/C3sNGCHvywO/"
-         className=""
-         height={"450"}
-      />}
-		</ClientOnly>
-      
+      <LiteYouTubeEmbed
+      id="Guyu8PcnnuE"
+      title="Video que describe nuestros servicios"
+      aspectHeight={14}
+      thumbnail={espadas}
+  />
    );
 };
 
