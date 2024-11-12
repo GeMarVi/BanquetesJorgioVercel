@@ -88,13 +88,15 @@ export async function action({ request }: ActionFunctionArgs) {
       return json({ response });
    }
 
+   const lugar = alcaldia.length > 5 ? alcaldia : edomex;
+
    const result = await sendEmail(
       nombre,
       apellido,
       email,
       telefono,
       mensaje,
-      alcaldia,
+      lugar,
       numeroPersonas,
       evento,
       fecha
