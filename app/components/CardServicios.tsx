@@ -35,7 +35,7 @@ const CardServicios: React.FC<CardServicio> = ({
          </div>
          <div className="p-6 flex flex-col gap-4 justify-between">
             <div className="bg-cover bg-no-repeat w-8 h-8">{logo}</div>
-            <h5 className="mb-2 block font-variable text-2xl text-heading font-normal">
+            <h5 className="mb-2 block font-pop text-2xl text-heading font-light">
                {title}
             </h5>
             <Btn

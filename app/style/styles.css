@@ -185,7 +185,7 @@
       font-size: 0.7rem;
    }
 
-   .form label .input + span {
+   .form label .input+span {
       position: absolute;
       left: 10px;
       top: 15px;
@@ -195,12 +195,12 @@
       transition: 0.3s ease;
    }
 
-   .form label .input:placeholder-shown + span {
+   .form label .input:placeholder-shown+span {
       top: 15px;
       font-size: 0.9em;
    }
 
-   .form label .input:valid + span {
+   .form label .input:valid+span {
       color: gray;
    }
 
@@ -209,7 +209,7 @@
       padding: 10px 10px 30px 10px;
    }
 
-   .form label .input01 + span {
+   .form label .input01+span {
       position: absolute;
       left: 10px;
       top: 50px;
@@ -219,19 +219,19 @@
       transition: 0.3s ease;
    }
 
-   .form label .input01:placeholder-shown + span {
+   .form label .input01:placeholder-shown+span {
       top: 40px;
       font-size: 0.9em;
    }
 
-   .form label .input01:focus + span,
-   .form label .input01:valid + span {
+   .form label .input01:focus+span,
+   .form label .input01:valid+span {
       top: 50px;
       font-size: 0.7em;
       font-weight: 600;
    }
 
-   .form label .input01:valid + span {
+   .form label .input01:valid+span {
       color: grey;
    }
 
@@ -246,13 +246,11 @@
       transition: all 0.3s;
       line-height: 1.4em;
       border: 2px solid var(--green);
-      background: linear-gradient(
-         to right,
-         rgba(182, 41, 6, 0.1) 1%,
-         transparent 40%,
-         transparent 60%,
-         rgba(231, 23, 8, 0.1) 100%
-      );
+      background: linear-gradient(to right,
+            rgba(182, 41, 6, 0.1) 1%,
+            transparent 40%,
+            transparent 60%,
+            rgba(231, 23, 8, 0.1) 100%);
       color: var(--green);
       box-shadow: inset 0 0 10px rgba(228, 52, 8, 0.4),
          0 0 9px 3px rgba(223, 49, 5, 0.1);
@@ -272,13 +270,11 @@
       height: 100%;
       top: 0;
       transition: transform 0.4s ease-in-out;
-      background: linear-gradient(
-         to right,
-         transparent 1%,
-         rgba(248, 18, 18, 0.1) 40%,
-         rgba(223, 12, 5, 0.1) 60%,
-         transparent 100%
-      );
+      background: linear-gradient(to right,
+            transparent 1%,
+            rgba(248, 18, 18, 0.1) 40%,
+            rgba(223, 12, 5, 0.1) 60%,
+            transparent 100%);
    }
 
    .custom-button:hover::before {
@@ -352,5 +348,27 @@
 
    body .animation-pause {
       animation-play-state: paused;
+   }
+
+   .custom-before-reloj::before {
+      content: '';
+      display: block;
+      width: 20px;
+      height: 20px;
+      background-image: url("../src/reloj.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateX(-30px);
+   }
+
+
+
+   @media screen and (max-width: 768px) {
+      .degradado {
+         background: linear-gradient(to right, rgba(0, 0, 0, 0.5) 25%, #31363F 25%, #31363F)
+      }
    }
 }

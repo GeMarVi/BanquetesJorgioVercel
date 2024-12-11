@@ -1,20 +1,20 @@
 interface NavegacionProps {
-    active: boolean;
-    setActive: (active: boolean) => void;
+    activeToggle: boolean;
+    setActiveToggle: (active: boolean) => void;
   }
 
-const BtnToggle:React.FC<NavegacionProps> = ({active, setActive}) => {
+const BtnToggle:React.FC<NavegacionProps> = ({activeToggle, setActiveToggle}) => {
 
     const handleClick = () => {
-        setActive(!active);
+        setActiveToggle(!activeToggle);
     }
 
     return (
         <div id="menuToggle" className="relative z-50">
             <div onClick={handleClick} className="toggle">
-                <div className={`bar${ active ? ' bar--top bar--top-active' : ' bar--top'}`}></div>
-                <div className={`bar${ active ? ' bar--middle bar--middle-active' : ' bar--middle'}`}></div>
-                <div className={`bar${ active ? ' bar--bottom bar--bottom-active' : ' bar--bottom'}`}></div>
+                <div className={`bar${ activeToggle ? ' bar--top bar--top-active' : ' bar--top'}`}></div>
+                <div className={`bar${ activeToggle ? ' bar--middle bar--middle-active' : ' bar--middle'}`}></div>
+                <div className={`bar${ activeToggle ? ' bar--bottom bar--bottom-active' : ' bar--bottom'}`}></div>
             </div>
         </div>
     );

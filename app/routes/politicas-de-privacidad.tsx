@@ -4,7 +4,7 @@ const PrivacyPolicy = () => {
 
 
   return (
-    <div className="max-w-6xl mx-auto text-gray-100 py-10">
+    <div className="max-w-6xl mx-auto text-gray-100 py-10 px-5 lg:px-0">
       <Link to={"/"} className="text-blue-600">Regresar al Inicio</Link>
       <h1 className="text-3xl my-4">Políticas de Privacidad</h1>
       

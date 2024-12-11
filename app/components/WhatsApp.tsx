@@ -20,7 +20,7 @@ const WhatsApp = () => {
 
       setTimeout(() => {
          setActive(true);
-      }, 20000);
+      }, 25000);
    }, [active]);
 
    const handleClick = () => {

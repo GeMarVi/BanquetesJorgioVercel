@@ -6,6 +6,14 @@ import meseros from "../src/CardServicios/meseros.webp"
 import dj from "../src/CardServicios/DJ.webp"
 import { DjIcon, EspadasIcon, MeserosIcon, MobiliarioIcon, ParrilladaIcon, TacosIcon } from '../components/IconsSvg';
 
+import picanha from "~/src/blog/picanha-blog.webp"
+import mignon from "~/src/blog/mignon-blog.webp"
+import ensalada from "~/src/blog/ensalada-blog.webp"
+import puntas from "~/src/blog/puntas-blog.webp"
+import costilla from "~/src/blog/costilla-blog.webp"
+import chorizo from "~/src/blog/chorizo-blog.webp"
+import espadasBlog from "~/src/blog/espadas.webp"
+
 export const cardsServicios = [
     { title: "Espadas Brasileñas", route: "espadas-brasilenas", alt: "Espadas brasileñas", src: espadas, logo: <EspadasIcon /> },
     { title: "Parrilladas", route: "parrilladas", alt: "Parrilladas", src: parrilla, logo: <ParrilladaIcon /> },
@@ -235,3 +243,64 @@ export const alcaldias = [
     "Reunion Familar",
     "Otro",
  ];
+
+
+//  entradas de blog disponibles
+export const blogPosts = [
+    {
+        id: 1,
+        title: "¿Qué son las espadas brasileñas?",
+        image: espadasBlog,
+        description: "Descubre la tradición detrás de las espadas brasileñas",
+        date: "25/Noviembre/2024",
+        link: "/blog/espadas-brasilenas",
+    },
+    {
+        id: 2,
+        title: "¿Qué es la picaña (picanha)?",
+        image: picanha,
+        description: "La picaña, el corte favorito de los brasileños, explicado a detalle.",
+        date: "05/Noviembre/2024",
+        link: "/blog/picanha",
+    },
+    {
+        id: 3,
+        title: "El secreto de las costillas BBQ",
+        image: costilla,
+        description: "Aprende a preparar costillas BBQ perfectas con este secreto infalible.",
+        date: "13/Noviembre/2024",
+        link: "/blog/costillas-bbq",
+    },
+    {
+        id: 4,
+        title: "¿Qué es el filete miñón (mignon)?",
+        image: mignon,
+        description: "Conoce más sobre este corte elegante y delicioso.",
+        date: "22/Noviembre/2024",
+        link: "/blog/filete-mignon",
+    },
+    {
+        id: 5,
+        title: "Delicias de la parrilla: el chorizo brasileño",
+        image: chorizo,
+        description: "El sabor auténtico del chorizo brasileño en la parrilla.",
+        date: "29/Noviembre/2024",
+        link: "/blog/chorizo-brasileno",
+    },
+    {
+        id: 6,
+        title: "El mejor acompañamiento para las carnes: la ensalada dulce",
+        image: ensalada,
+        description: "Refresca tus platos con esta ensalada única.",
+        date: "02/Diciembre/2024",
+        link: "/blog/ensalada-dulce",
+    },
+    {
+        id: 7,
+        title: "Puntas de cerdo con jalea de piña y habanero",
+        image: puntas,
+        description: "Una explosión de sabores tropicales en tu parrilla.",
+        date: "09/Diciembre/2024",
+        link: "/blog/puntas-cerdo",
+    },
+];

@@ -7,6 +7,7 @@ export default {
          fontFamily: {
             Nunito: ['"Nunito"', "sans-serif"],
             Inter: ['"Inter"', "sans-serif"],
+            pop: ['"Poppins"', "sans-serif"],
             clash: ['"ClashDisplay-Bold"', "serif"],
             variable: ['"ClashDisplay-Variable"', "serif"],
          },
